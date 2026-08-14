@@ -11,20 +11,12 @@
 
   /* ---- theme helpers ---- */
   function isDark() {
-    var s = localStorage.getItem(STORAGE_KEY);
-    if (s === "dark")  return true;
-    if (s === "light") return false;
-    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return document.documentElement.getAttribute("data-theme") === "dark";
   }
   function applyTheme(theme) {
-    if (theme) {
-      document.documentElement.setAttribute("data-theme", theme);
-      localStorage.setItem(STORAGE_KEY, theme);
-    } else {
-      document.documentElement.removeAttribute("data-theme");
-      localStorage.removeItem(STORAGE_KEY);
-    }
-    var dark = isDark();
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem(STORAGE_KEY, theme);
+    var dark = theme === "dark";
     var meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.setAttribute("content", dark ? "#0E0D0B" : "#F6F4EE");
     swapIcons(dark);
