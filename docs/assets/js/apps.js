@@ -1,0 +1,33 @@
+// VORYN LABS — app registry. THE single update point for the games grid.
+// To publish an app: set storeUrl to the live Play URL. The card badge and
+// CTA flip automatically. Icon: re-run tools/extract_site_icons.py when art changes.
+window.VORYN_APPS = [
+  { id: "arroway",     name: "Arrow Escape", genre: "arrow",     accent: "#6040E8",
+    tagline: "Arrow escape puzzles. Fair, calm, no fail state.", storeUrl: null },
+  { id: "circuitflow", name: "CircuitFlow", genre: "flow",       accent: "#1359D7",
+    tagline: "Connect-the-pairs flow puzzles. Zen and clean.", storeUrl: null },
+  { id: "decodo",      name: "Decodo",      genre: "deduction",  accent: "#E36C17",
+    tagline: "The daily color-code deduction — same code worldwide.", storeUrl: null },
+  { id: "dropforge",   name: "Dropforge",   genre: "merge",      accent: "#D23B71",
+    tagline: "Gem-merge physics, obsessively satisfying.", storeUrl: null },
+  { id: "gemforge",    name: "Gemforge",    genre: "idle",       accent: "#C8482E",
+    tagline: "Offline-first idle gem tycoon. Build your mine.", storeUrl: null },
+  { id: "gridlight",   name: "Gridlight",   genre: "nonogram",   accent: "#4D8B3A",
+    tagline: "Zen, collectible picross — one grid at a time.", storeUrl: null },
+  { id: "minevault",   name: "MineVault",   genre: "minesweeper", accent: "#B37A22",
+    tagline: "Modern no-guess Minesweeper. Every move fair.", storeUrl: null },
+  { id: "orbshot",     name: "Orbshot",     genre: "bubble",     accent: "#167FA5",
+    tagline: "A crunchy, juice-heavy bubble shooter.", storeUrl: null },
+  { id: "recall",      name: "Recall",      genre: "memory",     accent: "#B33D72",
+    tagline: "Memory and sequence pattern puzzles.", storeUrl: null },
+  { id: "slidr",       name: "Slidr",       genre: "slide",      accent: "#BA7815",
+    tagline: "Unblock slide puzzles. Par-perfect, no fail state.", storeUrl: null },
+  { id: "solitaire",   name: "Solitaire",   genre: "card",       accent: "#337557",
+    tagline: "Klondike, Spider and FreeCell — beautifully made.", storeUrl: null },
+  { id: "sortvault",   name: "Sortvault",   genre: "sort",       accent: "#6752C8",
+    tagline: "A tactile, fair colour-sort puzzle.", storeUrl: null },
+  { id: "tileforge",   name: "TileForge",   genre: "tiles",      accent: "#C38416",
+    tagline: "2048-style tiles with permanent meta progression.", storeUrl: null },
+  { id: "wordvein",    name: "Wordvein",    genre: "word",       accent: "#176ABD",
+    tagline: "Procedural word search and hunt.", storeUrl: null },
+];
