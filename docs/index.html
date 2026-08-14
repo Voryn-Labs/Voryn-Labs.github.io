@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/site.css">
-  <script>(function(){document.documentElement.classList.add("js");var t=localStorage.getItem("voryn-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);})();</script>
+  <script>(function(){document.documentElement.classList.add("js");var s=localStorage.getItem("voryn-theme");var t=s||((window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark");document.documentElement.setAttribute("data-theme",t);})();</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -71,7 +71,7 @@
 
         <div class="apps-grid" id="apps-grid">
           <article class="app-card" id="app-arroway" style="--accent:#6040E8">
-            <img class="app-icon" src="assets/icons/arroway.png" alt="Arrow Escape — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/arroway-dark.png" data-dark="assets/icons/arroway-dark.png" data-light="assets/icons/arroway-light.png" alt="Arrow Escape — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">01</span>
             <h3>Arrow Escape</h3>
             <p class="tagline">Arrow escape puzzles. Fair, calm, no fail state.</p>
@@ -80,7 +80,7 @@
             <span class="badge badge-soon">Coming soon on Google Play</span>
           </article>
           <article class="app-card" id="app-circuitflow" style="--accent:#1359D7">
-            <img class="app-icon" src="assets/icons/circuitflow.png" alt="CircuitFlow — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/circuitflow-dark.png" data-dark="assets/icons/circuitflow-dark.png" data-light="assets/icons/circuitflow-light.png" alt="CircuitFlow — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">02</span>
             <h3>CircuitFlow</h3>
             <p class="tagline">Connect-the-pairs flow puzzles. Zen and clean.</p>
@@ -89,7 +89,7 @@
             <span class="badge badge-soon">Coming soon on Google Play</span>
           </article>
           <article class="app-card" id="app-decodo" style="--accent:#E36C17">
-            <img class="app-icon" src="assets/icons/decodo.png" alt="Decodo — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/decodo-dark.png" data-dark="assets/icons/decodo-dark.png" data-light="assets/icons/decodo-light.png" alt="Decodo — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">03</span>
             <h3>Decodo</h3>
             <p class="tagline">The daily color-code deduction — same code worldwide.</p>
@@ -98,7 +98,7 @@
             <span class="badge badge-soon">Coming soon on Google Play</span>
           </article>
           <article class="app-card" id="app-dropforge" style="--accent:#D23B71">
-            <img class="app-icon" src="assets/icons/dropforge.png" alt="Dropforge — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/dropforge-dark.png" data-dark="assets/icons/dropforge-dark.png" data-light="assets/icons/dropforge-light.png" alt="Dropforge — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">04</span>
             <h3>Dropforge</h3>
             <p class="tagline">Gem-merge physics, obsessively satisfying.</p>
@@ -107,7 +107,7 @@
             <span class="badge badge-soon">Coming soon on Google Play</span>
           </article>
           <article class="app-card" id="app-gemforge" style="--accent:#C8482E">
-            <img class="app-icon" src="assets/icons/gemforge.png" alt="Gemforge — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/gemforge-dark.png" data-dark="assets/icons/gemforge-dark.png" data-light="assets/icons/gemforge-light.png" alt="Gemforge — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">05</span>
             <h3>Gemforge</h3>
             <p class="tagline">Offline-first idle gem tycoon. Build your mine.</p>
@@ -116,7 +116,7 @@
             <span class="badge badge-soon">Coming soon on Google Play</span>
           </article>
           <article class="app-card" id="app-gridlight" style="--accent:#4D8B3A">
-            <img class="app-icon" src="assets/icons/gridlight.png" alt="Gridlight — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/gridlight-dark.png" data-dark="assets/icons/gridlight-dark.png" data-light="assets/icons/gridlight-light.png" alt="Gridlight — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">06</span>
             <h3>Gridlight</h3>
             <p class="tagline">Zen, collectible picross — one grid at a time.</p>
@@ -125,7 +125,7 @@
             <span class="badge badge-soon">Coming soon on Google Play</span>
           </article>
           <article class="app-card" id="app-minevault" style="--accent:#B37A22">
-            <img class="app-icon" src="assets/icons/minevault.png" alt="MineVault — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/minevault-dark.png" data-dark="assets/icons/minevault-dark.png" data-light="assets/icons/minevault-light.png" alt="MineVault — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">07</span>
             <h3>MineVault</h3>
             <p class="tagline">Modern no-guess Minesweeper. Every move fair.</p>
@@ -134,7 +134,7 @@
             <span class="badge badge-soon">Coming soon on Google Play</span>
           </article>
           <article class="app-card" id="app-orbshot" style="--accent:#167FA5">
-            <img class="app-icon" src="assets/icons/orbshot.png" alt="Orbshot — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/orbshot-dark.png" data-dark="assets/icons/orbshot-dark.png" data-light="assets/icons/orbshot-light.png" alt="Orbshot — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">08</span>
             <h3>Orbshot</h3>
             <p class="tagline">A crunchy, juice-heavy bubble shooter.</p>
@@ -143,7 +143,7 @@
             <span class="badge badge-soon">Coming soon on Google Play</span>
           </article>
           <article class="app-card" id="app-recall" style="--accent:#B33D72">
-            <img class="app-icon" src="assets/icons/recall.png" alt="Recall — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/recall-dark.png" data-dark="assets/icons/recall-dark.png" data-light="assets/icons/recall-light.png" alt="Recall — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">09</span>
             <h3>Recall</h3>
             <p class="tagline">Memory and sequence pattern puzzles.</p>
@@ -152,7 +152,7 @@
             <span class="badge badge-soon">Coming soon on Google Play</span>
           </article>
           <article class="app-card" id="app-slidr" style="--accent:#BA7815">
-            <img class="app-icon" src="assets/icons/slidr.png" alt="Slidr — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/slidr-dark.png" data-dark="assets/icons/slidr-dark.png" data-light="assets/icons/slidr-light.png" alt="Slidr — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">10</span>
             <h3>Slidr</h3>
             <p class="tagline">Unblock slide puzzles. Par-perfect, no fail state.</p>
@@ -161,7 +161,7 @@
             <span class="badge badge-soon">Coming soon on Google Play</span>
           </article>
           <article class="app-card" id="app-solitaire" style="--accent:#337557">
-            <img class="app-icon" src="assets/icons/solitaire.png" alt="Solitaire — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/solitaire-dark.png" data-dark="assets/icons/solitaire-dark.png" data-light="assets/icons/solitaire-light.png" alt="Solitaire — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">11</span>
             <h3>Solitaire</h3>
             <p class="tagline">Klondike, Spider and FreeCell — beautifully made.</p>
@@ -170,7 +170,7 @@
             <span class="badge badge-soon">Coming soon on Google Play</span>
           </article>
           <article class="app-card" id="app-sortvault" style="--accent:#6752C8">
-            <img class="app-icon" src="assets/icons/sortvault.png" alt="Sortvault — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/sortvault-dark.png" data-dark="assets/icons/sortvault-dark.png" data-light="assets/icons/sortvault-light.png" alt="Sortvault — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">12</span>
             <h3>Sortvault</h3>
             <p class="tagline">A tactile, fair colour-sort puzzle.</p>
@@ -179,7 +179,7 @@
             <span class="badge badge-soon">Coming soon on Google Play</span>
           </article>
           <article class="app-card" id="app-tileforge" style="--accent:#C38416">
-            <img class="app-icon" src="assets/icons/tileforge.png" alt="TileForge — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/tileforge-dark.png" data-dark="assets/icons/tileforge-dark.png" data-light="assets/icons/tileforge-light.png" alt="TileForge — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">13</span>
             <h3>TileForge</h3>
             <p class="tagline">2048-style tiles with permanent meta progression.</p>
@@ -188,7 +188,7 @@
             <span class="badge badge-soon">Coming soon on Google Play</span>
           </article>
           <article class="app-card" id="app-wordvein" style="--accent:#176ABD">
-            <img class="app-icon" src="assets/icons/wordvein.png" alt="Wordvein — app icon" width="128" height="128" loading="lazy">
+            <img class="app-icon" src="assets/icons/wordvein-dark.png" data-dark="assets/icons/wordvein-dark.png" data-light="assets/icons/wordvein-light.png" alt="Wordvein — app icon" width="128" height="128" loading="lazy">
             <span class="app-index" aria-hidden="true">14</span>
             <h3>Wordvein</h3>
             <p class="tagline">Procedural word search and hunt.</p>
