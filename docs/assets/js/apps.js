@@ -2,8 +2,8 @@
 // To publish an app: set storeUrl to the live Play URL. The card badge and
 // CTA flip automatically. Icon: re-run tools/extract_site_icons.py when art changes.
 window.VORYN_APPS = [
-  { id: "arroway",     name: "Arrow Escape", genre: "arrow",     accent: "#6040E8",
-    tagline: "Arrow escape puzzles. Fair, calm, no fail state.", storeUrl: null },
+  { id: "arroway",     name: "Vexlo", genre: "arrow",     accent: "#6040E8",
+    tagline: "Fair, calm arrow-escape puzzles. No fail state.", storeUrl: null },
   { id: "circuitflow", name: "CircuitFlow", genre: "flow",       accent: "#1359D7",
     tagline: "Connect-the-pairs flow puzzles. Zen and clean.", storeUrl: null },
   { id: "decodo",      name: "Decodo",      genre: "deduction",  accent: "#E36C17",
