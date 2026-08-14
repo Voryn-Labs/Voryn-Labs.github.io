@@ -585,3 +585,70 @@ h3 { font-size: 1.35rem; }
   }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Light mode (system auto + manual [data-theme="light"]) ---------- */
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --noir: #F6F4EE;
+    --surface: #FFFFFF;
+    --surface-2: #EDE9DE;
+    --line: rgba(184,139,42,.22);
+    --cream: #191714;
+    --muted: #666055;
+    --gold: #A07722;
+    --gold-hi: #B88B2A;
+  }
+}
+[data-theme="light"] {
+  --noir: #F6F4EE;
+  --surface: #FFFFFF;
+  --surface-2: #EDE9DE;
+  --line: rgba(184,139,42,.22);
+  --cream: #191714;
+  --muted: #666055;
+  --gold: #A07722;
+  --gold-hi: #B88B2A;
+}
+[data-theme="dark"] {
+  --noir: #0E0D0B;
+  --surface: #161614;
+  --surface-2: #1C1B19;
+  --line: rgba(201,162,75,.18);
+  --cream: #F1EDE2;
+  --muted: #9A948A;
+  --gold: #C9A24B;
+  --gold-hi: #D8B25C;
+}
+body { transition: background-color .3s cubic-bezier(.22,.61,.21,1), color .3s cubic-bezier(.22,.61,.21,1); }
+
+/* ---------- Theme toggle button ---------- */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--gold);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform .25s cubic-bezier(.22,.61,.21,1), border-color .25s cubic-bezier(.22,.61,.21,1);
+}
+.theme-toggle:hover { border-color: var(--gold); transform: rotate(15deg); }
+.theme-toggle .icon-sun  { display: block; }
+.theme-toggle .icon-moon { display: none; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .theme-toggle .icon-sun  { display: none; }
+  :root:not([data-theme="dark"]) .theme-toggle .icon-moon { display: block; }
+}
+[data-theme="light"] .theme-toggle .icon-sun  { display: none; }
+[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+[data-theme="dark"]  .theme-toggle .icon-sun  { display: block; }
+[data-theme="dark"]  .theme-toggle .icon-moon { display: none; }
+
+.site-nav .wrap { gap: 1rem; }
