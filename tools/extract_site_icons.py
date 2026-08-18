@@ -45,7 +45,7 @@ SINGLE_SOURCE = {
     "rummyfold":  "apps/indiaapps/rummyfold/assets/brand/app_icon.png",
     "bhagobeta":  "apps/india_games/bhagobeta/assets/brand/app_icon.png",
     "dabbastack": "apps/india_games/dabbastack/assets/brand/app_icon.png",
-    "vividorbit": "../VividOrbit/app/src/main/res/drawable/logo.png",
+    "vividorbit": "../VividOrbit/app/src/main/assets/brand/app_icon.png",
 }
 
 ALL_APPS = APPS + tuple(SINGLE_SOURCE)
