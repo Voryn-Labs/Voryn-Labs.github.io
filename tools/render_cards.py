@@ -21,7 +21,6 @@ from validate_site import load_block  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "docs/index.html"
-REPO = "https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/"
 
 
 def card_html(app: dict, index: int, indent: str = " " * 12) -> str:
@@ -29,11 +28,12 @@ def card_html(app: dict, index: int, indent: str = " " * 12) -> str:
            if isinstance(v, (str, int))}
     app_id = esc["id"]
     live = bool(app.get("storeUrl"))
-    if live:
-        href = app["storeUrl"]
-    else:
-        href = app.get("repoUrl") or REPO + app.get("repo", app["id"])
+    # Every app without repoUrl lives in the private CoreBundle monorepo — a
+    # link there 404s for visitors, so no CTA renders at all in that case.
+    source_is_public = bool(app.get("repoUrl"))
+    href = app["storeUrl"] if live else app.get("repoUrl")
     cta = "Get it on Google Play ↗" if live else "View the source ↗"
+    show_cta = live or source_is_public
     badge_cls = "badge badge-live" if live else "badge badge-soon"
     badge_txt = "Get it on Google Play" if live else "Coming soon on Google Play"
     chip = esc.get("platform") or esc["genre"]
@@ -42,6 +42,9 @@ def card_html(app: dict, index: int, indent: str = " " * 12) -> str:
             f' data-dark="assets/icons/{app_id}-dark.png"'
             f' data-light="assets/icons/{app_id}-light.png"'
             f' alt="{esc["name"]} — app icon" width="128" height="128" loading="lazy">')
+
+    cta_line = (f'<a class="card-cta" href="{html.escape(href, quote=True)}">{cta}</a>'
+                if show_cta else None)
 
     if app.get("featured"):
         features = []
@@ -62,7 +65,7 @@ def card_html(app: dict, index: int, indent: str = " " * 12) -> str:
             *features,
             '    </ul>',
             '    <div class="card-actions">',
-            f'      <a class="card-cta" href="{html.escape(href, quote=True)}">{cta}</a>',
+            *([f'      {cta_line}'] if cta_line else []),
             f'      <span class="{badge_cls}">{badge_txt}</span>',
             '    </div>',
             '  </div>',
@@ -77,7 +80,7 @@ def card_html(app: dict, index: int, indent: str = " " * 12) -> str:
         f'  <h3>{esc["name"]}</h3>',
         f'  <p class="tagline">{esc["tagline"]}</p>',
         f'  <span class="chip">{chip}</span>',
-        f'  <a class="card-cta" href="{html.escape(href, quote=True)}">{cta}</a>',
+        *([f'  {cta_line}'] if cta_line else []),
         f'  <span class="{badge_cls}">{badge_txt}</span>',
         "</article>",
     ]

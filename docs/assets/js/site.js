@@ -8,7 +8,6 @@
 (function () {
   "use strict";
 
-  var REPO = "https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/";
   var STORAGE_KEY = "voryn-theme";
 
   function isDarkTheme() {
@@ -85,6 +84,9 @@
 
   function buildCard(app, index) {
     var live = typeof app.storeUrl === "string" && app.storeUrl.length > 0;
+    // Every app not listing repoUrl lives in the private CoreBundle monorepo
+    // — a link there would 404 for visitors, so it must never render.
+    var sourceIsPublic = typeof app.repoUrl === "string" && app.repoUrl.length > 0;
     var dark = isDarkTheme();
 
     var card = el("article", app.featured ? "app-card app-card--featured reveal"
@@ -106,10 +108,16 @@
 
     var chip = el("span", "chip", app.platform || app.genre);
 
-    var cta = el("a", "card-cta", live ? "Get it on Google Play ↗"
-                                       : "View the source ↗");
-    cta.href = live ? app.storeUrl
-                    : (app.repoUrl || REPO + (app.repo || app.id));
+    // No link at all when there's neither a live store page nor a public
+    // repo — a card with just the "coming soon" badge beats a 404.
+    var cta = null;
+    if (live) {
+      cta = el("a", "card-cta", "Get it on Google Play ↗");
+      cta.href = app.storeUrl;
+    } else if (sourceIsPublic) {
+      cta = el("a", "card-cta", "View the source ↗");
+      cta.href = app.repoUrl;
+    }
 
     var badge = el("span", live ? "badge badge-live" : "badge badge-soon",
                    live ? "Get it on Google Play" : "Coming soon on Google Play");
@@ -137,7 +145,7 @@
       }
 
       var actions = el("div", "card-actions");
-      actions.appendChild(cta);
+      if (cta) actions.appendChild(cta);
       actions.appendChild(badge);
       copy.appendChild(actions);
       card.appendChild(copy);
@@ -150,7 +158,7 @@
     card.appendChild(el("h3", null, app.name));
     card.appendChild(el("p", "tagline", app.tagline));
     card.appendChild(chip);
-    card.appendChild(cta);
+    if (cta) card.appendChild(cta);
     card.appendChild(badge);
     return card;
   }
