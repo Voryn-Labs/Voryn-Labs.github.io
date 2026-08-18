@@ -75,7 +75,7 @@ window.VORYN_APPS = [
     tagline: "Mumbai's dabbawala tiffin-sort puzzle.", storeUrl: null },
 
   /* ---------- Collection III — The Living Room ---------- */
-  { id: "vividorbit",  name: "VividOrbit",   genre: "live tv",    accent: "#2DD7C2", collection: "livingroom",
+  { id: "vividorbit",  name: "VividOrbit",   genre: "live tv",    accent: "#1B9C88", collection: "livingroom",
     repoUrl: "https://github.com/Voryn-Labs/VividOrbit",
     platform: "Android TV", featured: true,
     tagline: "A lightweight, fully offline live-TV and lineup manager for Android TV and Google TV. Renumber your channels the way you actually watch them, and manage the whole lineup from your phone over a QR code — nothing leaves your living room.",
