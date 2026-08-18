@@ -3,19 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Voryn Labs — Calm, fair puzzle games for Android</title>
-  <meta name="description" content="Voryn Labs is an independent studio making calm, fair puzzle games for Android — fourteen hand-crafted titles. No fail states. No dark patterns. No data sold.">
+  <title>Voryn Labs — Calm, fair apps for Android &amp; Android TV</title>
+  <meta name="description" content="Voryn Labs is an independent studio: twenty-two hand-crafted apps across three collections — puzzle games, games built for India, and VividOrbit for Android TV. No dark patterns. No accounts. No data sold.">
   <meta name="theme-color" content="#0E0D0B">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Voryn Labs — Calm, fair puzzle games for Android">
-  <meta property="og:description" content="Fourteen hand-crafted puzzle games. No fail states. No dark patterns. No data sold.">
+  <meta property="og:title" content="Voryn Labs — Calm, fair apps for Android &amp; Android TV">
+  <meta property="og:description" content="Twenty-two hand-crafted apps across three collections — puzzle games, games built for India, and VividOrbit for Android TV. No dark patterns. No data sold.">
   <meta property="og:image" content="assets/og.png">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E0D0B'/%3E%3Cpath d='M8 7l8 18 8-18' fill='none' stroke='%23C9A24B' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="assets/css/site.css?v=2">
-  <script>(function(){document.documentElement.classList.add("js");var s=localStorage.getItem("voryn-theme");var t=s||((window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches)?"light":"dark");document.documentElement.setAttribute("data-theme",t);})();</script>
+  <link rel="stylesheet" href="assets/css/site.css?v=3">
+  <script>
+    (function(){
+      document.documentElement.classList.add("js");
+      var t = localStorage.getItem("voryn-theme");
+      if (t === "dark" || t === "light") {
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -23,181 +31,339 @@
   <header class="site-nav" id="site-nav">
     <nav class="wrap" aria-label="Primary">
       <a class="wordmark" href="index.html">VORYN&nbsp;LABS</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-        <span class="bars" aria-hidden="true"></span>
-      </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#games">Games</a></li>
-        <li><a href="#why">Why Voryn Labs</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-      </ul>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light / dark theme" title="Toggle theme">
-        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#catalogue">Apps</a></li>
+          <li><a href="#collection-livingroom">Android TV</a></li>
+          <li><a href="#why">Why Voryn Labs</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light / dark theme" title="Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+            <span class="bars" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
     </nav>
   </header>
 
   <main id="main">
     <!-- ================= Hero ================= -->
     <section class="hero">
+      <svg class="hero-arch" viewBox="0 0 620 340" fill="none" aria-hidden="true" focusable="false">
+        <path d="M30 340V180C30 100 155 40 310 40s280 60 280 140v160" stroke="#C9A24B" stroke-opacity=".62" stroke-width="2.5"/>
+        <path d="M90 340V190c0-64 105-108 220-108s220 44 220 108v150" stroke="#C9A24B" stroke-opacity=".46" stroke-width="2"/>
+        <path d="M150 340V204c0-48 70-80 160-80s160 32 160 80v136" stroke="#C9A24B" stroke-opacity=".32" stroke-width="1.5"/>
+      </svg>
       <div class="wrap hero-inner">
-        <span class="eyebrow">Voryn Labs — The Lumen Series</span>
-        <h1>Small games.<br>Made with <span class="gold-ink">intent.</span></h1>
-        <p class="lede">Voryn Labs is an independent studio making calm, fair puzzle games for Android — fourteen hand-crafted titles, each completeable, honest, and free to try. No fail states. No dark patterns. No data sold.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-gold" href="#games">Browse the games ↓</a>
-          <a class="btn btn-outline" href="privacy.html">Our privacy promise</a>
+        <div class="hero-copy">
+          <span class="eyebrow">Voryn Labs — An independent studio</span>
+          <h1>Small apps.<br>Made with <span class="gold-ink">intent.</span></h1>
+          <p class="lede">Twenty-two hand-crafted apps across three collections — puzzle games, games built for India, and software for the living room. Each one honest, finished, and free to try. No dark patterns. No accounts. No data sold.</p>
+          <ul class="hero-stats" aria-label="Catalogue at a glance">
+            <li><strong>22</strong><span>Apps</span></li>
+            <li><strong>3</strong><span>Collections</span></li>
+            <li><strong>2</strong><span>Platforms</span></li>
+          </ul>
+          <div class="hero-ctas">
+            <a class="btn btn-gold" href="#catalogue">Browse the catalogue ↓</a>
+            <a class="btn btn-outline" href="#collection-livingroom">VividOrbit for TV</a>
+          </div>
+        </div>
+        <div class="hero-orbit" aria-hidden="true">
+          <img class="orbit-icon oi-1" src="assets/icons/decodo-dark.png" data-dark="assets/icons/decodo-dark.png" data-light="assets/icons/decodo-light.png" alt="" width="88" height="88" style="--accent:#E36C17" decoding="async">
+          <img class="orbit-icon oi-2" src="assets/icons/chaupar-dark.png" data-dark="assets/icons/chaupar-dark.png" data-light="assets/icons/chaupar-light.png" alt="" width="68" height="68" style="--accent:#B31235" decoding="async">
+          <img class="orbit-icon oi-3" src="assets/icons/circuitflow-dark.png" data-dark="assets/icons/circuitflow-dark.png" data-light="assets/icons/circuitflow-light.png" alt="" width="56" height="56" style="--accent:#1359D7" decoding="async">
+          <img class="orbit-icon oi-4" src="assets/icons/dabbastack-dark.png" data-dark="assets/icons/dabbastack-dark.png" data-light="assets/icons/dabbastack-light.png" alt="" width="78" height="78" style="--accent:#DA5904" decoding="async">
+          <img class="orbit-icon oi-5" src="assets/icons/gridlight-dark.png" data-dark="assets/icons/gridlight-dark.png" data-light="assets/icons/gridlight-light.png" alt="" width="58" height="58" style="--accent:#4D8B3A" decoding="async">
+          <img class="orbit-icon oi-6" src="assets/icons/vividorbit-dark.png" data-dark="assets/icons/vividorbit-dark.png" data-light="assets/icons/vividorbit-light.png" alt="" width="64" height="64" style="--accent:#2DD7C2" decoding="async">
+          <img class="orbit-icon oi-7" src="assets/icons/tileforge-dark.png" data-dark="assets/icons/tileforge-dark.png" data-light="assets/icons/tileforge-light.png" alt="" width="52" height="52" style="--accent:#C38416" decoding="async">
         </div>
       </div>
-      <svg class="hero-arch" viewBox="0 0 620 340" fill="none" aria-hidden="true" focusable="false">
-        <path d="M30 340V180C30 100 155 40 310 40s280 60 280 140v160" stroke="#C9A24B" stroke-opacity=".5" stroke-width="1.5"/>
-        <path d="M90 340V190c0-64 105-108 220-108s220 44 220 108v150" stroke="#C9A24B" stroke-opacity=".35" stroke-width="1.25"/>
-        <path d="M150 340V204c0-48 70-80 160-80s160 32 160 80v136" stroke="#C9A24B" stroke-opacity=".22" stroke-width="1"/>
-        <circle cx="310" cy="40" r="3" fill="#D8B25C" fill-opacity=".8"/>
-      </svg>
     </section>
 
-    <!-- ================= Apps grid ================= -->
-    <section id="games" aria-labelledby="games-heading">
+    <!-- ================= Catalogue ================= -->
+    <section id="catalogue" aria-labelledby="catalogue-heading">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow">The catalogue — 01–14</span>
-          <h2 id="games-heading">The games</h2>
-          <p class="lede">One studio, fourteen worlds — each a small, finished thing. Everything is free to try; a one-time Remove Ads purchase supports the studio.</p>
+          <span class="eyebrow">Everything we make</span>
+          <h2 id="catalogue-heading">The catalogue</h2>
+          <p class="lede">Twenty-two small, finished things in three collections — two of games, one of apps for the living room. Everything is free to try; a one-time Remove Ads purchase supports the studio.</p>
           <hr class="rule-gold" aria-hidden="true">
         </div>
 
-        <div class="apps-grid" id="apps-grid">
-          <article class="app-card" id="app-arroway" style="--accent:#6040E8">
-            <img class="app-icon" src="assets/icons/arroway-dark.png" data-dark="assets/icons/arroway-dark.png" data-light="assets/icons/arroway-light.png" alt="Arrow Escape — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">01</span>
-            <h3>Arrow Escape</h3>
-            <p class="tagline">Arrow escape puzzles. Fair, calm, no fail state.</p>
-            <span class="chip">arrow</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/arroway">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
-          <article class="app-card" id="app-circuitflow" style="--accent:#1359D7">
-            <img class="app-icon" src="assets/icons/circuitflow-dark.png" data-dark="assets/icons/circuitflow-dark.png" data-light="assets/icons/circuitflow-light.png" alt="CircuitFlow — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">02</span>
-            <h3>CircuitFlow</h3>
-            <p class="tagline">Connect-the-pairs flow puzzles. Zen and clean.</p>
-            <span class="chip">flow</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/circuitflow">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
-          <article class="app-card" id="app-decodo" style="--accent:#E36C17">
-            <img class="app-icon" src="assets/icons/decodo-dark.png" data-dark="assets/icons/decodo-dark.png" data-light="assets/icons/decodo-light.png" alt="Decodo — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">03</span>
-            <h3>Decodo</h3>
-            <p class="tagline">The daily color-code deduction — same code worldwide.</p>
-            <span class="chip">deduction</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/decodo">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
-          <article class="app-card" id="app-dropforge" style="--accent:#D23B71">
-            <img class="app-icon" src="assets/icons/dropforge-dark.png" data-dark="assets/icons/dropforge-dark.png" data-light="assets/icons/dropforge-light.png" alt="Dropforge — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">04</span>
-            <h3>Dropforge</h3>
-            <p class="tagline">Gem-merge physics, obsessively satisfying.</p>
-            <span class="chip">merge</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/dropforge">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
-          <article class="app-card" id="app-gemforge" style="--accent:#C8482E">
-            <img class="app-icon" src="assets/icons/gemforge-dark.png" data-dark="assets/icons/gemforge-dark.png" data-light="assets/icons/gemforge-light.png" alt="Gemforge — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">05</span>
-            <h3>Gemforge</h3>
-            <p class="tagline">Offline-first idle gem tycoon. Build your mine.</p>
-            <span class="chip">idle</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/gemforge">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
-          <article class="app-card" id="app-gridlight" style="--accent:#4D8B3A">
-            <img class="app-icon" src="assets/icons/gridlight-dark.png" data-dark="assets/icons/gridlight-dark.png" data-light="assets/icons/gridlight-light.png" alt="Gridlight — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">06</span>
-            <h3>Gridlight</h3>
-            <p class="tagline">Zen, collectible picross — one grid at a time.</p>
-            <span class="chip">nonogram</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/gridlight">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
-          <article class="app-card" id="app-minevault" style="--accent:#B37A22">
-            <img class="app-icon" src="assets/icons/minevault-dark.png" data-dark="assets/icons/minevault-dark.png" data-light="assets/icons/minevault-light.png" alt="MineVault — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">07</span>
-            <h3>MineVault</h3>
-            <p class="tagline">Modern no-guess Minesweeper. Every move fair.</p>
-            <span class="chip">minesweeper</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/minevault">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
-          <article class="app-card" id="app-orbshot" style="--accent:#167FA5">
-            <img class="app-icon" src="assets/icons/orbshot-dark.png" data-dark="assets/icons/orbshot-dark.png" data-light="assets/icons/orbshot-light.png" alt="Orbshot — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">08</span>
-            <h3>Orbshot</h3>
-            <p class="tagline">A crunchy, juice-heavy bubble shooter.</p>
-            <span class="chip">bubble</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/orbshot">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
-          <article class="app-card" id="app-recall" style="--accent:#B33D72">
-            <img class="app-icon" src="assets/icons/recall-dark.png" data-dark="assets/icons/recall-dark.png" data-light="assets/icons/recall-light.png" alt="Recall — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">09</span>
-            <h3>Recall</h3>
-            <p class="tagline">Memory and sequence pattern puzzles.</p>
-            <span class="chip">memory</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/recall">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
-          <article class="app-card" id="app-slidr" style="--accent:#BA7815">
-            <img class="app-icon" src="assets/icons/slidr-dark.png" data-dark="assets/icons/slidr-dark.png" data-light="assets/icons/slidr-light.png" alt="Slidr — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">10</span>
-            <h3>Slidr</h3>
-            <p class="tagline">Unblock slide puzzles. Par-perfect, no fail state.</p>
-            <span class="chip">slide</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/slidr">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
-          <article class="app-card" id="app-solitaire" style="--accent:#337557">
-            <img class="app-icon" src="assets/icons/solitaire-dark.png" data-dark="assets/icons/solitaire-dark.png" data-light="assets/icons/solitaire-light.png" alt="Solitaire — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">11</span>
-            <h3>Solitaire</h3>
-            <p class="tagline">Klondike, Spider and FreeCell — beautifully made.</p>
-            <span class="chip">card</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/solitaire">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
-          <article class="app-card" id="app-sortvault" style="--accent:#6752C8">
-            <img class="app-icon" src="assets/icons/sortvault-dark.png" data-dark="assets/icons/sortvault-dark.png" data-light="assets/icons/sortvault-light.png" alt="Sortvault — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">12</span>
-            <h3>Sortvault</h3>
-            <p class="tagline">A tactile, fair colour-sort puzzle.</p>
-            <span class="chip">sort</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/sortvault">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
-          <article class="app-card" id="app-tileforge" style="--accent:#C38416">
-            <img class="app-icon" src="assets/icons/tileforge-dark.png" data-dark="assets/icons/tileforge-dark.png" data-light="assets/icons/tileforge-light.png" alt="TileForge — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">13</span>
-            <h3>TileForge</h3>
-            <p class="tagline">2048-style tiles with permanent meta progression.</p>
-            <span class="chip">tiles</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/tileforge">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
-          <article class="app-card" id="app-wordvein" style="--accent:#176ABD">
-            <img class="app-icon" src="assets/icons/wordvein-dark.png" data-dark="assets/icons/wordvein-dark.png" data-light="assets/icons/wordvein-light.png" alt="Wordvein — app icon" width="128" height="128" loading="lazy">
-            <span class="app-index" aria-hidden="true">14</span>
-            <h3>Wordvein</h3>
-            <p class="tagline">Procedural word search and hunt.</p>
-            <span class="chip">word</span>
-            <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/wordvein">View the source ↗</a>
-            <span class="badge badge-soon">Coming soon on Google Play</span>
-          </article>
+        <!-- ---------- Collection I — The Lumen Series ---------- -->
+        <div class="collection" id="collection-lumen">
+          <header class="collection-head reveal">
+            <span class="collection-index" aria-hidden="true">I</span>
+            <div>
+              <h3 class="collection-name">The Lumen Series</h3>
+              <p class="collection-blurb">Fourteen quiet puzzle games — one design creed. Calm, fair, completeable.</p>
+            </div>
+            <span class="collection-count">Games · 14</span>
+          </header>
+          <div class="apps-grid" data-collection="lumen">
+            <!-- CARDS:lumen — generated by tools/render_cards.py -->
+            <article class="app-card" id="app-arroway" style="--accent:#6040E8">
+              <img class="app-icon" src="assets/icons/arroway-dark.png" data-dark="assets/icons/arroway-dark.png" data-light="assets/icons/arroway-light.png" alt="Vexlo — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">01</span>
+              <h3>Vexlo</h3>
+              <p class="tagline">Arrow escape puzzles. Fair, calm, no fail state.</p>
+              <span class="chip">arrow</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/arroway">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-circuitflow" style="--accent:#1359D7">
+              <img class="app-icon" src="assets/icons/circuitflow-dark.png" data-dark="assets/icons/circuitflow-dark.png" data-light="assets/icons/circuitflow-light.png" alt="CircuitFlow — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">02</span>
+              <h3>CircuitFlow</h3>
+              <p class="tagline">Connect-the-pairs flow puzzles. Zen and clean.</p>
+              <span class="chip">flow</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/circuitflow">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-decodo" style="--accent:#E36C17">
+              <img class="app-icon" src="assets/icons/decodo-dark.png" data-dark="assets/icons/decodo-dark.png" data-light="assets/icons/decodo-light.png" alt="Decodo — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">03</span>
+              <h3>Decodo</h3>
+              <p class="tagline">The daily color-code deduction — same code worldwide.</p>
+              <span class="chip">deduction</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/decodo">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-dropforge" style="--accent:#D23B71">
+              <img class="app-icon" src="assets/icons/dropforge-dark.png" data-dark="assets/icons/dropforge-dark.png" data-light="assets/icons/dropforge-light.png" alt="Dropforge — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">04</span>
+              <h3>Dropforge</h3>
+              <p class="tagline">Gem-merge physics, obsessively satisfying.</p>
+              <span class="chip">merge</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/dropforge">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-gemforge" style="--accent:#C8482E">
+              <img class="app-icon" src="assets/icons/gemforge-dark.png" data-dark="assets/icons/gemforge-dark.png" data-light="assets/icons/gemforge-light.png" alt="Gemforge — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">05</span>
+              <h3>Gemforge</h3>
+              <p class="tagline">Offline-first idle gem tycoon. Build your mine.</p>
+              <span class="chip">idle</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/gemforge">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-gridlight" style="--accent:#4D8B3A">
+              <img class="app-icon" src="assets/icons/gridlight-dark.png" data-dark="assets/icons/gridlight-dark.png" data-light="assets/icons/gridlight-light.png" alt="Gridlight — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">06</span>
+              <h3>Gridlight</h3>
+              <p class="tagline">Zen, collectible picross — one grid at a time.</p>
+              <span class="chip">nonogram</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/gridlight">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-minevault" style="--accent:#B37A22">
+              <img class="app-icon" src="assets/icons/minevault-dark.png" data-dark="assets/icons/minevault-dark.png" data-light="assets/icons/minevault-light.png" alt="MineVault — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">07</span>
+              <h3>MineVault</h3>
+              <p class="tagline">Modern no-guess Minesweeper. Every move fair.</p>
+              <span class="chip">minesweeper</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/minevault">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-orbshot" style="--accent:#167FA5">
+              <img class="app-icon" src="assets/icons/orbshot-dark.png" data-dark="assets/icons/orbshot-dark.png" data-light="assets/icons/orbshot-light.png" alt="Orbshot — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">08</span>
+              <h3>Orbshot</h3>
+              <p class="tagline">A crunchy, juice-heavy bubble shooter.</p>
+              <span class="chip">bubble</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/orbshot">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-recall" style="--accent:#B33D72">
+              <img class="app-icon" src="assets/icons/recall-dark.png" data-dark="assets/icons/recall-dark.png" data-light="assets/icons/recall-light.png" alt="Recall — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">09</span>
+              <h3>Recall</h3>
+              <p class="tagline">Memory and sequence pattern puzzles.</p>
+              <span class="chip">memory</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/recall">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-slidr" style="--accent:#BA7815">
+              <img class="app-icon" src="assets/icons/slidr-dark.png" data-dark="assets/icons/slidr-dark.png" data-light="assets/icons/slidr-light.png" alt="Slidr — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">10</span>
+              <h3>Slidr</h3>
+              <p class="tagline">Unblock slide puzzles. Par-perfect, no fail state.</p>
+              <span class="chip">slide</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/slidr">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-solitaire" style="--accent:#337557">
+              <img class="app-icon" src="assets/icons/solitaire-dark.png" data-dark="assets/icons/solitaire-dark.png" data-light="assets/icons/solitaire-light.png" alt="Solitaire — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">11</span>
+              <h3>Solitaire</h3>
+              <p class="tagline">Klondike, Spider and FreeCell — beautifully made.</p>
+              <span class="chip">card</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/solitaire">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-sortvault" style="--accent:#6752C8">
+              <img class="app-icon" src="assets/icons/sortvault-dark.png" data-dark="assets/icons/sortvault-dark.png" data-light="assets/icons/sortvault-light.png" alt="Sortvault — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">12</span>
+              <h3>Sortvault</h3>
+              <p class="tagline">A tactile, fair colour-sort puzzle.</p>
+              <span class="chip">sort</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/sortvault">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-tileforge" style="--accent:#C38416">
+              <img class="app-icon" src="assets/icons/tileforge-dark.png" data-dark="assets/icons/tileforge-dark.png" data-light="assets/icons/tileforge-light.png" alt="TileForge — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">13</span>
+              <h3>TileForge</h3>
+              <p class="tagline">2048-style tiles with permanent meta progression.</p>
+              <span class="chip">tiles</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/tileforge">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-wordvein" style="--accent:#176ABD">
+              <img class="app-icon" src="assets/icons/wordvein-dark.png" data-dark="assets/icons/wordvein-dark.png" data-light="assets/icons/wordvein-light.png" alt="Wordvein — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">14</span>
+              <h3>Wordvein</h3>
+              <p class="tagline">Procedural word search and hunt.</p>
+              <span class="chip">word</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/wordvein">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+          </div>
         </div>
-        <noscript><p class="grid-fallback">All fourteen games are listed above — no JavaScript needed. Store links appear here as titles launch on Google Play.</p></noscript>
+
+        <!-- ---------- Collection II — The India Collection ---------- -->
+        <div class="collection" id="collection-india">
+          <header class="collection-head reveal">
+            <span class="collection-index" aria-hidden="true">II</span>
+            <div>
+              <h3 class="collection-name">The India Collection</h3>
+              <p class="collection-blurb">Seven games built for India — daily Hindi words, cricket trivia, Bollywood chains, rummy and the family function.</p>
+            </div>
+            <span class="collection-count">Games · 7</span>
+          </header>
+          <div class="apps-grid" data-collection="india">
+            <!-- CARDS:india — generated by tools/render_cards.py -->
+            <article class="app-card" id="app-aksharword" style="--accent:#C77E54">
+              <img class="app-icon" src="assets/icons/aksharword-dark.png" data-dark="assets/icons/aksharword-dark.png" data-light="assets/icons/aksharword-light.png" alt="Aksharword — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">01</span>
+              <h3>Aksharword</h3>
+              <p class="tagline">Daily Hindi akshara deduction — the same word worldwide.</p>
+              <span class="chip">hindi word</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/indiaapps/aksharword">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-chaupar" style="--accent:#B31235">
+              <img class="app-icon" src="assets/icons/chaupar-dark.png" data-dark="assets/icons/chaupar-dark.png" data-light="assets/icons/chaupar-light.png" alt="Chaupar — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">02</span>
+              <h3>Chaupar</h3>
+              <p class="tagline">The classic Indian cross-and-circle board game.</p>
+              <span class="chip">board</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/indiaapps/chaupar">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-geetchain" style="--accent:#C9903A">
+              <img class="app-icon" src="assets/icons/geetchain-dark.png" data-dark="assets/icons/geetchain-dark.png" data-light="assets/icons/geetchain-light.png" alt="Geetchain — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">03</span>
+              <h3>Geetchain</h3>
+              <p class="tagline">Daily Bollywood akshara chain — link song to song.</p>
+              <span class="chip">bollywood</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/indiaapps/geetchain">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-gullyquiz" style="--accent:#1F7A52">
+              <img class="app-icon" src="assets/icons/gullyquiz-dark.png" data-dark="assets/icons/gullyquiz-dark.png" data-light="assets/icons/gullyquiz-light.png" alt="Gullyquiz — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">04</span>
+              <h3>Gullyquiz</h3>
+              <p class="tagline">Daily cricket trivia, plus endless practice.</p>
+              <span class="chip">cricket</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/indiaapps/gullyquiz">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-rummyfold" style="--accent:#2F8F63">
+              <img class="app-icon" src="assets/icons/rummyfold-dark.png" data-dark="assets/icons/rummyfold-dark.png" data-light="assets/icons/rummyfold-light.png" alt="Rummyfold — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">05</span>
+              <h3>Rummyfold</h3>
+              <p class="tagline">Free practice 13-card rummy. No wagering, no cash, ever.</p>
+              <span class="chip">rummy</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/indiaapps/rummyfold">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-bhagobeta" style="--accent:#E8A33D">
+              <img class="app-icon" src="assets/icons/bhagobeta-dark.png" data-dark="assets/icons/bhagobeta-dark.png" data-light="assets/icons/bhagobeta-light.png" alt="Aunty&#x27;s Chase — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">06</span>
+              <h3>Aunty&#x27;s Chase</h3>
+              <p class="tagline">Sprint through the family function, dodge the relatives.</p>
+              <span class="chip">runner</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/india_games/bhagobeta">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+            <article class="app-card" id="app-dabbastack" style="--accent:#DA5904">
+              <img class="app-icon" src="assets/icons/dabbastack-dark.png" data-dark="assets/icons/dabbastack-dark.png" data-light="assets/icons/dabbastack-light.png" alt="Dabba Jam — app icon" width="128" height="128" loading="lazy">
+              <span class="app-index" aria-hidden="true">07</span>
+              <h3>Dabba Jam</h3>
+              <p class="tagline">Mumbai&#x27;s dabbawala tiffin-sort puzzle.</p>
+              <span class="chip">tiffin sort</span>
+              <a class="card-cta" href="https://github.com/Voryn-Labs/CoreBundle/tree/main/apps/india_games/dabbastack">View the source ↗</a>
+              <span class="badge badge-soon">Coming soon on Google Play</span>
+            </article>
+          </div>
+        </div>
+
+        <!-- ---------- Collection III — The Living Room ---------- -->
+        <div class="collection" id="collection-livingroom">
+          <header class="collection-head reveal">
+            <span class="collection-index" aria-hidden="true">III</span>
+            <div>
+              <h3 class="collection-name">The Living Room</h3>
+              <p class="collection-blurb">Software for the biggest screen in the house. Offline-first, no accounts, no telemetry.</p>
+            </div>
+            <span class="collection-count">Apps &amp; utilities · 1</span>
+          </header>
+          <div class="apps-grid" data-collection="livingroom">
+            <!-- CARDS:livingroom — generated by tools/render_cards.py -->
+            <article class="app-card app-card--featured" id="app-vividorbit" style="--accent:#2DD7C2">
+              <div class="card-brand">
+                <img class="app-icon" src="assets/icons/vividorbit-dark.png" data-dark="assets/icons/vividorbit-dark.png" data-light="assets/icons/vividorbit-light.png" alt="VividOrbit — app icon" width="128" height="128" loading="lazy">
+                <span class="chip">Android TV</span>
+              </div>
+              <div class="card-copy">
+                <h3>VividOrbit</h3>
+                <p class="tagline">A lightweight, fully offline live-TV and lineup manager for Android TV and Google TV. Renumber your channels the way you actually watch them, and manage the whole lineup from your phone over a QR code — nothing leaves your living room.</p>
+                <ul class="card-features">
+                <li><strong>Custom channel numbering</strong> — reorder to 1..N, with atomic swaps so numbers never collide.</li>
+                <li><strong>Phone as remote</strong> — a local web UI over QR code; edit, reorder and tune from your phone.</li>
+                <li><strong>Now / Next EPG</strong> — live programme progress that collapses cleanly when a source has no data.</li>
+                <li><strong>100% offline</strong> — zero cloud dependency, zero accounts, zero telemetry.</li>
+                </ul>
+                <div class="card-actions">
+                  <a class="card-cta" href="https://github.com/Voryn-Labs/VividOrbit">View the source ↗</a>
+                  <span class="badge badge-soon">Coming soon on Google Play</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <noscript><p class="grid-fallback">The full catalogue is listed above — no JavaScript needed. Store links appear here as titles launch on Google Play.</p></noscript>
       </div>
     </section>
 
@@ -213,12 +379,12 @@
           <li class="pillar reveal">
             <span class="num" aria-hidden="true">01</span>
             <h3>Calm by design</h3>
-            <p>No fail states. No punishing timers. Games you can set down and pick back up without penalty — every title is completeable.</p>
+            <p>No fail states, no punishing timers, no nagging. Software you can set down and pick back up without penalty — every game is completeable, every app stays out of your way.</p>
           </li>
           <li class="pillar reveal">
             <span class="num" aria-hidden="true">02</span>
             <h3>Fair by default</h3>
-            <p>No-guess logic in every puzzle. Deterministic rules, no pay-to-win, no artificial scarcity. What you earn is earned.</p>
+            <p>No-guess logic in every puzzle. Deterministic rules, no pay-to-win, no artificial scarcity — and where an app can work offline, it works offline. What you earn is earned; what you own is yours.</p>
           </li>
           <li class="pillar reveal">
             <span class="num" aria-hidden="true">03</span>
@@ -235,7 +401,7 @@
         <span class="eyebrow">The studio</span>
         <h2 id="about-heading">About Voryn Labs</h2>
         <hr class="rule-gold" aria-hidden="true">
-        <p>Voryn Labs is an independent studio making quiet, considered puzzle games for Android. Fourteen titles, one design creed: calm, fair, honest. We build for the long haul — small games that respect your time, your data, and your attention.</p>
+        <p>Voryn Labs is an independent studio making quiet, considered software for Android. We started with games — the Lumen Series, then the India Collection — and we build across categories now: the Living Room collection opens with VividOrbit for Android TV, and more will follow. One design creed throughout, whatever the category: calm, fair, honest. We build for the long haul, and we respect your time, your data, and your attention.</p>
         <div class="about-contact">
           <div><span>Contact</span><br><a href="mailto:support@vorynlabs.com">support@vorynlabs.com</a></div>
           <div><span>Source</span><br><a href="https://github.com/Voryn-Labs/CoreBundle">github.com/Voryn-Labs/CoreBundle</a></div>
@@ -257,7 +423,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/apps.js?v=2"></script>
-  <script src="assets/js/site.js?v=2"></script>
+  <script src="assets/js/apps.js?v=3"></script>
+  <script src="assets/js/site.js?v=3"></script>
 </body>
 </html>
