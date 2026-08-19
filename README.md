@@ -1,8 +1,16 @@
-# Voryn Labs — Games Hub
+# Voryn Labs — studio site
 
-> **Live site**: [voryn-labs.github.io/vorynlabs-games](https://voryn-labs.github.io/vorynlabs-games/)
+> **Live site**: [voryn-labs.github.io](https://voryn-labs.github.io/)
+> **Contact**: [appsvorynlabs@gmail.com](mailto:appsvorynlabs@gmail.com)
 
-Static landing page for the **Voryn Labs** indie game studio. Fourteen hand-crafted Android puzzle games — calm, fair, no fail states, no dark patterns.
+Independent studio site for **Voryn Labs**. Games and other software — not a games-only hub.
+
+Catalogue is split on one page:
+
+- **Games** — The Lumen Series, The India Collection
+- **Apps** — The Living Room (VividOrbit and whatever comes next)
+
+Source of truth for copy/icons also lives in `CoreBundle/docs/`. Sync that folder here to publish.
 
 ---
 
@@ -10,59 +18,13 @@ Static landing page for the **Voryn Labs** indie game studio. Fourteen hand-craf
 
 | Layer | Choice |
 |---|---|
-| Hosting | GitHub Pages (served from `/docs`) |
+| Hosting | GitHub Pages (org site, served from `/docs`) |
 | Languages | HTML · Vanilla CSS · Vanilla JS |
 | Fonts | Cormorant Garamond (display) · Outfit (UI) via Google Fonts |
-| Build step | None — zero build tooling |
+| Build step | None |
 
 ---
 
-## Structure
+## Update the catalogue
 
-```
-docs/
-├── index.html          # Main landing page
-├── privacy.html        # Privacy policy
-├── 404.html            # Custom 404
-└── assets/
-    ├── css/site.css    # Single stylesheet (light + dark theme vars)
-    ├── js/
-    │   ├── apps.js     # ← THE single update point for game registry
-    │   └── site.js     # Theme toggle, grid renderer, scroll reveal
-    └── icons/
-        ├── <app>.png           # Default/fallback icon
-        ├── <app>-dark.png      # Icon used in dark theme
-        └── <app>-light.png     # Icon used in light theme
-tools/
-├── import_downloaded_icons.py  # Copy new icons from Downloads → docs/assets/icons/
-├── extract_site_icons.py       # Verify icon completeness
-└── validate_site.py            # Lint HTML links and assets
-```
-
----
-
-## Adding / updating a game
-
-1. **Update registry** — open `docs/assets/js/apps.js` and set `storeUrl` to the Play Store URL. The card badge and CTA flip automatically.
-2. **Update icons** — drop `<app>-dark.png` and `<app>-light.png` into `docs/assets/icons/`.
-3. Commit & push — GitHub Pages deploys in ~60 seconds.
-
----
-
-## Theme system
-
-- On first visit the site reads `window.matchMedia("(prefers-color-scheme: light)")` and sets `data-theme` on `<html>`.
-- The Sun/Moon toggle in the nav overrides the system preference and persists to `localStorage`.
-- All CSS colours are CSS custom properties; `[data-theme="light"]` / `[data-theme="dark"]` override them.
-
----
-
-## Source code
-
-Game source lives in the mono-repo: [github.com/Voryn-Labs/CoreBundle](https://github.com/Voryn-Labs/CoreBundle)
-
----
-
-## License
-
-Website code © Voryn Labs. Game assets are proprietary.
+Edit `docs/assets/js/apps.js`, then run `python3 tools/render_cards.py` and `python3 tools/validate_site.py` from CoreBundle before syncing `docs/` here.
