@@ -77,6 +77,8 @@ window.VORYN_APPS = [
   /* ---------- Collection III — The Living Room ---------- */
   { id: "vividorbit",  name: "VividOrbit",   genre: "live tv",    accent: "#1B9C88", collection: "livingroom",
     repoUrl: "https://github.com/Voryn-Labs/VividOrbit",
+    privacyUrl: "vividorbit-privacy.html",
+    bannerUrl: "assets/img/vividorbit-banner.png",
     platform: "Android TV", featured: true,
     tagline: "A lightweight, fully offline live-TV and lineup manager for Android TV and Google TV. Renumber your channels the way you actually watch them, and manage the whole lineup from your phone over a QR code — nothing leaves your living room.",
     features: [
