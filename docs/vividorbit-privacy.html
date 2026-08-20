@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — VividOrbit — Voryn Labs</title>
+  <meta name="description" content="Privacy policy for VividOrbit Live TV Guide for Android TV: zero data collection, zero tracking, zero ads. 100% private and local.">
+  <meta name="theme-color" content="#0E0D0B">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privacy Policy — VividOrbit — Voryn Labs">
+  <meta property="og:description" content="Zero data collection, zero tracking, zero ads. 100% private and local Live TV channel manager.">
+  <meta property="og:image" content="assets/og.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E0D0B'/%3E%3Cpath d='M8 7l8 18 8-18' fill='none' stroke='%23C9A24B' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css?v=3">
+  <script>
+    (function(){
+      document.documentElement.classList.add("js");
+      var t = localStorage.getItem("voryn-theme");
+      if (t === "dark" || t === "light") {
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-nav">
+    <nav class="wrap" aria-label="Primary">
+      <a class="wordmark" href="index.html">VORYN&nbsp;LABS</a>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html#catalogue">Apps</a></li>
+          <li><a href="index.html#why">Why Voryn Labs</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light / dark theme" title="Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+            <span class="bars" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="legal wrap" aria-labelledby="policy-heading">
+      <a class="back-link" href="index.html">← Home</a>
+      <h1 id="policy-heading">Privacy Policy — VividOrbit</h1>
+      <p class="effective"><em>Effective date: August 20, 2026. This policy applies specifically to the <strong>VividOrbit</strong> application for Android TV and Google TV (Package: <code>com.vorynlabs.vividorbit</code>).</em></p>
+
+      <h2>1. Overview</h2>
+      <p>VividOrbit is an open-source, privacy-first Live TV channel management and guide application developed by Voryn Labs. We believe your entertainment habits, channel choices, and viewing data belong strictly to you.</p>
+
+      <h2>2. Zero Data Collection & Zero Tracking</h2>
+      <p><strong>VividOrbit does NOT collect, store, transmit, or monetize any user data.</strong></p>
+      <ul>
+        <li><strong>No Personal Identifiable Information (PII):</strong> We do not collect names, email addresses, phone numbers, location, or device identifiers.</li>
+        <li><strong>No Telemetry or Analytics:</strong> VividOrbit contains zero analytics SDKs, zero crash trackers, and zero advertising libraries.</li>
+        <li><strong>No External Server Communication:</strong> No user data, channel selections, or preferences are ever uploaded to cloud servers.</li>
+      </ul>
+
+      <h2>3. Device Permissions & Purpose</h2>
+      <p>VividOrbit requests only the minimal local permissions needed to function on Android TV:</p>
+      <ul>
+        <li><code>READ_TV_LISTINGS</code> & <code>READ_EPG_DATA</code>: Read installed TV tuner channel lists and Electronic Program Guide (EPG) metadata provided by your local TV tuner hardware.</li>
+        <li><code>INTERNET</code> & <code>ACCESS_NETWORK_STATE</code>: Used solely for the optional <strong>Phone Setup</strong> feature. When activated, the app runs a private, temporary HTTP server on your local home Wi-Fi network (LAN) so you can reorder channels from a phone browser. No data ever leaves your home network.</li>
+      </ul>
+
+      <h2>4. Local Phone Setup Server</h2>
+      <p>When you open Phone Setup, a lightweight web server is temporarily launched on your TV box. The web page is accessible only within your private local Wi-Fi network and is protected by a high-entropy session token. The server immediately shuts down when Phone Setup is closed or when the app is exited.</p>
+
+      <h2>5. Open Source & Third-Party Components</h2>
+      <p>VividOrbit is built with open-source components from the <em>Android Open Source Project (AOSP)</em> under the Apache License 2.0, the <em>Mochitif Leanback Engine</em>, and the <em>ZXing</em> QR library. None of these libraries collect or transmit analytics.</p>
+
+      <h2>6. Children's Privacy</h2>
+      <p>VividOrbit is not directed to children under 13 and collects zero personal data from any user.</p>
+
+      <h2>7. Contact</h2>
+      <p>Voryn Labs — <strong><a href="mailto:appsvorynlabs@gmail.com">appsvorynlabs@gmail.com</a></strong>. We are committed to transparency and open-source integrity.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="wordmark" href="index.html">VORYN&nbsp;LABS</a>
+      <ul class="footer-links">
+        <li><a href="mailto:appsvorynlabs@gmail.com">appsvorynlabs@gmail.com</a></li>
+        <li><a href="https://github.com/Voryn-Labs/VividOrbit">GitHub (VividOrbit)</a></li>
+        <li><a href="privacy.html">Studio Privacy Policy</a></li>
+      </ul>
+      <p class="copyright">© <span id="year">2026</span> Voryn Labs</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js?v=3"></script>
+</body>
+</html>
