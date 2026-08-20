@@ -95,8 +95,9 @@
     card.style.setProperty("--accent", app.accent);
 
     var icon = el("img", "app-icon");
-    var darkSrc = "assets/icons/" + app.id + "-dark.png";
-    var lightSrc = "assets/icons/" + app.id + "-light.png";
+    var cacheBust = "?v=" + (app.id === "vividorbit" ? "3" : "1");
+    var darkSrc = "assets/icons/" + app.id + "-dark.png" + cacheBust;
+    var lightSrc = "assets/icons/" + app.id + "-light.png" + cacheBust;
 
     icon.src = dark ? darkSrc : lightSrc;
     icon.setAttribute("data-dark", darkSrc);
@@ -117,6 +118,8 @@
     } else if (sourceIsPublic) {
       cta = el("a", "card-cta", "View the source ↗");
       cta.href = app.repoUrl;
+      cta.target = "_blank";
+      cta.rel = "noopener";
     }
 
     var badge = el("span", live ? "badge badge-live" : "badge badge-soon",
@@ -125,13 +128,43 @@
     if (app.featured) {
       // Spotlight layout: brand column + copy column with feature bullets.
       var brand = el("div", "card-brand");
-      brand.appendChild(icon);
+      if (app.privacyUrl) {
+        var iconLink = el("a");
+        iconLink.href = app.privacyUrl;
+        iconLink.title = "View " + app.name + " details & privacy policy";
+        iconLink.appendChild(icon);
+        brand.appendChild(iconLink);
+      } else {
+        brand.appendChild(icon);
+      }
       brand.appendChild(chip);
       card.appendChild(brand);
 
       var copy = el("div", "card-copy");
-      copy.appendChild(el("h3", null, app.name));
+      if (app.privacyUrl) {
+        var h3 = el("h3");
+        var h3Link = el("a", null, app.name);
+        h3Link.href = app.privacyUrl;
+        h3Link.style.color = "inherit";
+        h3Link.style.textDecoration = "none";
+        h3.appendChild(h3Link);
+        copy.appendChild(h3);
+      } else {
+        copy.appendChild(el("h3", null, app.name));
+      }
       copy.appendChild(el("p", "tagline", app.tagline));
+
+      if (app.bannerUrl) {
+        var bannerLink = el("a", "card-banner-link");
+        bannerLink.href = app.privacyUrl || app.repoUrl || "#";
+        bannerLink.title = "Click to view " + app.name + " details & privacy policy";
+        var bannerImg = el("img", "card-banner-img");
+        bannerImg.src = app.bannerUrl;
+        bannerImg.alt = app.name + " Android TV Banner";
+        bannerImg.loading = "lazy";
+        bannerLink.appendChild(bannerImg);
+        copy.appendChild(bannerLink);
+      }
 
       if (Array.isArray(app.features) && app.features.length) {
         var list = el("ul", "card-features");
@@ -145,6 +178,11 @@
       }
 
       var actions = el("div", "card-actions");
+      if (app.privacyUrl) {
+        var privCta = el("a", "card-cta", "Privacy & Details ↗");
+        privCta.href = app.privacyUrl;
+        actions.appendChild(privCta);
+      }
       if (cta) actions.appendChild(cta);
       actions.appendChild(badge);
       copy.appendChild(actions);

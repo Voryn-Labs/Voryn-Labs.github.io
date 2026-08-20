@@ -38,35 +38,57 @@ def card_html(app: dict, index: int, indent: str = " " * 12) -> str:
     badge_txt = "Get it on Google Play" if live else "Coming soon on Google Play"
     chip = esc.get("platform") or esc["genre"]
 
-    icon = (f'<img class="app-icon" src="assets/icons/{app_id}-dark.png"'
-            f' data-dark="assets/icons/{app_id}-dark.png"'
-            f' data-light="assets/icons/{app_id}-light.png"'
+    cache_bust = "?v=3" if app_id == "vividorbit" else "?v=1"
+    icon = (f'<img class="app-icon" src="assets/icons/{app_id}-dark.png{cache_bust}"'
+            f' data-dark="assets/icons/{app_id}-dark.png{cache_bust}"'
+            f' data-light="assets/icons/{app_id}-light.png{cache_bust}"'
             f' alt="{esc["name"]} — app icon" width="128" height="128" loading="lazy">')
 
-    cta_line = (f'<a class="card-cta" href="{html.escape(href, quote=True)}">{cta}</a>'
+    cta_line = (f'<a class="card-cta" href="{html.escape(href, quote=True)}" target="_blank" rel="noopener">{cta}</a>'
                 if show_cta else None)
+    privacy_cta = (f'<a class="card-cta" href="{html.escape(app["privacyUrl"], quote=True)}">Privacy &amp; Details ↗</a>'
+                   if app.get("privacyUrl") else None)
 
     if app.get("featured"):
         features = []
         for label, rest in app.get("features", []):
             features.append(f'    <li><strong>{html.escape(label)}</strong> '
                             f'— {html.escape(rest)}</li>')
+
+        brand_inner = f'    <a href="{html.escape(app["privacyUrl"], quote=True)}" title="View {esc["name"]} details &amp; privacy policy">{icon}</a>' if app.get("privacyUrl") else f'    {icon}'
+        title_inner = f'<h3><a href="{html.escape(app["privacyUrl"], quote=True)}" style="color:inherit; text-decoration:none;">{esc["name"]}</a></h3>' if app.get("privacyUrl") else f'<h3>{esc["name"]}</h3>'
+        banner_block = []
+        if app.get("bannerUrl"):
+            b_href = html.escape(app.get("privacyUrl") or app.get("repoUrl") or "#", quote=True)
+            banner_block = [
+                f'    <a href="{b_href}" class="card-banner-link" title="Click to view {esc["name"]} details &amp; privacy policy">',
+                f'      <img src="{html.escape(app["bannerUrl"], quote=True)}" alt="{esc["name"]} Android TV Banner" class="card-banner-img" loading="lazy">',
+                f'    </a>'
+            ]
+
+        actions_list = []
+        if privacy_cta:
+            actions_list.append(f'      {privacy_cta}')
+        if cta_line:
+            actions_list.append(f'      {cta_line}')
+        actions_list.append(f'      <span class="{badge_cls}">{badge_txt}</span>')
+
         lines = [
             f'<article class="app-card app-card--featured" id="app-{app_id}"'
             f' style="--accent:{esc["accent"]}">',
             '  <div class="card-brand">',
-            f'    {icon}',
+            brand_inner,
             f'    <span class="chip">{chip}</span>',
             '  </div>',
             '  <div class="card-copy">',
-            f'    <h3>{esc["name"]}</h3>',
+            f'    {title_inner}',
             f'    <p class="tagline">{esc["tagline"]}</p>',
+            *banner_block,
             '    <ul class="card-features">',
             *features,
             '    </ul>',
             '    <div class="card-actions">',
-            *([f'      {cta_line}'] if cta_line else []),
-            f'      <span class="{badge_cls}">{badge_txt}</span>',
+            *actions_list,
             '    </div>',
             '  </div>',
             '</article>',
