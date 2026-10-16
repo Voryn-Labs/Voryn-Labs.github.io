@@ -32,3 +32,24 @@ Edit `docs/assets/js/apps.js`, then run `python3 tools/render_cards.py` and `pyt
 Cloudified product content: `docs/cloudified.html`, `docs/cloudified-privacy.html`, and
 `docs/assets/css/cloudified.css` and `docs/assets/js/cloudified.js`. Its feature on the homepage is separate from the
 22-title Android registry, whose existing generator and entries remain unchanged.
+
+
+## Website analytics
+
+Cloudflare Web Analytics can collect website visits/page views and performance
+metrics while hosting stays on GitHub Pages. It does not instrument the apps.
+Activation needs the real public token from Cloudflare → Web Analytics → Manage
+site for `voryn-labs.github.io`; never use a management API key or login cookie.
+
+```sh
+python3 tools/configure_analytics.py --token PUBLIC_BEACON_TOKEN
+python3 tools/configure_analytics.py --check
+```
+
+Review the website privacy disclosure and deploy the resulting HTML. The helper
+updates all root HTML pages with one official deferred beacon each. Remove it with
+`python3 tools/configure_analytics.py --disable` and redeploy. Statistics begin at
+activation; historical visits cannot be recovered. Sign in to Cloudflare → Web
+Analytics to view the private dashboard. No Actions schedule or analytics artifact
+storage is needed. The deployed site uses the account owner’s public collection token; management
+credentials stay out of this repository.
