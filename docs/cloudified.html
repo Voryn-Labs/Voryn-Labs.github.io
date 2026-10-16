@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>Cloudified — Original iPhone backups · Voryn Labs</title>
+ <meta name="description" content="Original photo and video backup for iPhone. Independent Google Photos and Telegram queues. Cloudified by Voryn Labs.">
+ <meta name="theme-color" content="#0E0D0B"><meta property="og:title" content="Cloudified by Voryn Labs"><meta property="og:type" content="website"><meta property="og:image" content="https://voryn-labs.github.io/assets/icons/cloudified.png"><meta property="og:description" content="Your originals. Two destinations. A focused iPhone backup app.">
+ <link rel="canonical" href="https://voryn-labs.github.io/cloudified.html"><link rel="icon" href="assets/icons/cloudified.png">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap">
+ <link rel="stylesheet" href="assets/css/site.css?v=3"><link rel="stylesheet" href="assets/css/cloudified.css">
+<script>try { var theme = localStorage.getItem("voryn-theme"); if (theme === "light" || theme === "dark") document.documentElement.setAttribute("data-theme", theme); } catch (_) {}</script>
+</head>
+<body class="cloudified-page">
+ <a class="skip-link" href="#main">Skip to content</a>
+ <div class="wrap">
+  <header class="product-nav"><a class="studio-lockup" href="index.html"><img src="assets/voryn-mark.png" width="32" height="32" alt="">Voryn Labs</a><nav class="product-nav-actions" aria-label="Page controls"><a href="https://github.com/Voryn-Labs/Cloudified">GitHub ↗</a><button class="theme-toggle" id="theme-toggle" aria-label="Switch color theme" title="Switch color theme"><svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"></path></svg><svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.5 13.2A8.5 8.5 0 0 1 10.8 3.5a8.5 8.5 0 1 0 9.7 9.7Z"></path></svg></button></nav></header>
+  <main id="main">
+   <section class="product-hero" aria-labelledby="product-title">
+    <div><span class="eyebrow">Cloudified · iPhone · v0.1</span><h1 id="product-title">Your originals.<br>Two destinations.</h1>
+     <p class="lede">Back up photos and videos to Google Photos, Telegram, or both. A focused uploader that keeps each destination moving independently.</p>
+     <div class="product-actions"><a class="btn btn-gold" href="#install">Get Cloudified</a><a href="https://github.com/Voryn-Labs/Cloudified">Explore the code ↗</a></div>
+    </div><img class="product-icon" src="assets/icons/cloudified.png" alt="Cloudified mint C icon" width="200" height="200">
+   </section>
+   <section class="product-section" aria-labelledby="features"><span class="eyebrow">Built around your backup</span><h2 id="features">Keep the original. Know what is saved.</h2>
+    <dl class="product-facts"><div><dt>Original files</dt><dd>Photos and videos stay uncompressed. Live Photo choices are explicit; Telegram preserves both original components and their association metadata.</dd></div><div><dt>Separate progress</dt><dd>See photo and video counts for each destination, measured file progress, and clear reasons when an item needs attention.</dd></div><div><dt>Recover before retrying</dt><dd>Local receipts record confirmed content. Uncertain sends are checked before another upload, with bounded automatic attempts.</dd></div><div><dt>A little less screen</dt><dd>A quiet Keep Awake mode for foreground backups, light and night themes, and small thumbnails only when you need to identify a problem file.</dd></div></dl>
+   </section>
+   <section class="product-section" id="install" aria-labelledby="install-title"><span class="eyebrow">Choose how you run it</span><h2 id="install-title">Your iPhone. Your signing method.</h2>
+    <p class="install-intro">Add the Voryn Labs source. Choose Cloudified in your installer and follow its signing or import steps.</p>
+    <nav class="installer-links" aria-label="Add Voryn Labs source"><a class="installer-link" href="feather://source/https://raw.githubusercontent.com/Voryn-Labs/Cloudified-Source/main/source.json"><span class="installer-monogram" aria-hidden="true">F</span><span>Feather</span><span class="installer-arrow" aria-hidden="true">↗</span></a>
+<a class="installer-link" href="sidestore://source?url=https%3A%2F%2Fraw.githubusercontent.com%2FVoryn-Labs%2FCloudified-Source%2Fmain%2Fsource.json"><span class="installer-monogram" aria-hidden="true">S</span><span>SideStore</span><span class="installer-arrow" aria-hidden="true">↗</span></a>
+<a class="installer-link" href="altstore://source?url=https%3A%2F%2Fraw.githubusercontent.com%2FVoryn-Labs%2FCloudified-Source%2Fmain%2Fsource.json"><span class="installer-monogram" aria-hidden="true">A</span><span>AltStore Classic</span><span class="installer-arrow" aria-hidden="true">↗</span></a>
+<a class="installer-link" href="livecontainer://source?url=https%3A%2F%2Fraw.githubusercontent.com%2FVoryn-Labs%2FCloudified-Source%2Fmain%2Fsource.json"><span class="installer-monogram" aria-hidden="true">LC</span><span>LiveContainer</span><span class="installer-arrow" aria-hidden="true">↗</span></a></nav>
+    <div class="install-utilities"><a id="download-ipa" href="https://github.com/Voryn-Labs/Cloudified-Source/releases/download/ci-run-38920202426-untested/Cloudified-unsigned.ipa">Download IPA ↗</a><button id="copy-source" type="button">Copy source URL</button><span id="source-copy-status" role="status"></span></div>
+    <p class="install-hint">Open on your iPhone with your chosen installer installed. LiveContainer source support requires a recent version. AltStore Classic is supported; AltStore PAL cannot install this unsigned IPA.</p>
+    <details class="install-details"><summary>Setup &amp; installation notes</summary>
+    <ol class="installation"><li><strong>Feather, SideStore or another compatible signer</strong><p>Requires iOS 26 or later. Import the unsigned IPA and sign it using your own certificate or installer. Keep the public bundle ID, com.vorynlabs.cloudified, consistent across updates.</p></li><li><strong>LiveContainer</strong><p>Import the IPA into a supported LiveContainer version. Cloudified uses foreground backup there; keep the guest open. Background relaunch is not promised.</p></li><li><strong>Link your destinations</strong><p>Allow Photos access, connect your Google account and/or Telegram account, then map a private Telegram channel. Each destination can be enabled independently.</p></li></ol>
+    <p>Add the source manually if your installer does not open:</p><code class="source-address" id="source-url" tabindex="0">https://raw.githubusercontent.com/Voryn-Labs/Cloudified-Source/main/source.json</code>
+    <p class="release-note">The new 0.1 bundle is separate from earlier 6.x testing builds. It does not inherit their local queue or credentials. <a href="https://github.com/Voryn-Labs/Cloudified/blob/main/docs/public/SETUP.md">Read setup and migration notes ↗</a></p></details>
+   </section>
+   <section class="product-section" aria-labelledby="notes-title"><h2 id="notes-title">A few things to know</h2>
+    <p class="lede">Google uses an unofficial integration. Quota treatment and continued availability can change. Telegram archives are cloud documents, not end-to-end encrypted Secret Chats. iOS controls background time for installed apps.</p>
+    <p><a href="cloudified-privacy.html">Read Cloudified privacy</a> · <a href="https://github.com/Voryn-Labs/Cloudified/blob/main/docs/public/FAQ.md">Questions and answers ↗</a></p>
+   </section>
+   <section class="product-section" aria-labelledby="support"><h2 id="support">Help improve Cloudified</h2><p><a href="https://github.com/Voryn-Labs/Cloudified/issues">Report a problem or suggest an improvement ↗</a></p><p><a href="https://github.com/Voryn-Labs/Cloudified#credits">Project credits and license on GitHub ↗</a></p></section>
+  </main>
+  <footer class="product-footer"><span>© 2026 Voryn Labs</span><nav aria-label="Footer"><a href="index.html">Studio</a><a href="cloudified-privacy.html">Privacy</a><a href="https://github.com/Voryn-Labs/Cloudified">GitHub</a></nav></footer>
+ </div>
+<script src="assets/js/cloudified.js"></script>
+</body>
+</html>
