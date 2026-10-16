@@ -1,0 +1,64 @@
+.cloudified-page { --cloud-accent: var(--gold); }
+.cloudified-page .product-nav { display:flex; justify-content:space-between; align-items:center; gap:1.5rem; padding-block:1.5rem; border-bottom:1px solid var(--line); }
+.cloudified-page .product-nav a { text-decoration:none; }
+.cloudified-page .studio-lockup { display:inline-flex; align-items:center; gap:.65rem; font-weight:600; letter-spacing:.06em; }
+.cloudified-page .studio-lockup img { border-radius:8px; }
+.cloudified-page .product-hero { display:grid; grid-template-columns:minmax(0,1fr) 240px; align-items:center; gap:4rem; padding-block:6rem; }
+.cloudified-page h1 { font-family:inherit; font-size:clamp(2.8rem,6vw,5rem); line-height:1.05; letter-spacing:-.055em; margin:.8rem 0 1.4rem; max-width:12ch; }
+.cloudified-page .product-hero .lede { max-width:43ch; }
+.cloudified-page .product-icon { width:200px; height:200px; border-radius:44px; justify-self:center; }
+.cloudified-page .product-actions { display:flex; flex-wrap:wrap; align-items:center; gap:1rem; margin-top:2rem; }
+.cloudified-page .release-note { color:var(--muted); font-size:.875rem; margin-top:1.25rem; max-width:56ch; }
+.cloudified-page .product-section { padding-block:3.5rem; border-top:1px solid var(--line); }
+.cloudified-page .product-section h2 { margin:0 0 1.4rem; font-size:clamp(1.8rem,3vw,2.5rem); }
+.cloudified-page .product-facts { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem 4rem; margin:2rem 0 0; }
+.cloudified-page .product-facts dt { font-weight:600; font-size:1.15rem; margin-bottom:.6rem; }
+.cloudified-page .product-facts dd { margin:0; color:var(--muted); max-width:44ch; line-height:1.7; }
+.cloudified-page .installation { padding:0; list-style:none; counter-reset:step; }
+.cloudified-page .installation li { counter-increment:step; padding:1.25rem 0 1.25rem 2.5rem; border-top:1px solid var(--line); position:relative; }
+.cloudified-page .installation li::before { content:counter(step,decimal-leading-zero); position:absolute; left:0; color:var(--gold); font-size:.85rem; font-variant-numeric:tabular-nums; }
+.cloudified-page .installation strong { display:block; margin-bottom:.3rem; }
+.cloudified-page .installation p { color:var(--muted); margin:0; max-width:65ch; }
+.cloudified-page .source-address { display:block; padding:1.2rem; background:var(--surface); border-radius:12px; overflow-wrap:anywhere; font-size:.85rem; line-height:1.6; user-select:all; }
+.cloudified-page .product-footer { display:flex; justify-content:space-between; gap:2rem; flex-wrap:wrap; padding-block:2rem 3rem; border-top:1px solid var(--line); color:var(--muted); font-size:.875rem; }
+.cloudified-page .product-footer nav { display:flex; gap:1.5rem; flex-wrap:wrap; }
+.cloudified-page .privacy-copy { max-width:72ch; padding-block:3rem; }
+.cloudified-page .privacy-copy h1 { max-width:none; font-size:clamp(2.5rem,5vw,4rem); }
+.cloudified-page .privacy-copy h2 { font-family:inherit; font-size:1.4rem; margin-top:2.5rem; }
+.cloudified-page .privacy-copy p { color:var(--muted); line-height:1.8; }
+.cloudified-feature { display:flex; align-items:center; gap:2rem; padding:2rem; margin-block:1rem 3rem; background:var(--surface); border-radius:20px; }
+.cloudified-feature img { flex-shrink:0; border-radius:24px; }
+.cloudified-feature h2 { font-family:inherit; margin:.5rem 0; }
+.cloudified-feature p { max-width:55ch; color:var(--muted); }
+.cloudified-feature a { display:inline-block; margin-top:.8rem; color:var(--gold); text-decoration:underline; text-underline-offset:4px; }
+.cloudified-page a:focus-visible { outline:2px solid var(--gold); outline-offset:5px; border-radius:3px; }
+@media(max-width:640px) {
+ .cloudified-page .product-hero { grid-template-columns:1fr; gap:2rem; padding-block:3rem; }
+ .cloudified-page .product-icon { grid-row:1; justify-self:start; width:104px; height:104px; border-radius:24px; }
+ .cloudified-page .product-facts { grid-template-columns:1fr; gap:2rem; }
+ .cloudified-page .product-section { padding-block:2.5rem; }
+ .cloudified-feature { align-items:flex-start; padding:1.5rem; gap:1.25rem; }
+ .cloudified-feature img { width:64px; height:64px; border-radius:16px; }
+ .cloudified-page .product-nav { gap:1rem; font-size:.875rem; }
+}
+
+.cloudified-page .product-nav-actions { display:flex; align-items:center; gap:1.4rem; }
+.cloudified-page .theme-toggle { width:44px; height:44px; }
+.cloudified-page .install-intro { max-width:58ch; color:var(--muted); line-height:1.7; }
+.cloudified-page .installer-links { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.75rem; margin:1.75rem 0 1.25rem; }
+.cloudified-page .installer-link { display:flex; align-items:center; gap:.65rem; padding:1rem; min-height:64px; color:var(--cream); border:1px solid var(--line); border-radius:12px; background:var(--surface); text-decoration:none; font-weight:500; transition:border-color .2s,transform .2s; }
+.cloudified-page .installer-link:hover { border-color:var(--gold); transform:translateY(-2px); }
+.cloudified-page .installer-link:active { transform:translateY(0); }
+.cloudified-page .installer-monogram { width:28px; flex-shrink:0; color:var(--gold); font-size:.85rem; font-weight:600; letter-spacing:-.04em; }
+.cloudified-page .installer-arrow { margin-left:auto; color:var(--muted); }
+.cloudified-page .install-utilities { display:flex; align-items:center; flex-wrap:wrap; column-gap:1.5rem; row-gap:.5rem; font-size:.9rem; }
+.cloudified-page .install-utilities a,.cloudified-page .install-utilities button { min-height:44px; display:inline-flex; align-items:center; color:var(--gold); }
+.cloudified-page .install-utilities button { padding:0; border:0; background:none; font:inherit; cursor:pointer; text-decoration:underline; text-underline-offset:4px; }
+.cloudified-page #source-copy-status { color:var(--muted); font-size:.85rem; }
+.cloudified-page .install-hint { max-width:75ch; color:var(--muted); font-size:.85rem; line-height:1.6; }
+.cloudified-page .install-details { margin-top:1.75rem; }
+.cloudified-page .install-details summary { cursor:pointer; padding-block:1rem; font-weight:500; }
+.cloudified-page .install-details summary:focus-visible,.cloudified-page button:focus-visible { outline:2px solid var(--gold); outline-offset:4px; }
+@media(max-width:900px) { .cloudified-page .installer-links { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:400px) { .cloudified-page .installer-link { padding:.85rem .65rem; gap:.4rem; font-size:.85rem; } .cloudified-page .installer-monogram { width:21px; } }
+@media(prefers-reduced-motion:reduce) { .cloudified-page .installer-link,.cloudified-page .theme-toggle { transition:none; transform:none; } }
