@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Cloudified",
+    "repository": "Voryn-Labs/Cloudified",
+    "bundleIdentifier": "com.vorynlabs.cloudified"
+  },
+  {
+    "name": "Musyn",
+    "repository": "Voryn-Labs/Musyn",
+    "bundleIdentifier": "com.vorynlabs.musyn"
+  }
+]
