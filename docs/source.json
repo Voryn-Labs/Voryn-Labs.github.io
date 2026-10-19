@@ -19,14 +19,14 @@
       "category": "photo-video",
       "versions": [
         {
-          "version": "0.1",
-          "buildVersion": "27",
-          "marketingVersion": "0.1 (27)",
-          "date": "2026-10-16T15:04:14+00:00",
+          "version": "0.2",
+          "buildVersion": "28",
+          "marketingVersion": "0.2 (28)",
+          "date": "2026-10-19T10:15:44Z",
           "localizedDescription": "Original photo and video backup by Voryn Labs. Sign the IPA with your preferred installer.",
-          "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/ci-run-38920202426-untested/Cloudified-unsigned.ipa",
-          "size": 17791392,
-          "sha256": "be93ec0b1553836f80d52b044720287b08ecba6554675079660e7a6ccdc2f650",
+          "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-39233571132/Cloudified-unsigned.ipa",
+          "size": 17849001,
+          "sha256": "f57be8d8b1db8575f154237d5a0a5ef3985c06e6c307053e1190b843fe7bb831",
           "minOSVersion": "26.0"
         }
       ],
@@ -36,13 +36,13 @@
           "NSPhotoLibraryUsageDescription": "Cloudified requires photo library access to back up original quality photos and videos to Google Photos and Telegram."
         }
       },
-      "version": "0.1",
-      "versionDate": "2026-10-16T15:04:14+00:00",
+      "version": "0.2",
+      "versionDate": "2026-10-19T10:15:44Z",
       "versionDescription": "Original photo and video backup by Voryn Labs. Sign the IPA with your preferred installer.",
-      "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/ci-run-38920202426-untested/Cloudified-unsigned.ipa",
-      "size": 17791392,
+      "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-39233571132/Cloudified-unsigned.ipa",
+      "size": 17849001,
       "minOSVersion": "26.0",
-      "buildVersion": "27"
+      "buildVersion": "28"
     },
     {
       "name": "Musyn",
@@ -54,27 +54,27 @@
       "tintColor": "FFC5A7",
       "versions": [
         {
-          "version": "0.1.0",
-          "date": "2026-10-19T09:47:59.451851+00:00",
-          "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.1.0/Musyn.ipa",
-          "size": 11912622,
+          "version": "0.1.1",
+          "buildVersion": "2",
+          "date": "2026-10-19T11:17:56.706209+00:00",
+          "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.1.1/Musyn.ipa",
+          "size": 11917105,
           "minOSVersion": "15.0",
           "localizedDescription": "The first Musyn preview by Voryn Labs. Multi-source playback, offline downloads, synced lyrics and a focused player.",
-          "buildVersion": "1",
-          "sha256": "0f23db265e28819795eb6ad4688a056b7bc71139b263bbf114d3cedbc9df032a"
+          "sha256": "9ddb98e6d350f18a133376611ce34dd0bf94187204bac4f15092295571b5ce70"
         }
       ],
-      "version": "0.1.0",
-      "versionDate": "2026-10-19T09:47:59.451851+00:00",
-      "versionDescription": "The first Musyn preview by Voryn Labs. Multi-source playback, offline downloads, synced lyrics and a focused player.",
-      "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.1.0/Musyn.ipa",
-      "size": 11912622,
-      "minOSVersion": "15.0",
       "appPermissions": {
         "entitlements": [],
         "privacy": {}
       },
-      "buildVersion": "1"
+      "version": "0.1.1",
+      "versionDate": "2026-10-19T11:17:56.706209+00:00",
+      "versionDescription": "The first Musyn preview by Voryn Labs. Multi-source playback, offline downloads, synced lyrics and a focused player.",
+      "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.1.1/Musyn.ipa",
+      "size": 11917105,
+      "minOSVersion": "15.0",
+      "buildVersion": "2"
     }
   ],
   "news": []
