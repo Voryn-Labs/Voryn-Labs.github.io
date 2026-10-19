@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Musyn — Music, in your rhythm · Voryn Labs</title>
+<meta name="description" content="An iPhone music player with YouTube Music, JioSaavn, synced lyrics and offline downloads. Musyn by Voryn Labs.">
+<meta name="theme-color" content="#0E0D0B">
+<meta property="og:title" content="Musyn — Music, in your rhythm">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://voryn-labs.github.io/assets/icons/musyn.png">
+<meta property="og:description" content="An iPhone music player with YouTube Music, JioSaavn, synced lyrics and offline downloads. Musyn by Voryn Labs.">
+<link rel="canonical" href="https://voryn-labs.github.io/musyn.html">
+<link rel="icon" href="assets/icons/musyn.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/site.css?v=3">
+<link rel="stylesheet" href="assets/css/cloudified.css">
+<link rel="stylesheet" href="assets/css/musyn.css">
+<script>try { var theme=localStorage.getItem("voryn-theme"); if(theme==="light"||theme==="dark") document.documentElement.setAttribute("data-theme",theme); } catch (_) {}</script>
+</head>
+<body class="cloudified-page musyn-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="product-nav">
+<a class="studio-lockup" href="index.html">
+<img src="assets/voryn-mark.png" width="32" height="32" alt="">Voryn Labs</a>
+<nav aria-label="Product navigation">
+<a href="index.html#iphone-apps">Our iPhone apps</a>
+<button class="theme-toggle" id="theme-toggle" aria-label="Switch color theme" title="Switch color theme">
+<svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+<circle cx="12" cy="12" r="4">
+</circle>
+<path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5">
+</path>
+</svg>
+<svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+<path d="M20.5 13.2A8.5 8.5 0 0 1 10.8 3.5a8.5 8.5 0 1 0 9.7 9.7Z">
+</path>
+</svg>
+</button>
+</nav>
+</header>
+<main id="main">
+<section class="product-hero">
+<div>
+<span class="eyebrow">For iPhone · Musyn 0.1 preview</span>
+<h1>Music, in your rhythm.</h1>
+<p class="lede">One place for your next track. YouTube Music and JioSaavn, a queue you control, lyrics that follow along, and downloads for the way home.</p>
+<div class="product-actions">
+<a class="btn btn-gold" id="download-ipa" href="https://github.com/Voryn-Labs/Musyn/releases">View releases ↗</a>
+<a href="#install">Installation guide ↓</a>
+</div>
+<p class="release-note">Open source · iOS 15+ · Unsigned IPA · By Voryn Labs</p>
+<p class="download-stat">
+<strong id="ipa-downloads">—</strong> IPA downloads <span id="download-status" role="status">Loading public release statistics</span>
+</p>
+</div>
+<img class="product-icon" src="assets/icons/musyn.png" width="200" height="200" alt="Musyn folded coral music mark">
+</section>
+<section class="product-section" aria-labelledby="listen">
+<h2 id="listen">A little more music. A little less friction.</h2>
+<dl class="product-facts">
+<div>
+<dt>Choose your source</dt>
+<dd>YouTube Music and JioSaavn AAC, with explicit source selection and honest quality choices. No lossless claims.</dd>
+</div>
+<div>
+<dt>Keep the queue yours</dt>
+<dd>Play next, reorder, shuffle and save your favorites. Open the full player without losing your place.</dd>
+</div>
+<div>
+<dt>Read along</dt>
+<dd>Synced lyrics follow playback, with line seeking where timestamps are available.</dd>
+</div>
+<div>
+<dt>Go offline</dt>
+<dd>Track and playlist downloads with progress, cancellation and retry. Search and sort what is saved.</dd>
+</div>
+</dl>
+</section>
+<section class="product-section" aria-labelledby="views">
+<h2 id="views">Made to keep the music in view.</h2>
+<div class="musyn-screens">
+<figure>
+<img src="assets/img/musyn-home.png" width="390" height="844" loading="lazy" alt="Musyn Home with featured tracks and recent listening">
+<figcaption>Find your next track</figcaption>
+</figure>
+<figure>
+<img src="assets/img/musyn-player.png" width="390" height="844" loading="lazy" alt="Musyn full player with playback controls">
+<figcaption>Stay in the music</figcaption>
+</figure>
+<figure>
+<img src="assets/img/musyn-downloads.png" width="390" height="844" loading="lazy" alt="Musyn download manager showing transfer progress">
+<figcaption>Take it with you</figcaption>
+</figure>
+</div>
+<p class="release-note">Interface previews use fictional tracks and placeholder artwork. They are automated renders, not device playback screenshots.</p>
+</section>
+<section class="product-section" id="install" aria-labelledby="install-title">
+<h2 id="install-title">Your iPhone. Your installer.</h2>
+<p class="lede">Musyn 0.1 is an unsigned preview. Use your own signing identity with a compatible installer, or import the IPA into a compatible LiveContainer version.</p>
+<nav class="installer-links" aria-label="Add Musyn source">
+<a class="installer-link" href="feather://source/https://raw.githubusercontent.com/Voryn-Labs/Musyn/main/source.json">
+<span class="installer-monogram" aria-hidden="true">F</span>
+<span>Feather</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="installer-link" href="sidestore://source?url=https%3A%2F%2Fraw.githubusercontent.com%2FVoryn-Labs%2FMusyn%2Fmain%2Fsource.json">
+<span class="installer-monogram" aria-hidden="true">S</span>
+<span>SideStore</span>
+<span aria-hidden="true">↗</span>
+</a>
+<a class="installer-link" href="altstore://source?url=https%3A%2F%2Fraw.githubusercontent.com%2FVoryn-Labs%2FMusyn%2Fmain%2Fsource.json">
+<span class="installer-monogram" aria-hidden="true">A</span>
+<span>AltStore Classic</span>
+<span aria-hidden="true">↗</span>
+</a>
+</nav>
+<div class="install-utilities">
+<a href="https://github.com/Voryn-Labs/Musyn/releases/tag/v0.1.0">Release and checksum ↗</a>
+<button id="copy-source" type="button">Copy source URL</button>
+<span id="source-copy-status" role="status">
+</span>
+</div>
+<details class="install-details">
+<summary>Setup and preview notes</summary>
+<ol class="installation">
+<li>
+<strong>Download and verify</strong>
+<p>Get Musyn.ipa and its SHA-256 file from the release. Sign with a compatible installer or import into LiveContainer. AltStore PAL cannot install this unsigned IPA.</p>
+</li>
+<li>
+<strong>Open Musyn</strong>
+<p>Browse music, choose your preferred provider and quality, or connect YouTube Music for account features. A login is optional for general browsing.</p>
+</li>
+<li>
+<strong>Save a track</strong>
+<p>Use its options menu to choose a download source and bitrate. Downloads shows transfer status and saved music.</p>
+</li>
+</ol>
+<p>Manual source URL:</p>
+<code class="source-address" id="source-url" tabindex="0">https://raw.githubusercontent.com/Voryn-Labs/Musyn/main/source.json</code>
+<p class="release-note">Fresh app identity: com.vorynlabs.musyn · 0.1.0 (1). Physical iPhone playback, background transitions and installer behavior still need device acceptance. Background download resumption is not promised.</p>
+</details>
+</section>
+<section class="product-section">
+<h2>Built in the open.</h2>
+<p class="lede">Musyn is maintained by Voryn Labs under GPL-3.0, with credits to the Musify lineage and BitChord design reference. Music providers and artwork owners retain their rights. Availability can vary by source and region.</p>
+<p>
+<a href="https://github.com/Voryn-Labs/Musyn">Explore the source ↗</a> · <a href="https://github.com/Voryn-Labs/Musyn/issues">Report an issue ↗</a> · <a href="musyn-privacy.html">Read the privacy notes</a>
+</p>
+<p class="release-note">The counter sums public GitHub downloads of Musyn.ipa across published releases. It counts file requests, not people or verified installations. If GitHub is unavailable, no guessed count is shown.</p>
+</section>
+</main>
+<footer class="product-footer">
+<span>© 2026 Voryn Labs</span>
+<nav aria-label="Footer">
+<a href="index.html">Studio</a>
+<a href="musyn.html">Musyn</a>
+<a href="musyn-privacy.html">Privacy</a>
+<a href="https://github.com/Voryn-Labs/Musyn">GitHub</a>
+</nav>
+</footer>
+</div>
+<script src="assets/js/musyn.js">
+</script>
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"221b6d4d6a374533bbdf5fec04bee453"}'>
+</script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>
