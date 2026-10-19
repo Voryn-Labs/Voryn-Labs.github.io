@@ -53,3 +53,7 @@ activation; historical visits cannot be recovered. Sign in to Cloudflare → Web
 Analytics to view the private dashboard. No Actions schedule or analytics artifact
 storage is needed. The deployed site uses the account owner’s public collection token; management
 credentials stay out of this repository.
+
+## Musyn
+
+Musyn 0.1 has a product page (`docs/musyn.html`), privacy notes, branded icon and interface previews. The public GitHub IPA counter has loading/error states and counts only `Musyn.ipa`, not source-feed downloads or installs. The iPhone spotlights remain separate from the Android registry.

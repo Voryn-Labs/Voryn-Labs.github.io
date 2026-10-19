@@ -1,0 +1,15 @@
+.musyn-page .product-nav nav { display:flex;align-items:center;gap:1rem; }
+.musyn-page .download-stat { margin-top:1.8rem;font-variant-numeric:tabular-nums; }
+.musyn-page .download-stat strong { font-size:1.4rem; }
+.musyn-page #download-status { display:block;font-size:.8rem;color:var(--muted);margin-top:.25rem; }
+.musyn-screens { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;max-width:900px; }
+.musyn-screens figure { margin:0; }
+.musyn-screens img { width:100%;height:auto;border-radius:24px;border:1px solid var(--line); }
+.musyn-screens figcaption { color:var(--muted);font-size:.875rem;margin-top:.8rem; }
+@media(max-width:640px) { .musyn-screens { grid-template-columns:repeat(3,220px);overflow-x:auto;padding-bottom:1rem;scroll-snap-type:x mandatory; } .musyn-screens figure { scroll-snap-align:start; } }
+
+@media(max-width:640px) {
+ .musyn-page .product-nav { flex-wrap:wrap; }
+ .musyn-page .product-nav nav { margin-left:auto;flex-wrap:wrap;gap:.75rem; }
+ .musyn-page .studio-lockup { flex-shrink:0; }
+}
