@@ -54,27 +54,27 @@
       "tintColor": "FFC5A7",
       "versions": [
         {
-          "version": "0.2.0",
-          "buildVersion": "11",
-          "date": "2026-10-20T08:03:50.615395+00:00",
-          "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.2.0/Musyn.ipa",
-          "size": 11969560,
+          "version": "0.3.1",
+          "buildVersion": "13",
+          "date": "2026-10-20T12:15:49.473979+00:00",
+          "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.3.1/Musyn.ipa",
+          "size": 12249906,
           "minOSVersion": "15.0",
           "localizedDescription": "Musyn by Voryn Labs. Multi-source playback, offline downloads, synced lyrics and a focused player.",
-          "sha256": "8bb9ffb563fa461bf5dfb5690eaaa047fc58b253a2a6dba2cdffaf30f0865de1"
+          "sha256": "42f29e2f6d6c45b12bb0fe99150850a5c79aa639495ac8f9049bb4be41f4b05b"
         }
       ],
       "appPermissions": {
         "entitlements": [],
         "privacy": {}
       },
-      "version": "0.2.0",
-      "versionDate": "2026-10-20T08:03:50.615395+00:00",
+      "version": "0.3.1",
+      "versionDate": "2026-10-20T12:15:49.473979+00:00",
       "versionDescription": "Musyn by Voryn Labs. Multi-source playback, offline downloads, synced lyrics and a focused player.",
-      "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.2.0/Musyn.ipa",
-      "size": 11969560,
+      "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.3.1/Musyn.ipa",
+      "size": 12249906,
       "minOSVersion": "15.0",
-      "buildVersion": "11"
+      "buildVersion": "13"
     }
   ],
   "news": []
