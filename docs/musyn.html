@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Musyn — Music, in your rhythm · Voryn Labs</title>
+<title>Musyn · Music, in your rhythm · Voryn Labs</title>
 <meta name="description" content="An iPhone music player with YouTube Music, JioSaavn, synced lyrics and offline downloads. Musyn by Voryn Labs.">
 <meta name="theme-color" content="#0E0D0B">
-<meta property="og:title" content="Musyn — Music, in your rhythm">
+<meta property="og:title" content="Musyn · Music, in your rhythm">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://voryn-labs.github.io/assets/icons/musyn.png">
 <meta property="og:description" content="An iPhone music player with YouTube Music, JioSaavn, synced lyrics and offline downloads. Musyn by Voryn Labs.">
@@ -45,31 +45,34 @@
 <div>
 <span class="eyebrow">For iPhone · Musyn by Voryn Labs</span>
 <h1>Music, in your rhythm.</h1>
-<p class="lede">One place for your next track. YouTube Music and JioSaavn, a queue you control, lyrics that follow along, and downloads for the way home.</p>
+<p class="lede">Your music, beautifully in reach. YouTube Music, optional JioSaavn, synced lyrics and a library that travels with you.</p>
 <div class="product-actions">
 <a class="btn btn-gold" id="download-ipa" href="https://github.com/Voryn-Labs/Musyn/releases">View Musyn releases ↗</a>
 <a href="#install">Installation guide ↓</a>
 </div>
 <p class="release-note">Open source · iOS 15+ · Unsigned IPA · By Voryn Labs</p>
 <p class="download-stat">
-<strong id="ipa-downloads">—</strong> IPA downloads <span id="download-status" role="status">Loading public release statistics</span>
+<strong id="ipa-downloads">·</strong> IPA downloads <span id="download-status" role="status">Loading public release statistics</span>
 </p>
 </div>
-<img class="product-icon" src="assets/icons/musyn.png" width="200" height="200" alt="Musyn folded coral music mark">
+<div class="musyn-hero-art" aria-label="Musyn player and library preview">
+<img class="musyn-hero-home" src="assets/img/musyn-home.png" width="390" height="844" alt="Musyn Home with a fictional music library">
+<img class="musyn-hero-player" src="assets/img/musyn-player.png" width="390" height="844" alt="Musyn player with lyrics and playback controls">
+</div>
 </section>
 <section class="product-section" aria-labelledby="listen">
 <h2 id="listen">A little more music. A little less friction.</h2>
 <dl class="product-facts">
 <div>
 <dt>Choose your source</dt>
-<dd>YouTube Music and JioSaavn AAC, with explicit source selection and honest quality choices. No lossless claims.</dd>
+<dd>YouTube Music works without a key. Add your own JioSaavn media URL key in Settings when you want another source. Clear AAC quality options, with no lossless claims.</dd>
 </div>
 <div>
 <dt>Keep the queue yours</dt>
 <dd>Play next, reorder, shuffle and save your favorites. Open the full player without losing your place.</dd>
 </div>
 <div>
-<dt>Read along</dt>
+<dt>Your YouTube library</dt><dd>Connect YouTube Music to sync liked music and playlists. Your local favorites remain available when a refresh fails.</dd></div><div><dt>Read along</dt>
 <dd>Synced lyrics follow playback, with line seeking where timestamps are available.</dd>
 </div>
 <div>
@@ -77,6 +80,10 @@
 <dd>Track and playlist downloads with progress, cancellation and retry. Search and sort what is saved.</dd>
 </div>
 </dl>
+</section>
+<section class="product-section musyn-motion" aria-labelledby="motion-title">
+<div><h2 id="motion-title">A player with a little more presence.</h2><p class="lede">Native glass on iOS 26. Real video artwork when you add a clip. Your choice, one switch away.</p><p>Turn on Native glass or Animated artwork in Appearance. Attach your own silent square or portrait clip from a song’s menu. The player and supported lock screen can use that clip; tracks without one keep their still cover. Reduce Motion, power settings and iOS remain in control.</p><p class="release-note">Earlier iOS versions keep the standard player. Musyn does not extract Spotify Canvas or bundle an Apple Music catalogue token.</p></div>
+<img src="assets/img/musyn-landscape.png" width="844" height="390" loading="lazy" alt="Musyn landscape player with artwork beside synced lyrics">
 </section>
 <section class="product-section" aria-labelledby="views">
 <h2 id="views">Made to keep the music in view.</h2>
@@ -132,11 +139,11 @@
 </li>
 <li>
 <strong>Open Musyn</strong>
-<p>Browse music, choose your preferred provider and quality, or connect YouTube Music for account features. A login is optional for general browsing.</p>
+<p>YouTube Music is ready without a key or account. Connect YouTube Music for your liked music and playlists. JioSaavn is optional: add a media URL key you are authorized to use in Settings → JioSaavn. Musyn supplies no provider key.</p>
 </li>
 <li>
 <strong>Save a track</strong>
-<p>Use its options menu to choose a download source and bitrate. Downloads shows transfer status and saved music.</p>
+<p>Tap Download on the player using your saved default. Use Download options when you want a different source or quality. Follow progress, retry failures and find saved music in Library.</p>
 </li>
 </ol>
 <p>Manual source URL:</p>
@@ -145,12 +152,12 @@
 </details>
 </section>
 <section class="product-section">
-<h2>Built in the open.</h2>
-<p class="lede">Musyn is maintained by Voryn Labs under GPL-3.0, with credits to the Musify lineage and BitChord design reference. Music providers and artwork owners retain their rights. Availability can vary by source and region.</p>
+<h2>Yours to explore. Open to grow.</h2>
+<p class="lede">Musyn is maintained by Voryn Labs under GPL-3.0, with credits to the Musify lineage and BitChord design reference. YouTube Music and optional JioSaavn are the current sources; more providers can be introduced as the project grows. Music and artwork retain their owners’ rights. Availability varies by source and region.</p>
 <p>
-<a href="https://github.com/Voryn-Labs/Musyn">Explore the source ↗</a> · <a href="https://github.com/Voryn-Labs/Musyn/issues">Report an issue ↗</a> · <a href="musyn-privacy.html">Read the privacy notes</a>
+<a href="https://github.com/Voryn-Labs/Musyn">Explore the source ↗</a> · <a href="https://github.com/Voryn-Labs/Musyn/issues">Report an issue ↗</a> · <a href="musyn-privacy.html">Privacy</a> · <a href="musyn-terms.html">Terms of use</a>
 </p>
-<p class="release-note">The counter sums public GitHub downloads of Musyn.ipa across published releases. It counts file requests, not people or verified installations. If GitHub is unavailable, no guessed count is shown.</p>
+<p class="release-note">The counter sums public GitHub downloads of Musyn.ipa across currently published releases. Removed releases are excluded. It counts file requests, not people or verified installations. If GitHub is unavailable, no guessed count is shown.</p>
 </section>
 </main>
 <footer class="product-footer">
@@ -163,7 +170,7 @@
 </nav>
 </footer>
 </div>
-<script src="assets/js/musyn.js?v=0.1.5">
+<script src="assets/js/musyn.js?v=public-1">
 </script>
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"221b6d4d6a374533bbdf5fec04bee453"}'>
