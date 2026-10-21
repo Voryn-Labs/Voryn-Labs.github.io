@@ -34,7 +34,6 @@
     }
   });
   // The maintainer-selected source is authoritative, including preview releases.
-  // Keep this independent of GitHub statistics and its API rate limit.
   (async function () {
     var link = document.getElementById('download-ipa');
     if (!link) return;
@@ -57,38 +56,6 @@
     } catch (_) {
       link.href = 'https://github.com/Voryn-Labs/Musyn/releases';
       link.textContent = 'View Musyn releases ↗';
-    } finally { clearTimeout(timeout); }
-  })();
-  var counter = document.getElementById('ipa-downloads');
-  var status = document.getElementById('download-status');
-  if (!counter) return;
-  (async function () {
-    var controller = new AbortController();
-    var timeout = setTimeout(function () { controller.abort(); }, 10000);
-    try {
-      var total = 0;
-      for (var page = 1; page <= 20; page++) {
-        var response = await fetch('https://api.github.com/repos/Voryn-Labs/Musyn/releases?per_page=100&page=' + page, {signal: controller.signal, headers: {Accept: 'application/vnd.github+json'}});
-        if (!response.ok) throw new Error('Release statistics unavailable');
-        var releases = await response.json();
-        if (!Array.isArray(releases)) throw new Error('Invalid release response');
-        releases.forEach(function (release) {
-          if (release.draft) return;
-          (release.assets || []).forEach(function (asset) {
-            if (asset.name !== 'Musyn.ipa') return;
-            if (!Number.isFinite(asset.download_count) || asset.download_count < 0) throw new Error('Invalid download total');
-            total += asset.download_count;
-
-          });
-        });
-        if (!(response.headers.get('Link') || '').includes('rel="next"')) break;
-        if (page === 20) throw new Error('Incomplete release statistics');
-      }
-      counter.textContent = new Intl.NumberFormat().format(total);
-      status.textContent = 'Public GitHub asset downloads · not installations';
-    } catch (_) {
-      counter.textContent = '—';
-      status.textContent = 'Statistics unavailable · see GitHub releases';
     } finally { clearTimeout(timeout); }
   })();
 })();
