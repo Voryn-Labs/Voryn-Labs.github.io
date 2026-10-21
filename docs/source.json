@@ -19,14 +19,14 @@
       "category": "photo-video",
       "versions": [
         {
-          "version": "0.3",
-          "buildVersion": "29",
-          "marketingVersion": "0.3 (29)",
-          "date": "2026-10-19T19:37:23Z",
-          "localizedDescription": "Walkthrough redesign\n\n- Replaced the text-heavy introduction with three focused screens: backup basics,\n  storage trade-offs and setup.\n- Added a simple destination diagram, shorter headings and concise benefit labels.\n- Made Back, Skip and Continue consistent, with a fixed bottom action and scrollable\n  content for smaller screens and larger text.\n- Kept Google's account restriction/suspension warning visible. Full credential,\n  quota, Telegram encryption and service-limit explanations open in a separate\n  Storage & account details sheet.\n- Retained Settings → Getting started so the walkthrough can be replayed.\n\nThis is a presentation correction. Upload queues, retry/recovery rules, provider\nconnections, original-quality handling and background execution are unchanged.\nExisting walkthrough completion is retained; replay it in Settings to see the new\nscreens. Requires iOS 26 or later. No new device-compatibility claim.",
-          "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-39311792832/Cloudified-unsigned.ipa",
-          "size": 17872631,
-          "sha256": "89194139767c203eeaafbd8fc6c02f6990199b8517f87d610703a40bec1dc86d",
+          "version": "0.4",
+          "buildVersion": "30",
+          "marketingVersion": "0.4 (30)",
+          "date": "2026-10-21T15:42:47Z",
+          "localizedDescription": "Background backup reliability\n\n- Queue up to four small Google originals, within a 64 MiB queue budget, for iOS\n  to transfer independently of the app's upload worker. Network concurrency stays\n  bounded; large files and Live Photo pairs retain their serial transfer path.\n- Keep submitted files protected until real system completion and Google library\n  confirmation. Recover completed submissions without sending their bytes again.\n- Show progress for work remaining in the current continued-processing run, rather\n  than crediting the same run with photos saved before it began.\n- Reserve continued processing for explicit Start/Resume. Automatic backup on open\n  and system-scheduled background processing remain available.\n- Serialize destination enable/disable requests and preserve the latest preference\n  during account/recovery actions. Diagnostics retain the exact internal error\n  category without exposing credentials or private paths.\n\nBackground time remains controlled by iOS. Ordinary app suspension preserves\nsubmitted Google transfers; a genuinely failed network transfer may still restart\nfrom the beginning. Google-specific byte-offset resume is not claimed. Original\nquality, provider independence and the three-attempt automatic limit are retained.",
+          "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-39627332114/Cloudified-unsigned.ipa",
+          "size": 17901806,
+          "sha256": "8b37d8d56b2abca5e8ef556405d3476255ec5a2583dce760016d8fb85a869705",
           "minOSVersion": "26.0"
         }
       ],
@@ -36,13 +36,13 @@
           "NSPhotoLibraryUsageDescription": "Cloudified requires photo library access to back up original quality photos and videos to Google Photos and Telegram."
         }
       },
-      "version": "0.3",
-      "versionDate": "2026-10-19T19:37:23Z",
-      "versionDescription": "Walkthrough redesign\n\n- Replaced the text-heavy introduction with three focused screens: backup basics,\n  storage trade-offs and setup.\n- Added a simple destination diagram, shorter headings and concise benefit labels.\n- Made Back, Skip and Continue consistent, with a fixed bottom action and scrollable\n  content for smaller screens and larger text.\n- Kept Google's account restriction/suspension warning visible. Full credential,\n  quota, Telegram encryption and service-limit explanations open in a separate\n  Storage & account details sheet.\n- Retained Settings → Getting started so the walkthrough can be replayed.\n\nThis is a presentation correction. Upload queues, retry/recovery rules, provider\nconnections, original-quality handling and background execution are unchanged.\nExisting walkthrough completion is retained; replay it in Settings to see the new\nscreens. Requires iOS 26 or later. No new device-compatibility claim.",
-      "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-39311792832/Cloudified-unsigned.ipa",
-      "size": 17872631,
+      "version": "0.4",
+      "versionDate": "2026-10-21T15:42:47Z",
+      "versionDescription": "Background backup reliability\n\n- Queue up to four small Google originals, within a 64 MiB queue budget, for iOS\n  to transfer independently of the app's upload worker. Network concurrency stays\n  bounded; large files and Live Photo pairs retain their serial transfer path.\n- Keep submitted files protected until real system completion and Google library\n  confirmation. Recover completed submissions without sending their bytes again.\n- Show progress for work remaining in the current continued-processing run, rather\n  than crediting the same run with photos saved before it began.\n- Reserve continued processing for explicit Start/Resume. Automatic backup on open\n  and system-scheduled background processing remain available.\n- Serialize destination enable/disable requests and preserve the latest preference\n  during account/recovery actions. Diagnostics retain the exact internal error\n  category without exposing credentials or private paths.\n\nBackground time remains controlled by iOS. Ordinary app suspension preserves\nsubmitted Google transfers; a genuinely failed network transfer may still restart\nfrom the beginning. Google-specific byte-offset resume is not claimed. Original\nquality, provider independence and the three-attempt automatic limit are retained.",
+      "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-39627332114/Cloudified-unsigned.ipa",
+      "size": 17901806,
       "minOSVersion": "26.0",
-      "buildVersion": "29"
+      "buildVersion": "30"
     },
     {
       "name": "Musyn",
