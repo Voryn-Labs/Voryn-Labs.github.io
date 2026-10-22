@@ -39,6 +39,21 @@ def require(condition, message):
         raise ValueError(message)
 
 
+def app_for_channel(app, version, *, preview=False):
+    channel_app = deepcopy(app)
+    channel_app['versions'] = [version]
+    channel_app.update(version=version['version'], versionDate=version['date'],
+                       versionDescription=version.get('localizedDescription', ''),
+                       downloadURL=version['downloadURL'], size=version['size'],
+                       minOSVersion=version['minOSVersion'])
+    if 'buildVersion' in version:
+        channel_app['buildVersion'] = version['buildVersion']
+    if preview:
+        channel_app['name'] = f'{app["name"]} Preview'
+        channel_app['subtitle'] = 'Preview channel · may contain unfinished features'
+    return channel_app
+
+
 def build_catalog(registry, feeds, release_lookup):
     apps = []
     identities = set()
@@ -90,25 +105,20 @@ def build_catalog(registry, feeds, release_lookup):
         # Keep the catalog concise: newest stable and newest preview only.
         # Sorting by GitHub's publication timestamp makes promotion predictable
         # even when an app feed contains older versions in an arbitrary order.
-        selected = []
+        selected = {}
         for prerelease in (False, True):
             channel = [item for item in verified_releases
                        if bool(item[1].get('prerelease', False)) == prerelease]
             if channel:
-                selected.append(max(channel, key=lambda item: item[1]['published_at']))
-        selected.sort(key=lambda item: item[1]['published_at'], reverse=True)
-        verified_versions = [item[0] for item in selected]
-        # Both modern versions[] and legacy flat fields are used by installers.
-        # Keep the real build number, minimum OS and permission disclosures.
-        version = verified_versions[0]
-        app['versions'] = verified_versions
-        app.update(version=version['version'], versionDate=version['date'],
-                   versionDescription=version.get('localizedDescription', ''),
-                   downloadURL=version['downloadURL'], size=version['size'],
-                   minOSVersion=version['minOSVersion'])
-        if 'buildVersion' in version:
-            app['buildVersion'] = version['buildVersion']
-        apps.append(app)
+                selected[prerelease] = max(
+                    channel, key=lambda item: item[1]['published_at'])[0]
+        # Feather renders one card per apps[] entry and hides versions[] behind
+        # a context menu. Separate cards make stable and preview explicit while
+        # retaining the same bundle identifier for in-place installation.
+        if False in selected:
+            apps.append(app_for_channel(app, selected[False]))
+        if True in selected:
+            apps.append(app_for_channel(app, selected[True], preview=True))
     require(bool(apps), 'The shared source cannot be empty')
     return {
         'name': 'Voryn Labs',
