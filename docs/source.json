@@ -28,6 +28,50 @@
           "size": 17932543,
           "sha256": "6ec74685da1213a5a6779fb0957d569916aeafe37c5f9288ef7c7c720c46fce9",
           "minOSVersion": "26.0"
+        },
+        {
+          "version": "0.4",
+          "buildVersion": "30",
+          "marketingVersion": "0.4 (30)",
+          "date": "2026-10-21T15:42:47Z",
+          "localizedDescription": "Background backup reliability\n\n- Queue up to four small Google originals, within a 64 MiB queue budget, for iOS\n  to transfer independently of the app's upload worker. Network concurrency stays\n  bounded; large files and Live Photo pairs retain their serial transfer path.\n- Keep submitted files protected until real system completion and Google library\n  confirmation. Recover completed submissions without sending their bytes again.\n- Show progress for work remaining in the current continued-processing run, rather\n  than crediting the same run with photos saved before it began.\n- Reserve continued processing for explicit Start/Resume. Automatic backup on open\n  and system-scheduled background processing remain available.\n- Serialize destination enable/disable requests and preserve the latest preference\n  during account/recovery actions. Diagnostics retain the exact internal error\n  category without exposing credentials or private paths.\n\nBackground time remains controlled by iOS. Ordinary app suspension preserves\nsubmitted Google transfers; a genuinely failed network transfer may still restart\nfrom the beginning. Google-specific byte-offset resume is not claimed. Original\nquality, provider independence and the three-attempt automatic limit are retained.",
+          "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-39627332114/Cloudified-unsigned.ipa",
+          "size": 17901806,
+          "sha256": "8b37d8d56b2abca5e8ef556405d3476255ec5a2583dce760016d8fb85a869705",
+          "minOSVersion": "26.0"
+        },
+        {
+          "version": "0.3",
+          "buildVersion": "29",
+          "marketingVersion": "0.3 (29)",
+          "date": "2026-10-19T19:37:23Z",
+          "localizedDescription": "Walkthrough redesign\n\n- Replaced the text-heavy introduction with three focused screens: backup basics,\n  storage trade-offs and setup.\n- Added a simple destination diagram, shorter headings and concise benefit labels.\n- Made Back, Skip and Continue consistent, with a fixed bottom action and scrollable\n  content for smaller screens and larger text.\n- Kept Google's account restriction/suspension warning visible. Full credential,\n  quota, Telegram encryption and service-limit explanations open in a separate\n  Storage & account details sheet.\n- Retained Settings → Getting started so the walkthrough can be replayed.\n\nThis is a presentation correction. Upload queues, retry/recovery rules, provider\nconnections, original-quality handling and background execution are unchanged.\nExisting walkthrough completion is retained; replay it in Settings to see the new\nscreens. Requires iOS 26 or later. No new device-compatibility claim.",
+          "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-39311792832/Cloudified-unsigned.ipa",
+          "size": 17872631,
+          "sha256": "89194139767c203eeaafbd8fc6c02f6990199b8517f87d610703a40bec1dc86d",
+          "minOSVersion": "26.0"
+        },
+        {
+          "version": "0.2",
+          "buildVersion": "28",
+          "marketingVersion": "0.2 (28)",
+          "date": "2026-10-19T10:15:44Z",
+          "localizedDescription": "Original photo and video backup by Voryn Labs. Sign the IPA with your preferred installer.",
+          "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-39233571132/Cloudified-unsigned.ipa",
+          "size": 17849001,
+          "sha256": "f57be8d8b1db8575f154237d5a0a5ef3985c06e6c307053e1190b843fe7bb831",
+          "minOSVersion": "26.0"
+        },
+        {
+          "version": "0.1",
+          "buildVersion": "27",
+          "marketingVersion": "0.1 (27)",
+          "date": "2026-10-16T15:04:14+00:00",
+          "localizedDescription": "Original photo and video backup by Voryn Labs. Sign the IPA with your preferred installer.",
+          "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/ci-run-38920202426-untested/Cloudified-unsigned.ipa",
+          "size": 17791392,
+          "sha256": "be93ec0b1553836f80d52b044720287b08ecba6554675079660e7a6ccdc2f650",
+          "minOSVersion": "26.0"
         }
       ],
       "appPermissions": {
@@ -54,27 +98,40 @@
       "tintColor": "FFC5A7",
       "versions": [
         {
+          "version": "0.4.0-beta.1",
+          "buildVersion": "20",
+          "date": "2026-10-22T15:38:03+00:00",
+          "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.4.0-beta.1/Musyn.ipa",
+          "size": 12489421,
+          "minOSVersion": "15.0",
+          "localizedDescription": "Preview — local Smart Library, ratings, tags, moods, smart shuffle and Home Screen widgets.",
+          "sha256": "2b29ffe8029e1216f36c17fbaac82846d354eaa0802b1c1015a7763d36c3c185"
+        },
+        {
           "version": "0.3.7",
           "buildVersion": "19",
           "date": "2026-10-22T05:21:34.816936+00:00",
           "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.3.7/Musyn.ipa",
           "size": 12433343,
           "minOSVersion": "15.0",
-          "localizedDescription": "Musyn by Voryn Labs. Multi-source playback, offline downloads, synced lyrics and a focused player.",
+          "localizedDescription": "Stable — multi-source playback, offline downloads, synced lyrics and a focused player.",
           "sha256": "6f85eedf0555184e243347dbdb3547a47fb5243f0fec34d148bdf72916fcbfe6"
         }
       ],
       "appPermissions": {
-        "entitlements": [],
+        "entitlements": [
+          "com.apple.developer.carplay-audio",
+          "com.apple.security.application-groups"
+        ],
         "privacy": {}
       },
-      "version": "0.3.7",
-      "versionDate": "2026-10-22T05:21:34.816936+00:00",
-      "versionDescription": "Musyn by Voryn Labs. Multi-source playback, offline downloads, synced lyrics and a focused player.",
-      "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.3.7/Musyn.ipa",
-      "size": 12433343,
+      "version": "0.4.0-beta.1",
+      "versionDate": "2026-10-22T15:38:03+00:00",
+      "versionDescription": "Preview — local Smart Library, ratings, tags, moods, smart shuffle and Home Screen widgets.",
+      "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.4.0-beta.1/Musyn.ipa",
+      "size": 12489421,
       "minOSVersion": "15.0",
-      "buildVersion": "19"
+      "buildVersion": "20"
     }
   ],
   "news": []
