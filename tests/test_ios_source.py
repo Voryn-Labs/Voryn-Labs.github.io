@@ -42,6 +42,12 @@ class SourceTest(unittest.TestCase):
             self.assertIn('appPermissions', app)
         self.assertEqual(original, self.feeds)
 
+    def test_current_catalog_has_fresh_feather_identity(self):
+        catalog = module.current_catalog(self.build())
+        self.assertEqual(catalog['sourceURL'], 'https://voryn-labs.github.io/source-v2.json')
+        self.assertEqual(catalog['identifier'], 'com.vorynlabs.source.v2')
+        self.assertEqual([app['version'] for app in catalog['apps']], ['0.1', '0.1'])
+
     def test_draft_cannot_be_advertised(self):
         self.releases['Voryn-Labs/Musyn']['draft'] = True
         with self.assertRaisesRegex(ValueError, 'not published'):
