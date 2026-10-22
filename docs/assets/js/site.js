@@ -88,6 +88,7 @@
     // — a link there would 404 for visitors, so it must never render.
     var sourceIsPublic = typeof app.repoUrl === "string" && app.repoUrl.length > 0;
     var dark = isDarkTheme();
+    var isOnHold = Boolean(app.onHold || app.collection === "lumen" || app.collection === "india");
 
     var card = el("article", app.featured ? "app-card app-card--featured reveal"
                                           : "app-card reveal");
@@ -122,8 +123,9 @@
       cta.rel = "noopener";
     }
 
-    var badge = el("span", live ? "badge badge-live" : "badge badge-soon",
-                   live ? "Get it on Google Play" : "Coming soon on Google Play");
+    var badgeCls = isOnHold ? "badge badge-hold" : (live ? "badge badge-live" : "badge badge-soon");
+    var badgeTxt = isOnHold ? "On Hold · Archived" : (live ? "Get it on Google Play" : "Coming soon on Google Play");
+    var badge = el("span", badgeCls, badgeTxt);
 
     if (app.featured) {
       // Spotlight layout: brand column + copy column with feature bullets.
@@ -250,6 +252,58 @@
     targets.forEach(function (t) { observer.observe(t); });
   }
 
+  function initArchiveTabs() {
+    var tabs = document.querySelectorAll("[data-archive-filter]");
+    if (!tabs.length) return;
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        var filter = tab.getAttribute("data-archive-filter");
+        tabs.forEach(function (t) { t.classList.toggle("is-active", t === tab); });
+        var lumen = document.getElementById("collection-lumen");
+        var india = document.getElementById("collection-india");
+        if (lumen) lumen.style.display = (filter === "all" || filter === "lumen") ? "" : "none";
+        if (india) india.style.display = (filter === "all" || filter === "india") ? "" : "none";
+      });
+    });
+  }
+
+  function initCopySource() {
+    var btn = document.getElementById("copy-source-btn");
+    var status = document.getElementById("copy-status-msg");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var url = "https://voryn-labs.github.io/source.json";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function () {
+          if (status) {
+            status.textContent = "Source URL copied to clipboard!";
+            status.classList.add("is-visible");
+            setTimeout(function () {
+              status.textContent = "";
+              status.classList.remove("is-visible");
+            }, 3500);
+          }
+        });
+      }
+    });
+  }
+
+  function initMusynCounter() {
+    var countEl = document.getElementById("musyn-stat-downloads");
+    if (!countEl) return;
+    fetch("https://api.github.com/repos/Voryn-Labs/Musyn/releases/tags/v0.1.0")
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data && Array.isArray(data.assets)) {
+          var ipa = data.assets.find(function (a) { return a.name === "Musyn.ipa"; });
+          if (ipa && typeof ipa.download_count === "number") {
+            countEl.textContent = ipa.download_count.toLocaleString();
+          }
+        }
+      })
+      .catch(function () {});
+  }
+
   function initYear() {
     var slot = document.getElementById("year");
     if (slot) slot.textContent = String(new Date().getFullYear());
@@ -259,5 +313,8 @@
   renderGrid();
   initNav();
   initReveal();
+  initArchiveTabs();
+  initCopySource();
+  initMusynCounter();
   initYear();
 })();
