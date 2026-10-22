@@ -14,6 +14,7 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_URL = 'https://voryn-labs.github.io/source.json'
+CURRENT_SOURCE_URL = 'https://voryn-labs.github.io/source-v2.json'
 
 
 def fetch_json(url):
@@ -113,6 +114,14 @@ def build_catalog(registry, feeds, release_lookup):
     }
 
 
+def current_catalog(catalog):
+    """Give installers a fresh identity after Feather cached the original feed."""
+    current = deepcopy(catalog)
+    current['identifier'] = 'com.vorynlabs.source.v2'
+    current['sourceURL'] = CURRENT_SOURCE_URL
+    return current
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true', help='Validate remote releases without writing')
@@ -122,15 +131,17 @@ def main():
     catalog = build_catalog(registry, feeds, lambda repo, tag: fetch_json(
         f'https://api.github.com/repos/{repo}/releases/tags/{quote(tag, safe="")}'))
     output = json.dumps(catalog, indent=2, ensure_ascii=False) + '\n'
+    current_output = json.dumps(current_catalog(catalog), indent=2, ensure_ascii=False) + '\n'
     if not args.check:
-        destination = ROOT / 'docs/source.json'
-        temporary = destination.with_suffix('.json.tmp')
-        temporary.write_text(output)
-        temporary.replace(destination)
+        for filename, contents in [('source.json', output), ('source-v2.json', current_output)]:
+            destination = ROOT / 'docs' / filename
+            temporary = destination.with_suffix('.json.tmp')
+            temporary.write_text(contents)
+            temporary.replace(destination)
     for app in catalog['apps']:
         print(f'{app["name"]}: {app["version"]} ({app.get("buildVersion", "1")}), '
               f'iOS {app["minOSVersion"]}+, {app["size"]} bytes')
-    print('Verified shared source' if args.check else f'Updated {SOURCE_URL}')
+    print('Verified shared source' if args.check else f'Updated {SOURCE_URL} and {CURRENT_SOURCE_URL}')
 
 
 if __name__ == '__main__':
