@@ -12,12 +12,12 @@
 //   platform  — badge line when it is not plain Android (e.g. "Android TV")
 //   featured  — render as a full-width spotlight card with `features` bullets
 window.VORYN_COLLECTIONS = [
-  { id: "lumen", eyebrow: "Collection I", name: "The Lumen Series", kind: "Games",
-    blurb: "Fourteen quiet puzzle games — one design creed. Calm, fair, completeable." },
-  { id: "india", eyebrow: "Collection II", name: "The India Collection", kind: "Games",
-    blurb: "Seven games built for India — daily Hindi words, cricket trivia, Bollywood chains, rummy and the family function." },
-  { id: "livingroom", eyebrow: "Collection III", name: "The Living Room", kind: "Apps & utilities",
+  { id: "livingroom", eyebrow: "Flagship TV · Active", name: "The Living Room", kind: "Apps & utilities",
     blurb: "Software for the biggest screen in the house. Offline-first, no accounts, no telemetry." },
+  { id: "lumen", eyebrow: "Archive · On Hold", name: "The Lumen Series", kind: "Games",
+    blurb: "Fourteen quiet puzzle games — developed as calm, completeable offline logic experiments. Currently on hold." },
+  { id: "india", eyebrow: "Archive · On Hold", name: "The India Collection", kind: "Games",
+    blurb: "Seven games built for India — cultural word deductions, cricket trivia, and family gatherings. Currently on hold." },
 ];
 
 window.VORYN_APPS = [

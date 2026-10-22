@@ -3,12 +3,14 @@
 > **Live site**: [voryn-labs.github.io](https://voryn-labs.github.io/)
 > **Contact**: [appsvorynlabs@gmail.com](mailto:appsvorynlabs@gmail.com)
 
-Independent studio site for **Voryn Labs**. Games and other software for iPhone, Android and TV. Cloudified and Musyn have dedicated product and privacy pages and a single shared iOS installer source.
+Independent studio site for **Voryn Labs**. Software crafted for iPhone and Android TV.
 
-Catalogue is split on one page:
+Site structure:
 
-- **Games** — The Lumen Series, The India Collection
-- **Apps** — The Living Room (VividOrbit and whatever comes next)
+- **Flagship Apps** — Cloudified (iOS lossless dual backup), Musyn (iOS music player & synced lyrics), and VividOrbit (Android TV channel & lineup manager).
+- **One iOS Source** — Shared `source.json` installer feed for Feather, SideStore, AltStore Classic, and LiveContainer.
+- **Lab Archive (On Hold)** — Twenty-one archived Android mobile game prototypes across The Lumen Series (14) and The India Collection (7).
+- **Studio Creed & About** — Core engineering values (calm, fair, zero telemetry).
 
 Source of truth for copy/icons also lives in `CoreBundle/docs/`. Sync that folder here to publish.
 

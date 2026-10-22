@@ -34,8 +34,16 @@ def card_html(app: dict, index: int, indent: str = " " * 12) -> str:
     href = app["storeUrl"] if live else app.get("repoUrl")
     cta = "Get it on Google Play ↗" if live else "View the source ↗"
     show_cta = live or source_is_public
-    badge_cls = "badge badge-live" if live else "badge badge-soon"
-    badge_txt = "Get it on Google Play" if live else "Coming soon on Google Play"
+    is_on_hold = bool(app.get("onHold")) or app.get("collection") in ("lumen", "india")
+    if is_on_hold:
+        badge_cls = "badge badge-hold"
+        badge_txt = "On Hold · Archived"
+    elif live:
+        badge_cls = "badge badge-live"
+        badge_txt = "Get it on Google Play"
+    else:
+        badge_cls = "badge badge-soon"
+        badge_txt = "Coming soon on Google Play"
     chip = esc.get("platform") or esc["genre"]
 
     cache_bust = "?v=3" if app_id == "vividorbit" else "?v=1"
