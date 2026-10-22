@@ -45,12 +45,12 @@
 <div>
 <span class="eyebrow">For iPhone · Musyn by Voryn Labs</span>
 <h1>Music, in your rhythm.</h1>
-<p class="lede">Your music, beautifully in reach. YouTube Music, optional JioSaavn, synced lyrics and a library that travels with you.</p>
+<p class="lede">Stream your favorites. Save them offline. Follow every lyric. A music player that makes room for your music.</p>
 <div class="product-actions">
-<a class="btn btn-gold" id="download-ipa" href="https://github.com/Voryn-Labs/Musyn/releases">View Musyn releases ↗</a>
+<a class="btn btn-gold" id="download-ipa" href="https://github.com/Voryn-Labs/Musyn/releases/download/v0.3.7/Musyn.ipa">Download Musyn 0.3.7 IPA ↗</a>
 <a href="#install">Installation guide ↓</a>
 </div>
-<p class="release-note">Open source · iOS 15+ · Unsigned IPA · By Voryn Labs</p>
+<p class="release-note">Musyn 0.3.7 · Open source · iOS 15+ · Unsigned IPA</p>
 </div>
 <div class="musyn-hero-art" aria-label="Musyn player and library preview">
 <img class="musyn-hero-home" src="assets/img/musyn-home.png" width="390" height="844" alt="Musyn Home with a fictional music library">
@@ -60,26 +60,16 @@
 <section class="product-section" aria-labelledby="listen">
 <h2 id="listen">A little more music. A little less friction.</h2>
 <dl class="product-facts">
-<div>
-<dt>Choose your source</dt>
-<dd>YouTube Music works without a key. Add your own JioSaavn media URL key in Settings when you want another source. Clear AAC quality options, with no lossless claims.</dd>
-</div>
-<div>
-<dt>Keep the queue yours</dt>
-<dd>Play next, reorder, shuffle and save your favorites. Open the full player without losing your place.</dd>
-</div>
-<div>
-<dt>Your YouTube library</dt><dd>Connect YouTube Music to sync liked music and playlists. Your local favorites remain available when a refresh fails.</dd></div><div><dt>Read along</dt>
-<dd>Synced lyrics follow playback, with line seeking and a focused lyrics view. Sing Along is upcoming: turn down the singer’s voice while the backing music and live lyrics continue. The experimental preparation flow is being reworked for faster startup.</dd>
-</div>
-<div>
-<dt>Go offline</dt>
-<dd>Track and playlist downloads with progress, cancellation and retry. Search and sort what is saved.</dd>
-</div>
+<div><dt>Your music, your sources</dt><dd>YouTube Music, ready without API keys. Optional JioSaavn AAC up to 320 kbps when you add your own key.</dd></div>
+<div><dt>Saved for wherever</dt><dd>Download songs and playlists. Choose your source and quality, follow progress, and find saved tracks in your library.</dd></div>
+<div><dt>Every line, in time</dt><dd>Synced lyrics, line seeking and optional lock-screen lyrics. Keep reading in portrait or landscape.</dd></div>
+<div><dt>A queue that follows you</dt><dd>Play next, reorder and shuffle. Keep favorites, playlists and folders just how you like them.</dd></div>
+<div><dt>Your YouTube library</dt><dd>Connect YouTube Music to bring your liked music and playlists into Musyn.</dd></div>
+<div><dt>Coming soon: Sing Along</dt><dd>Turn down the singer’s voice while the backing music and live lyrics continue. In development; vocal reduction is currently disabled.</dd></div>
 </dl>
 </section>
 <section class="product-section musyn-motion" aria-labelledby="motion-title">
-<div><h2 id="motion-title">A player with a little more presence.</h2><p class="lede">Compact glass navigation on iOS 26. Animated album covers, found automatically.</p><p>Musyn matches your selected track against Apple’s public catalogue and album pages. When a suitable real animated cover is available, it is cached for the player and supported lock screen. No file import, extra account or artwork key is needed. Uncertain matches and albums without a clip keep their still cover.</p><p>Automatic artwork is enabled on supported systems unless you turn it off in Appearance. Glass navigation has its own switch. The player’s More menu also offers optional lock-screen lyrics: choose timed lyrics in the artist line, artwork, or both. Artwork lyrics require iOS 26; tap the system artwork to expand it. Offline mode, Reduce Motion, power settings and iOS remain in control.</p><p class="release-note">Earlier iOS versions keep the standard player. Musyn does not extract Spotify Canvas or bundle an Apple Music catalogue token.</p></div>
+<div><h2 id="motion-title">A player with presence.</h2><p class="lede">Your artwork. Your lyrics. Your music.</p><p>Automatic animated album covers and optional glass navigation on iOS 26. No artwork uploads or extra account needed. Covers stay still when a matching animation isn’t available.</p><p>Choose lock-screen lyrics in the artist line, artwork, or both. Artwork lyrics require iOS 26.</p><p class="release-note">CarPlay brings your queue, downloads and favorites to the car with compatible CarPlay-enabled signing.</p></div>
 <img src="assets/img/musyn-landscape.png" width="844" height="390" loading="lazy" alt="Musyn landscape player with artwork beside synced lyrics">
 </section>
 <section class="product-section" aria-labelledby="views">
@@ -98,7 +88,7 @@
 <figcaption>Take it with you</figcaption>
 </figure>
 </div>
-<p class="release-note">Interface previews use fictional tracks and placeholder artwork. They are automated renders, not device playback screenshots.</p>
+<p class="release-note">Interface previews with sample tracks and placeholder artwork.</p>
 </section>
 <section class="product-section" id="install" aria-labelledby="install-title">
 <h2 id="install-title">Your iPhone. Your installer.</h2>
@@ -136,7 +126,7 @@
 </li>
 <li>
 <strong>Open Musyn</strong>
-<p>YouTube Music is ready without a key or account. Connect YouTube Music for your liked music and playlists. JioSaavn is optional: add a media URL key you are authorized to use in Settings → JioSaavn. Musyn supplies no provider key.</p>
+<p>YouTube Music is ready without a key or account. Connect YouTube Music for your liked music and playlists. JioSaavn is optional: add your own authorized media URL key in Settings → JioSaavn. For setup, search “JioSaavn media URL key.” Musyn supplies no provider key.</p>
 </li>
 <li>
 <strong>Save a track</strong>
@@ -145,12 +135,12 @@
 </ol>
 <p>Manual source URL:</p>
 <code class="source-address" id="source-url" tabindex="0">https://voryn-labs.github.io/source.json</code>
-<p class="release-note">App identity: <span id="release-identity">com.vorynlabs.musyn</span>. Physical iPhone playback, background transitions and installer behavior still need device acceptance. Background download resumption is not promised.</p>
+<p class="release-note"><span id="release-identity">Musyn 0.3.7 · com.vorynlabs.musyn</span> · iOS 15+. CarPlay requires an approved audio entitlement in your signing profile.</p>
 </details>
 </section>
 <section class="product-section">
 <h2>Yours to explore. Open to grow.</h2>
-<p class="lede">Musyn is maintained by Voryn Labs under GPL-3.0, with credits to the Musify lineage and BitChord design reference. YouTube Music and optional JioSaavn are the current sources; more providers can be introduced as the project grows. Music and artwork retain their owners’ rights. Availability varies by source and region.</p>
+<p class="lede">Made by Voryn Labs. Open source under GPL-3.0, with credits to the Musify lineage and BitChord interface reference. YouTube Music and optional JioSaavn today, with room for more sources. Music and artwork remain their owners’ property.</p>
 <p>
 <a href="https://github.com/Voryn-Labs/Musyn">Explore the source ↗</a> · <a href="https://github.com/Voryn-Labs/Musyn/issues">Report an issue ↗</a> · <a href="musyn-privacy.html">Privacy</a> · <a href="musyn-terms.html">Terms of use</a>
 </p>
