@@ -62,7 +62,7 @@ Musyn 0.1 has a product page (`docs/musyn.html`), privacy notes, branded icon an
 
 ## One iOS installer source
 
-Add **https://voryn-labs.github.io/source-v2.json** to Feather, SideStore or a
+Add **https://voryn-labs.github.io/source.json** to Feather, SideStore or a
 compatible AltStore Classic installer. It lists **Cloudified and Musyn** together.
 These are unsigned IPAs; installer/signing and minimum-iOS requirements still apply.
 
