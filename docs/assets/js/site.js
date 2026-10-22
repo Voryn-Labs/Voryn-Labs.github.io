@@ -291,7 +291,7 @@
   function initMusynCounter() {
     var countEl = document.getElementById("musyn-stat-downloads");
     if (!countEl) return;
-    fetch("https://api.github.com/repos/Voryn-Labs/Musyn/releases/tags/v0.1.0")
+    fetch("https://api.github.com/repos/Voryn-Labs/Musyn/releases/tags/v0.3.7")
       .then(function (r) { return r.json(); })
       .then(function (data) {
         if (data && Array.isArray(data.assets)) {
