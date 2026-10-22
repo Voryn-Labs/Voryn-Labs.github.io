@@ -56,37 +56,41 @@ def build_catalog(registry, feeds, release_lookup):
         require(app.get('name') == spec['name'], f'{repository}: incorrect app name')
         versions = app.get('versions', [])
         require(bool(versions), f'{repository}: missing release version')
-        version = versions[0]
-        for field in ['version', 'date', 'downloadURL', 'size', 'minOSVersion']:
-            require(bool(version.get(field)), f'{repository}: missing {field}')
-        download = urlsplit(version['downloadURL'])
-        parts = download.path.strip('/').split('/')
-        require(download.scheme == 'https' and download.hostname == 'github.com'
-                and not download.query and not download.fragment
-                and len(parts) == 6 and '/'.join(parts[:2]) == repository
-                and parts[2:4] == ['releases', 'download']
-                and unquote(parts[5]).lower().endswith('.ipa'),
-                f'{repository}: invalid release download URL')
-        tag = unquote(parts[4])
-        release = release_lookup(repository, tag)
-        require(release.get('tag_name') == tag and not release.get('draft')
-                and bool(release.get('published_at')), f'{repository}: release is not published')
-        assets = [asset for asset in release.get('assets', [])
-                  if asset.get('browser_download_url') == version['downloadURL']]
-        require(len(assets) == 1, f'{repository}: IPA asset is missing')
-        asset = assets[0]
-        require(asset.get('state') == 'uploaded' and type(version['size']) is int
-                and version['size'] > 0 and asset.get('size') == version['size'],
-                f'{repository}: IPA size/upload mismatch')
-        digest = asset.get('digest') or ''
-        if digest.startswith('sha256:'):
-            checksum = digest.removeprefix('sha256:')
-            require(not version.get('sha256') or version['sha256'] == checksum,
-                    f'{repository}: SHA-256 mismatch')
-            version['sha256'] = checksum
+        verified_versions = []
+        for version in versions:
+            for field in ['version', 'date', 'downloadURL', 'size', 'minOSVersion']:
+                require(bool(version.get(field)), f'{repository}: missing {field}')
+            download = urlsplit(version['downloadURL'])
+            parts = download.path.strip('/').split('/')
+            require(download.scheme == 'https' and download.hostname == 'github.com'
+                    and not download.query and not download.fragment
+                    and len(parts) == 6 and '/'.join(parts[:2]) == repository
+                    and parts[2:4] == ['releases', 'download']
+                    and unquote(parts[5]).lower().endswith('.ipa'),
+                    f'{repository}: invalid release download URL')
+            tag = unquote(parts[4])
+            release = release_lookup(repository, tag)
+            require(release.get('tag_name') == tag and not release.get('draft')
+                    and bool(release.get('published_at')),
+                    f'{repository}: release {tag} is not published')
+            assets = [asset for asset in release.get('assets', [])
+                      if asset.get('browser_download_url') == version['downloadURL']]
+            require(len(assets) == 1, f'{repository}: IPA asset is missing for {tag}')
+            asset = assets[0]
+            require(asset.get('state') == 'uploaded' and type(version['size']) is int
+                    and version['size'] > 0 and asset.get('size') == version['size'],
+                    f'{repository}: IPA size/upload mismatch for {tag}')
+            digest = asset.get('digest') or ''
+            if digest.startswith('sha256:'):
+                checksum = digest.removeprefix('sha256:')
+                require(not version.get('sha256') or version['sha256'] == checksum,
+                        f'{repository}: SHA-256 mismatch for {tag}')
+                version['sha256'] = checksum
+            verified_versions.append(version)
         # Both modern versions[] and legacy flat fields are used by installers.
         # Keep the real build number, minimum OS and permission disclosures.
-        app['versions'] = [version]
+        version = verified_versions[0]
+        app['versions'] = verified_versions
         app.update(version=version['version'], versionDate=version['date'],
                    versionDescription=version.get('localizedDescription', ''),
                    downloadURL=version['downloadURL'], size=version['size'],
