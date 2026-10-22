@@ -14,7 +14,6 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_URL = 'https://voryn-labs.github.io/source.json'
-CURRENT_SOURCE_URL = 'https://voryn-labs.github.io/source-v2.json'
 
 
 def fetch_json(url):
@@ -57,7 +56,7 @@ def build_catalog(registry, feeds, release_lookup):
         require(app.get('name') == spec['name'], f'{repository}: incorrect app name')
         versions = app.get('versions', [])
         require(bool(versions), f'{repository}: missing release version')
-        verified_versions = []
+        verified_releases = []
         for version in versions:
             for field in ['version', 'date', 'downloadURL', 'size', 'minOSVersion']:
                 require(bool(version.get(field)), f'{repository}: missing {field}')
@@ -87,7 +86,18 @@ def build_catalog(registry, feeds, release_lookup):
                 require(not version.get('sha256') or version['sha256'] == checksum,
                         f'{repository}: SHA-256 mismatch for {tag}')
                 version['sha256'] = checksum
-            verified_versions.append(version)
+            verified_releases.append((version, release))
+        # Keep the catalog concise: newest stable and newest preview only.
+        # Sorting by GitHub's publication timestamp makes promotion predictable
+        # even when an app feed contains older versions in an arbitrary order.
+        selected = []
+        for prerelease in (False, True):
+            channel = [item for item in verified_releases
+                       if bool(item[1].get('prerelease', False)) == prerelease]
+            if channel:
+                selected.append(max(channel, key=lambda item: item[1]['published_at']))
+        selected.sort(key=lambda item: item[1]['published_at'], reverse=True)
+        verified_versions = [item[0] for item in selected]
         # Both modern versions[] and legacy flat fields are used by installers.
         # Keep the real build number, minimum OS and permission disclosures.
         version = verified_versions[0]
@@ -114,14 +124,6 @@ def build_catalog(registry, feeds, release_lookup):
     }
 
 
-def current_catalog(catalog):
-    """Give installers a fresh identity after Feather cached the original feed."""
-    current = deepcopy(catalog)
-    current['identifier'] = 'com.vorynlabs.source.v2'
-    current['sourceURL'] = CURRENT_SOURCE_URL
-    return current
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check', action='store_true', help='Validate remote releases without writing')
@@ -131,17 +133,15 @@ def main():
     catalog = build_catalog(registry, feeds, lambda repo, tag: fetch_json(
         f'https://api.github.com/repos/{repo}/releases/tags/{quote(tag, safe="")}'))
     output = json.dumps(catalog, indent=2, ensure_ascii=False) + '\n'
-    current_output = json.dumps(current_catalog(catalog), indent=2, ensure_ascii=False) + '\n'
     if not args.check:
-        for filename, contents in [('source.json', output), ('source-v2.json', current_output)]:
-            destination = ROOT / 'docs' / filename
-            temporary = destination.with_suffix('.json.tmp')
-            temporary.write_text(contents)
-            temporary.replace(destination)
+        destination = ROOT / 'docs/source.json'
+        temporary = destination.with_suffix('.json.tmp')
+        temporary.write_text(output)
+        temporary.replace(destination)
     for app in catalog['apps']:
         print(f'{app["name"]}: {app["version"]} ({app.get("buildVersion", "1")}), '
               f'iOS {app["minOSVersion"]}+, {app["size"]} bytes')
-    print('Verified shared source' if args.check else f'Updated {SOURCE_URL} and {CURRENT_SOURCE_URL}')
+    print('Verified shared source' if args.check else f'Updated {SOURCE_URL}')
 
 
 if __name__ == '__main__':

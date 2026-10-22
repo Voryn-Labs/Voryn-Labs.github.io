@@ -42,11 +42,31 @@ class SourceTest(unittest.TestCase):
             self.assertIn('appPermissions', app)
         self.assertEqual(original, self.feeds)
 
-    def test_current_catalog_has_fresh_feather_identity(self):
-        catalog = module.current_catalog(self.build())
-        self.assertEqual(catalog['sourceURL'], 'https://voryn-labs.github.io/source-v2.json')
-        self.assertEqual(catalog['identifier'], 'com.vorynlabs.source.v2')
-        self.assertEqual([app['version'] for app in catalog['apps']], ['0.1', '0.1'])
+    def test_only_latest_stable_and_prerelease_are_exposed(self):
+        repo = 'Voryn-Labs/Musyn'
+        app = self.feeds[repo]['apps'][0]
+        releases = {}
+        for version, tag, published, prerelease in [
+            ('0.2', 'v0.2', '2026-10-20T10:00:00Z', False),
+            ('0.3.0-beta.1', 'v0.3.0-beta.1', '2026-10-21T10:00:00Z', True),
+            ('0.3.0-beta.2', 'v0.3.0-beta.2', '2026-10-22T10:00:00Z', True),
+        ]:
+            url = f'https://github.com/{repo}/releases/download/{tag}/Musyn.ipa'
+            item = dict(version=version, date=published, downloadURL=url, size=123,
+                        minOSVersion='15.0')
+            app['versions'].append(item)
+            releases[tag] = dict(tag_name=tag, draft=False, prerelease=prerelease,
+                                 published_at=published,
+                                 assets=[dict(browser_download_url=url, state='uploaded',
+                                              size=123, digest='sha256:' + 'a' * 64)])
+        releases['v0.1'] = dict(self.releases[repo], prerelease=False)
+        catalog = module.build_catalog(
+            self.registry, self.feeds,
+            lambda candidate_repo, tag: releases[tag] if candidate_repo == repo else self.releases[candidate_repo])
+        musyn = next(app for app in catalog['apps'] if app['name'] == 'Musyn')
+        self.assertEqual([version['version'] for version in musyn['versions']],
+                         ['0.3.0-beta.2', '0.2'])
+        self.assertEqual(musyn['version'], '0.3.0-beta.2')
 
     def test_draft_cannot_be_advertised(self):
         self.releases['Voryn-Labs/Musyn']['draft'] = True

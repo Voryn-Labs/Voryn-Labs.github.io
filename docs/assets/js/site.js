@@ -272,7 +272,7 @@
     var status = document.getElementById("copy-status-msg");
     if (!btn) return;
     btn.addEventListener("click", function () {
-      var url = "https://voryn-labs.github.io/source-v2.json";
+      var url = "https://voryn-labs.github.io/source.json";
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(function () {
           if (status) {

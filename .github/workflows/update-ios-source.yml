@@ -23,14 +23,14 @@ jobs:
       - name: Publish updated catalog
         id: publish
         run: |
-          if git diff --quiet -- docs/source.json docs/source-v2.json; then
+          if git diff --quiet -- docs/source.json; then
             echo 'Both apps are already current.'
             echo 'changed=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add docs/source.json docs/source-v2.json
+          git add docs/source.json
           git commit -m 'chore(source): refresh Voryn Labs iOS apps'
           git pull --rebase origin main
           git push origin HEAD:main
