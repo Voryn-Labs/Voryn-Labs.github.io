@@ -64,9 +64,13 @@ class SourceTest(unittest.TestCase):
             self.registry, self.feeds,
             lambda candidate_repo, tag: releases[tag] if candidate_repo == repo else self.releases[candidate_repo])
         musyn = next(app for app in catalog['apps'] if app['name'] == 'Musyn')
-        self.assertEqual([version['version'] for version in musyn['versions']],
-                         ['0.3.0-beta.2', '0.2'])
-        self.assertEqual(musyn['version'], '0.3.0-beta.2')
+        preview = next(app for app in catalog['apps'] if app['name'] == 'Musyn Preview')
+        self.assertEqual([version['version'] for version in musyn['versions']], ['0.2'])
+        self.assertEqual([version['version'] for version in preview['versions']],
+                         ['0.3.0-beta.2'])
+        self.assertEqual(musyn['version'], '0.2')
+        self.assertEqual(preview['version'], '0.3.0-beta.2')
+        self.assertEqual(musyn['bundleIdentifier'], preview['bundleIdentifier'])
 
     def test_draft_cannot_be_advertised(self):
         self.releases['Voryn-Labs/Musyn']['draft'] = True
