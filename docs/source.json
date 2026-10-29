@@ -45,6 +45,42 @@
       "buildVersion": "32"
     },
     {
+      "name": "Cloudified Preview",
+      "bundleIdentifier": "com.vorynlabs.cloudified",
+      "developerName": "Voryn Labs",
+      "subtitle": "Preview channel · may contain unfinished features",
+      "localizedDescription": "Back up original photos and videos to Google Photos and Telegram with independent queues, progress and recovery. An unsigned Voryn Labs app; sign with your own certificate or import into LiveContainer.",
+      "iconURL": "https://raw.githubusercontent.com/Voryn-Labs/Cloudified/main/App/Resources/Assets.xcassets/AppIcon.appiconset/CloudifiedIcon.png",
+      "tintColor": "#096E61",
+      "category": "photo-video",
+      "versions": [
+        {
+          "version": "0.7",
+          "buildVersion": "35",
+          "marketingVersion": "0.7 Preview (35)",
+          "date": "2026-10-29T06:25:06Z",
+          "localizedDescription": "Preview channel; stable installer feeds remain on 0.5.\n\n- Finish interrupted Google save-to-library operations using their existing upload\n  receipts after exact-content checks. This recovery does not upload original\n  media again. Saved requires a valid Google media key or confirmed exact match.\n- Persist bounded finalization retries. Files still unconfirmed after three\n  attempts appear individually in Needs attention; other ready files continue.\n  Verify upload starts another explicit recovery cycle while preserving evidence.\n- Separate valid larger Google metadata responses from the smaller limits used\n  for other requests, while keeping memory, cache and disk use bounded.\n- Distinguish thermal/background cancellations from provider rejections and\n  associate commit failures with their file/job and retry cycle. Preserve HTTP\n  status, structured Google status and response shape/size without raw responses.\n- Preserve initial failures ahead of repeated follow-up checks. Diagnostic reports\n  include bounded queue state, uploaded versus already-present counts, first\n  failures and sanitized checkpoint/native ownership evidence.\n- Surface admission-check failures instead of silently treating them as no capacity.\n  Coalesce busy Telegram recovery and keep per-file failures independent.\n- Preserve original media, upload quality/profile, independent providers and native\n  reader safety. iOS background/thermal limits still apply; an unstructured Google\n  error may not disclose its internal cause. Receipt replay uses a private API\n  whose duplicate safety is not formally documented.\n\nUpdate with the same signing identity and keep app data. Downgrading this container to 0.5 or 0.6 is unsupported; keep protected uploads and update forward.",
+          "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-40828576876/Cloudified-unsigned.ipa",
+          "size": 18068990,
+          "sha256": "815c6d144c8413182c062806fae19dda10514957595764505cba70c531d80e26",
+          "minOSVersion": "26.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSPhotoLibraryUsageDescription": "Cloudified requires photo library access to back up original quality photos and videos to Google Photos and Telegram."
+        }
+      },
+      "version": "0.7",
+      "versionDate": "2026-10-29T06:25:06Z",
+      "versionDescription": "Preview channel; stable installer feeds remain on 0.5.\n\n- Finish interrupted Google save-to-library operations using their existing upload\n  receipts after exact-content checks. This recovery does not upload original\n  media again. Saved requires a valid Google media key or confirmed exact match.\n- Persist bounded finalization retries. Files still unconfirmed after three\n  attempts appear individually in Needs attention; other ready files continue.\n  Verify upload starts another explicit recovery cycle while preserving evidence.\n- Separate valid larger Google metadata responses from the smaller limits used\n  for other requests, while keeping memory, cache and disk use bounded.\n- Distinguish thermal/background cancellations from provider rejections and\n  associate commit failures with their file/job and retry cycle. Preserve HTTP\n  status, structured Google status and response shape/size without raw responses.\n- Preserve initial failures ahead of repeated follow-up checks. Diagnostic reports\n  include bounded queue state, uploaded versus already-present counts, first\n  failures and sanitized checkpoint/native ownership evidence.\n- Surface admission-check failures instead of silently treating them as no capacity.\n  Coalesce busy Telegram recovery and keep per-file failures independent.\n- Preserve original media, upload quality/profile, independent providers and native\n  reader safety. iOS background/thermal limits still apply; an unstructured Google\n  error may not disclose its internal cause. Receipt replay uses a private API\n  whose duplicate safety is not formally documented.\n\nUpdate with the same signing identity and keep app data. Downgrading this container to 0.5 or 0.6 is unsupported; keep protected uploads and update forward.",
+      "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-40828576876/Cloudified-unsigned.ipa",
+      "size": 18068990,
+      "minOSVersion": "26.0",
+      "buildVersion": "35"
+    },
+    {
       "name": "Musyn",
       "bundleIdentifier": "com.vorynlabs.musyn",
       "developerName": "Voryn Labs",
