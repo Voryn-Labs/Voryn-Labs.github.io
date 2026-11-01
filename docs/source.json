@@ -55,14 +55,14 @@
       "category": "photo-video",
       "versions": [
         {
-          "version": "0.8",
-          "buildVersion": "37",
-          "marketingVersion": "0.8 Preview (37)",
-          "date": "2026-10-30T11:00:10Z",
-          "localizedDescription": "Preview channel. Stable remains0.5.\n\n- Exclude regular Photos albums separately for Google Photos and Telegram.\n  Rules apply before original export and again before sending; existing cloud\n  files are unchanged. Excluded items have a separate count.\n- Redesign Keep Awake with a black background, stable progress ring, aligned\n  close control and Dim/Comfortable appearance options. Remove the square launch\n  background while retaining the existing app icon.\n- Share Google token refresh between concurrent operations, distinguish service\n  outages from expired sign-in, and recover a background401 with bounded refresh\n  rather than immediately asking for another login. No automatic byte replay.\n- Preserve pending background delegate results and settle Telegram failed sends\n  with bounded native rechecks. Unknown readers and unconfirmed outcomes remain\n  protected; a file failure does not authorize a blind resend.\n- Keep unreadable issue details visible and skip permanently unavailable Telegram\n  channel candidates without hiding account, rate or network errors.\n\nUpdate in place with the same signing/container identity. This preview upgrades\nthe local database to schema6; downgrading to0.7 or earlier in that container is\nunsupported. Published0.5 and0.7 assets remain unchanged.",
-          "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-41044058063/Cloudified-unsigned.ipa",
-          "size": 17979800,
-          "sha256": "1127c87a90d0ee60603fa5e3f8d7236391da07947703132fa203ca314782bb3c",
+          "version": "0.81",
+          "buildVersion": "38",
+          "marketingVersion": "0.81 Preview (38)",
+          "date": "2026-10-30T17:33:29Z",
+          "localizedDescription": "Latest preview; stable remains0.5.\n\n- Filter unrelated Telegram chat/file updates before the bounded native queue,\n  preventing irrelevant bursts from poisoning upload delivery. Preserve owned\n  completion/failure events, including retained uploads from an older mapping.\n- Gate a broken Telegram input stream once and request verified recovery, rather\n  than repeatedly admitting the same failed connection. Google stays independent.\n- Identify local connection-capacity failures accurately instead of calling them\n  Telegram server rejections. Record the precise capacity subtype; transient\n  request pressure remains retryable.\n- Preserve original media, upload profile, retry limits, receipts and protected\n  native files. Unknown outcomes still require verification before another send.\n\nUpdate in place with the same signing identity/container. This preview advances\nthe database to schema7; do not downgrade its container to0.8 or earlier.",
+          "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-41096481874/Cloudified-unsigned.ipa",
+          "size": 17986116,
+          "sha256": "43a119261a75a8cc844908c332efc7e0d2b6942ea88e01b7491d56a05f94c84d",
           "minOSVersion": "26.0"
         }
       ],
@@ -72,13 +72,13 @@
           "NSPhotoLibraryUsageDescription": "Cloudified requires photo library access to back up original quality photos and videos to Google Photos and Telegram."
         }
       },
-      "version": "0.8",
-      "versionDate": "2026-10-30T11:00:10Z",
-      "versionDescription": "Preview channel. Stable remains0.5.\n\n- Exclude regular Photos albums separately for Google Photos and Telegram.\n  Rules apply before original export and again before sending; existing cloud\n  files are unchanged. Excluded items have a separate count.\n- Redesign Keep Awake with a black background, stable progress ring, aligned\n  close control and Dim/Comfortable appearance options. Remove the square launch\n  background while retaining the existing app icon.\n- Share Google token refresh between concurrent operations, distinguish service\n  outages from expired sign-in, and recover a background401 with bounded refresh\n  rather than immediately asking for another login. No automatic byte replay.\n- Preserve pending background delegate results and settle Telegram failed sends\n  with bounded native rechecks. Unknown readers and unconfirmed outcomes remain\n  protected; a file failure does not authorize a blind resend.\n- Keep unreadable issue details visible and skip permanently unavailable Telegram\n  channel candidates without hiding account, rate or network errors.\n\nUpdate in place with the same signing/container identity. This preview upgrades\nthe local database to schema6; downgrading to0.7 or earlier in that container is\nunsupported. Published0.5 and0.7 assets remain unchanged.",
-      "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-41044058063/Cloudified-unsigned.ipa",
-      "size": 17979800,
+      "version": "0.81",
+      "versionDate": "2026-10-30T17:33:29Z",
+      "versionDescription": "Latest preview; stable remains0.5.\n\n- Filter unrelated Telegram chat/file updates before the bounded native queue,\n  preventing irrelevant bursts from poisoning upload delivery. Preserve owned\n  completion/failure events, including retained uploads from an older mapping.\n- Gate a broken Telegram input stream once and request verified recovery, rather\n  than repeatedly admitting the same failed connection. Google stays independent.\n- Identify local connection-capacity failures accurately instead of calling them\n  Telegram server rejections. Record the precise capacity subtype; transient\n  request pressure remains retryable.\n- Preserve original media, upload profile, retry limits, receipts and protected\n  native files. Unknown outcomes still require verification before another send.\n\nUpdate in place with the same signing identity/container. This preview advances\nthe database to schema7; do not downgrade its container to0.8 or earlier.",
+      "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-41096481874/Cloudified-unsigned.ipa",
+      "size": 17986116,
       "minOSVersion": "26.0",
-      "buildVersion": "37"
+      "buildVersion": "38"
     },
     {
       "name": "Musyn",
