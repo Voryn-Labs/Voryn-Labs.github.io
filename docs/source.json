@@ -125,14 +125,14 @@
       "tintColor": "FFC5A7",
       "versions": [
         {
-          "version": "0.4.0-beta.1",
-          "buildVersion": "20",
-          "date": "2026-10-22T15:38:03+00:00",
-          "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.4.0-beta.1/Musyn.ipa",
-          "size": 12489421,
+          "version": "0.9.0-beta.1",
+          "buildVersion": "21",
+          "date": "2026-11-04T13:42:22.606115+00:00",
+          "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.9.0-beta.1/Musyn.ipa",
+          "size": 12490132,
           "minOSVersion": "15.0",
-          "localizedDescription": "Preview — local Smart Library, ratings, tags, moods, smart shuffle and Home Screen widgets.",
-          "sha256": "2b29ffe8029e1216f36c17fbaac82846d354eaa0802b1c1015a7763d36c3c185"
+          "localizedDescription": "Preview — fixes for downloaded playback, stalled stream switching and Previous Track. Includes Smart Library and Home Screen widgets.",
+          "sha256": "686d1aac216fb247fd5ad3e3c69abdb64c6f2a846720e8102f72bb98dfd9b6a8"
         }
       ],
       "appPermissions": {
@@ -142,13 +142,13 @@
         ],
         "privacy": {}
       },
-      "version": "0.4.0-beta.1",
-      "versionDate": "2026-10-22T15:38:03+00:00",
-      "versionDescription": "Preview — local Smart Library, ratings, tags, moods, smart shuffle and Home Screen widgets.",
-      "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.4.0-beta.1/Musyn.ipa",
-      "size": 12489421,
+      "version": "0.9.0-beta.1",
+      "versionDate": "2026-11-04T13:42:22.606115+00:00",
+      "versionDescription": "Preview — fixes for downloaded playback, stalled stream switching and Previous Track. Includes Smart Library and Home Screen widgets.",
+      "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v0.9.0-beta.1/Musyn.ipa",
+      "size": 12490132,
       "minOSVersion": "15.0",
-      "buildVersion": "20"
+      "buildVersion": "21"
     }
   ],
   "news": []
