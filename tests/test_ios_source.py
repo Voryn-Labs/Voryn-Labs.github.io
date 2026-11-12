@@ -91,6 +91,27 @@ class SourceTest(unittest.TestCase):
         self.assertEqual(next(app for app in catalog['apps'] if app['name'] == 'Cloudified')['version'], '0.1')
         self.assertFalse(any(app['name'] == 'Cloudified Preview' for app in catalog['apps']))
 
+    def test_musyn_preview_can_be_hidden_without_removing_release(self):
+        repo = 'Voryn-Labs/Musyn'
+        self.registry[1]['includePreview'] = False
+        app = self.feeds[repo]['apps'][0]
+        tag = 'v0.2-beta.1'
+        url = f'https://github.com/{repo}/releases/download/{tag}/Musyn.ipa'
+        app['versions'].append(dict(version='0.2-beta.1', date='2026-10-21T10:00:00Z',
+                                    downloadURL=url, size=123, minOSVersion='15.0'))
+        self.releases[tag] = dict(tag_name=tag, draft=False, prerelease=True,
+                                  published_at='2026-10-21T10:00:00Z',
+                                  assets=[dict(browser_download_url=url, state='uploaded',
+                                               size=123, digest='sha256:' + 'a' * 64)])
+        catalog = module.build_catalog(
+            self.registry, self.feeds,
+            lambda candidate_repo, release_tag: (
+                self.releases[tag] if candidate_repo == repo and release_tag == tag
+                else self.releases[candidate_repo]))
+        self.assertEqual([app['name'] for app in catalog['apps']], ['Cloudified', 'Musyn'])
+        musyn = next(app for app in catalog['apps'] if app['name'] == 'Musyn')
+        self.assertEqual(musyn['version'], '0.1')
+
     def test_draft_cannot_be_advertised(self):
         self.releases['Voryn-Labs/Musyn']['draft'] = True
         with self.assertRaisesRegex(ValueError, 'not published'):
