@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navigy — Context Action Bar &amp; Overlay for macOS · Voryn Labs</title>
+  <meta name="description" content="Highlight any text across macOS and hit ⌥⌘C to trigger instant conversions, searches, and actions. Navigy by Voryn Labs.">
+  <meta name="theme-color" content="#0A0C10">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Navigy — Context Action Bar &amp; Overlay for macOS">
+  <meta property="og:description" content="Floating action bar and context overlay for selected text on macOS. 100% offline, zero cloud telemetry.">
+  <meta property="og:image" content="assets/icons/navigy.png">
+  <link rel="icon" href="assets/icons/navigy.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=12">
+  <link rel="stylesheet" href="assets/css/product-pages.css?v=5">
+  <script>
+    (function(){
+      document.documentElement.classList.add("js");
+      var t = localStorage.getItem("voryn-theme");
+      if (t === "dark" || t === "light") {
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    })();
+  </script>
+</head>
+<body class="product-detail-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Navigation Bar -->
+  <header class="site-nav">
+    <nav class="wrap" aria-label="Main Navigation">
+      <a class="brand-mark" href="index.html" aria-label="Voryn Labs Home">
+        <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="28" height="28">
+        <span class="brand-text">VORYN LABS</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#products">Ecosystem</a></li>
+        <li><a href="index.html#macos">macOS Apps</a></li>
+        <li><a href="https://github.com/Voryn-Labs/navigy" target="_blank" rel="noopener">GitHub Repo ↗</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a class="nav-github-btn" href="https://github.com/Voryn-Labs/navigy" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>Source Code</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="product-page-hero">
+      <div class="wrap product-hero-grid">
+        <div class="product-hero-copy">
+          <div class="badge-row">
+            <span class="platform-pill">macOS 14+ · Sonoma &amp; Sequoia</span>
+            <span class="status-pill status-active">Stable · v1.0.0</span>
+            <span class="license-pill">AGPL-3.0</span>
+          </div>
+          <h1>Navigy</h1>
+          <p class="tagline-large">Selected text, given superpowers across your Mac.</p>
+          <p class="hero-desc">
+            Navigy is an ultra-fast macOS menu bar application and floating context bar. Highlight any text in any Mac app, hit <kbd>⌥</kbd><kbd>⌘</kbd><kbd>C</kbd>, and instantly transform, convert, summarize, or calculate without leaving your active workflow.
+          </p>
+
+          <div class="hero-actions">
+            <a class="action-btn action-btn-primary" href="https://github.com/Voryn-Labs/navigy/releases/download/v1/Navigy.dmg">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download Navigy DMG (v1.0.0)</span>
+            </a>
+            <a class="action-btn" href="https://github.com/Voryn-Labs/navigy/releases/tag/v1" target="_blank" rel="noopener">
+              <span>Release Notes ↗</span>
+            </a>
+            <a class="action-btn" href="#gatekeeper">
+              <span>Gatekeeper Guide ↓</span>
+            </a>
+            <a class="action-btn action-btn-ghost" href="#build-from-source">
+              <span>Build from Source ↓</span>
+            </a>
+          </div>
+
+          <div class="product-metadata-bar">
+            <span class="meta-tag"><code>com.vorynlabs.navigy</code></span>
+            <span class="meta-divider">·</span>
+            <span>v1.0.0 Universal</span>
+            <span class="meta-divider">·</span>
+            <a class="meta-link" href="https://github.com/Voryn-Labs/navigy/releases/tag/v1" target="_blank" rel="noopener">v1 Release Notes &amp; SHA256 ↗</a>
+            <span class="meta-divider">·</span>
+            <span class="meta-badge">Gatekeeper Safe</span>
+          </div>
+        </div>
+
+        <div class="product-hero-visual">
+          <div class="mac-app-window">
+            <div class="mac-window-titlebar">
+              <span class="mac-dot mac-dot-red"></span>
+              <span class="mac-dot mac-dot-yellow"></span>
+              <span class="mac-dot mac-dot-green"></span>
+              <span class="mac-window-title">Navigy — Command Palette (⌥⌘C)</span>
+            </div>
+            <div class="mac-window-viewport">
+              <img src="assets/img/navigy-search-palette.png" alt="Navigy Search Palette interface" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Showcase of Navigy Real Screenshots -->
+    <section class="wrap product-detail-section">
+      <div class="section-header">
+        <h2>Interface in Motion</h2>
+        <p class="section-lede">Captured directly from macOS Sonoma. Clean, distraction-free overlays that attach smoothly to your current cursor selection.</p>
+      </div>
+
+      <div class="screenshots-showcase-grid">
+        <figure class="screenshot-figure">
+          <img src="assets/img/navigy-search-palette.png" alt="Navigy Search Palette interface" loading="lazy">
+          <figcaption>
+            <strong>Fuzzy Search Command Palette</strong>
+            <span>Summoned with ⌥⌘C to search across all registered text actions, converters, and custom scripts.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="screenshot-figure">
+          <img src="assets/img/navigy-in-app-extensions.png" alt="Navigy In-App Extensions Floating Bar" loading="lazy">
+          <figcaption>
+            <strong>Selection Action Overlay</strong>
+            <span>A quiet floating context bar that attaches adjacent to highlighted text anywhere on macOS.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="screenshot-figure">
+          <img src="assets/img/navigy-ai-tools.png" alt="Navigy AI Tools and Transformations" loading="lazy">
+          <figcaption>
+            <strong>Local Processing &amp; Transformations</strong>
+            <span>One-tap grammar repair, formatting, casing shifts, and contextual utilities.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="screenshot-figure">
+          <img src="assets/img/navigy-math.png" alt="Navigy Inline Math Engine" loading="lazy">
+          <figcaption>
+            <strong>Inline Calculator &amp; Unit Engine</strong>
+            <span>Select any mathematical equation or currency and receive instantaneous inline answers.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Key Architecture Points -->
+    <section class="wrap product-detail-section">
+      <div class="section-header">
+        <h2>Engineered for Privacy &amp; Speed</h2>
+        <p class="section-lede">Navigy operates strictly within macOS security guidelines.</p>
+      </div>
+
+      <div class="arch-points-grid">
+        <div class="arch-card">
+          <h4>100% Local Execution</h4>
+          <p>Your highlighted text is processed entirely within local memory. No keystroke loggers, no cloud tracking, and zero remote network requests.</p>
+        </div>
+        <div class="arch-card">
+          <h4>Universal Binary</h4>
+          <p>Hand-tuned native Swift code compiled for Apple Silicon M1/M2/M3/M4 and Intel processors with instantaneous cold start times.</p>
+        </div>
+        <div class="arch-card">
+          <h4>Permission Transparency</h4>
+          <p>Relies on macOS Accessibility APIs to locate selection bounds. Screen capture triggers strictly on explicit user hotkey invocation.</p>
+        </div>
+        <div class="arch-card">
+          <h4>Menu Bar Resident</h4>
+          <p>Unobtrusively docks in your menu bar. Easily configure global hotkeys, active tools, and ignore-lists for sensitive apps.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= macOS Gatekeeper & Authorization Guide ================= -->
+    <section class="wrap product-detail-section" id="gatekeeper">
+      <div class="section-header">
+        <h2>macOS Gatekeeper &amp; Authorization Guide</h2>
+        <p class="section-lede">Independent open-source binary without an Apple Developer subscription ($99/yr). Safe, verifiable, and running in under 30 seconds.</p>
+      </div>
+
+      <div class="gatekeeper-notice-box">
+        <div class="notice-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <div class="notice-text">
+          <h4>Why macOS Shows a Security Prompt</h4>
+          <p>
+            Because Navigy is 100% free, copyleft open source (AGPL-3.0), we do not pay an annual Apple Developer certificate fee. On first launch, macOS Gatekeeper may show: <em>"Navigy cannot be opened because Apple cannot check it for malicious software"</em>. Navigy is completely auditable with public source code, zero analytics, and 100% offline text processing. Follow either method below to authorize launch.
+          </p>
+        </div>
+      </div>
+
+      <div class="gatekeeper-methods-grid">
+        <!-- Method 1: GUI / Finder -->
+        <div class="method-card">
+          <div class="method-card-header">
+            <h3>Method 1: Control-Click (GUI)</h3>
+            <span class="method-tag method-tag-gui">Recommended</span>
+          </div>
+          <p class="method-desc">Authorize Navigy directly through Finder without touching the command line.</p>
+          <ol class="method-steps">
+            <li>
+              <span class="step-bullet">1</span>
+              <span>Open the downloaded <code>Navigy.dmg</code> and drag <strong>Navigy.app</strong> into your <strong>/Applications</strong> folder.</span>
+            </li>
+            <li>
+              <span class="step-bullet">2</span>
+              <span>In Finder, open <strong>/Applications</strong>, hold <kbd>Control</kbd> (or right-click) on <strong>Navigy.app</strong>, and choose <strong>Open</strong> from the menu.</span>
+            </li>
+            <li>
+              <span class="step-bullet">3</span>
+              <span>In the security dialog asking <em>"Are you sure you want to open it?"</em>, click <strong>Open</strong>. This permanently saves an exception for Navigy.</span>
+            </li>
+          </ol>
+          <p class="method-desc" style="margin-top:auto; font-size:0.84rem; opacity:0.8;">
+            <em>Tip:</em> You can also go to <strong>System Settings → Privacy &amp; Security</strong>, scroll down to <strong>Security</strong>, and click <strong>"Open Anyway"</strong>.
+          </p>
+        </div>
+
+        <!-- Method 2: Terminal Quarantine Strip -->
+        <div class="method-card">
+          <div class="method-card-header">
+            <h3>Method 2: Strip Quarantine Flag</h3>
+            <span class="method-tag method-tag-cli">Instant CLI</span>
+          </div>
+          <p class="method-desc">For power users: strip macOS download quarantine flag in one terminal command.</p>
+          <ol class="method-steps">
+            <li>
+              <span class="step-bullet">1</span>
+              <span>Move <strong>Navigy.app</strong> to your <strong>/Applications</strong> folder.</span>
+            </li>
+            <li>
+              <span class="step-bullet">2</span>
+              <span>Open <strong>Terminal.app</strong> (hit <kbd>⌘</kbd> <kbd>Space</kbd> and type Terminal).</span>
+            </li>
+            <li>
+              <span class="step-bullet">3</span>
+              <span>Run the following command to remove the quarantine attribute:</span>
+            </li>
+          </ol>
+          <div class="cli-command-box">
+            <code>xattr -cr /Applications/Navigy.app</code>
+            <button class="copy-cmd-btn" type="button" data-copy-text="xattr -cr /Applications/Navigy.app" aria-label="Copy terminal command">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Required Accessibility Banner -->
+      <div class="permission-banner-card">
+        <div class="perm-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="10" r="3"></circle>
+            <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"></path>
+          </svg>
+        </div>
+        <div class="perm-text">
+          <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.25rem;">
+            <h4>Required Step: Grant Accessibility Permission</h4>
+            <span class="method-tag method-tag-required">Required</span>
+          </div>
+          <p>
+            Because Navigy detects highlighted text selections across your open Mac applications and displays a floating context overlay, macOS requires explicit Accessibility authorization:
+          </p>
+          <div class="perm-path">
+            <span>System Settings</span> <span>→</span> <span>Privacy &amp; Security</span> <span>→</span> <span>Accessibility</span> <span>→</span> <strong>Toggle Navigy ON</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Build from Source Section ================= -->
+    <section class="wrap product-detail-section" id="build-from-source">
+      <div class="section-header">
+        <h2>Build from Source</h2>
+        <p class="section-lede">Prefer to inspect and compile the code yourself? Navigy is 100% open source under AGPL-3.0. Compile universal binaries directly with Swift Package Manager.</p>
+      </div>
+
+      <div class="build-source-grid">
+        <div>
+          <div class="code-terminal-block">
+            <div class="code-terminal-header">
+              <span class="code-terminal-dot"></span>
+              <span class="code-terminal-dot"></span>
+              <span class="code-terminal-dot"></span>
+              <span class="code-terminal-title">Terminal — Build Navigy from Source</span>
+              <button class="copy-cmd-btn" type="button" data-copy-target="navigy-build-code" style="margin-left:auto;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>Copy All</span>
+              </button>
+            </div>
+            <pre class="code-terminal-body"><code id="navigy-build-code"># 1. Clone the official repository
+git clone https://github.com/Voryn-Labs/navigy.git
+cd navigy
+
+# 2. Build release binary using Swift Package Manager
+./scripts/build-app.sh
+
+# 3. Launch compiled bundle
+open dist/Navigy.app</code></pre>
+          </div>
+        </div>
+
+        <div class="build-requirements-card">
+          <h4>Build Environment &amp; Requirements</h4>
+          <ul class="req-list">
+            <li><span class="req-check">✓</span> <span>macOS 14.0 Sonoma or macOS 15 Sequoia</span></li>
+            <li><span class="req-check">✓</span> <span>Xcode Command Line Tools (<code>xcode-select --install</code>)</span></li>
+            <li><span class="req-check">✓</span> <span>Swift 5.9+ compiler toolchain</span></li>
+            <li><span class="req-check">✓</span> <span>Pure Swift &amp; AppKit · Zero third-party web runtimes</span></li>
+            <li><span class="req-check">✓</span> <span>Native universal binary (x86_64 + arm64)</span></li>
+          </ul>
+
+          <div style="margin-top:1.5rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <a class="action-btn action-btn-primary" href="https://github.com/Voryn-Labs/navigy" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub Repository ↗</span>
+            </a>
+            <a class="action-btn" href="https://github.com/Voryn-Labs/navigy/issues" target="_blank" rel="noopener">
+              <span>Report Issue ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand-mark" href="index.html">
+          <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="24" height="24">
+          <span class="brand-text">VORYN LABS</span>
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#products">Ecosystem</a></li>
+          <li><a href="https://github.com/Voryn-Labs/navigy" target="_blank" rel="noopener">Navigy on GitHub</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Voryn Labs. Independent Multi-Platform Software Studio. Zero Telemetry.</p>
+        <p>Built with native web standards · No runtime frameworks</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/site.js?v=9"></script>
+</body>
+</html>

@@ -1,178 +1,313 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Musyn · Music, in your rhythm · Voryn Labs</title>
-<meta name="description" content="An iPhone music player with YouTube Music, JioSaavn, synced lyrics and offline downloads. Musyn by Voryn Labs.">
-<meta name="theme-color" content="#0E0D0B">
-<meta property="og:title" content="Musyn · Music, in your rhythm">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://voryn-labs.github.io/assets/icons/musyn.png">
-<meta property="og:description" content="An iPhone music player with YouTube Music, JioSaavn, synced lyrics and offline downloads. Musyn by Voryn Labs.">
-<link rel="canonical" href="https://voryn-labs.github.io/musyn.html">
-<link rel="icon" href="assets/icons/musyn.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="assets/css/site.css?v=3">
-<link rel="stylesheet" href="assets/css/cloudified.css">
-<link rel="stylesheet" href="assets/css/musyn.css?v=2">
-<script>try { var theme=localStorage.getItem("voryn-theme"); if(theme==="light"||theme==="dark") document.documentElement.setAttribute("data-theme",theme); } catch (_) {}</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Musyn · Music, in your rhythm · Voryn Labs</title>
+  <meta name="description" content="An iPhone music player uniting YouTube Music and JioSaavn with dynamic time-synced karaoke lyrics and offline caching. Musyn by Voryn Labs.">
+  <meta name="theme-color" content="#0A0C10">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Musyn · Music, in your rhythm">
+  <meta property="og:description" content="An iPhone music player with YouTube Music, JioSaavn, synced lyrics and offline downloads. Musyn by Voryn Labs.">
+  <meta property="og:image" content="assets/icons/musyn.png">
+  <link rel="icon" href="assets/icons/musyn.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=10">
+  <link rel="stylesheet" href="assets/css/product-pages.css?v=3">
+  <script>
+    (function(){
+      document.documentElement.classList.add("js");
+      var t = localStorage.getItem("voryn-theme");
+      if (t === "dark" || t === "light") {
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    })();
+  </script>
 </head>
-<body class="cloudified-page musyn-page">
-<a class="skip-link" href="#main">Skip to content</a>
-<div class="wrap">
-<header class="product-nav">
-<a class="studio-lockup" href="index.html">
-<img src="assets/voryn-mark.png" width="32" height="32" alt="">Voryn Labs</a>
-<nav aria-label="Product navigation">
-<a href="index.html#iphone-apps">Our iPhone apps</a>
-<button class="theme-toggle" id="theme-toggle" aria-label="Switch color theme" title="Switch color theme">
-<svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-<circle cx="12" cy="12" r="4">
-</circle>
-<path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5">
-</path>
-</svg>
-<svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-<path d="M20.5 13.2A8.5 8.5 0 0 1 10.8 3.5a8.5 8.5 0 1 0 9.7 9.7Z">
-</path>
-</svg>
-</button>
-</nav>
-</header>
-<main id="main">
-<section class="product-hero">
-<div>
-<span class="eyebrow">For iPhone · Musyn by Voryn Labs</span>
-<h1>Music, in your rhythm.</h1>
-<p class="lede">Stream your favorites. Save them offline. Follow every lyric. A music player that makes room for your music.</p>
-<div class="product-actions">
-<a class="btn btn-gold" id="download-ipa" href="https://github.com/Voryn-Labs/Musyn/releases/download/v1.0.0/Musyn.ipa">Download Musyn 1.0.0 IPA ↗</a>
-<a href="#install">Installation guide ↓</a>
-</div>
-<p class="release-note">Stable 1.0.0 · <a href="https://github.com/Voryn-Labs/Musyn/releases/tag/v1.0.0">Release notes and checksum ↗</a> · iOS 15+ · Unsigned IPA</p>
-<p>1.0.0 improves playback from Downloads after a connection change, fixes Previous Track, and adds Smart Library tools and Home Screen widgets.</p>
-</div>
-<div class="musyn-hero-art" aria-label="Musyn screenshots from iPhone">
-<img class="musyn-hero-home" src="assets/img/musyn-screen-home.jpg" width="1206" height="2622" alt="Musyn Home with recently played tracks, favorites, and the mini player">
-<img class="musyn-hero-player" src="assets/img/musyn-screen-player.jpg" width="1206" height="2622" alt="Musyn Now Playing with album art and playback controls">
-</div>
-</section>
-<section class="product-section" aria-labelledby="listen">
-<h2 id="listen">A little more music. A little less friction.</h2>
-<dl class="product-facts">
-<div><dt>Your music, your sources</dt><dd>YouTube Music, ready without API keys. Optional JioSaavn AAC up to 320 kbps when you add your own key.</dd></div>
-<div><dt>Saved for wherever</dt><dd>Download songs and playlists. Choose your source and quality, follow progress, and find saved tracks in your library.</dd></div>
-<div><dt>Every line, in time</dt><dd>Synced lyrics, line seeking and optional lock-screen lyrics. Keep reading in portrait or landscape.</dd></div>
-<div><dt>A queue that follows you</dt><dd>Play next, reorder and shuffle. Keep favorites, playlists and folders just how you like them.</dd></div>
-<div><dt>Your YouTube library</dt><dd>Connect YouTube Music to bring your liked music and playlists into Musyn.</dd></div>
-<div><dt>Coming soon: Sing Along</dt><dd>Turn down the singer’s voice while the backing music and live lyrics continue. In development; vocal reduction is currently disabled.</dd></div>
-</dl>
-</section>
-<section class="product-section musyn-motion" aria-labelledby="motion-title">
-<div><h2 id="motion-title">A player with presence.</h2><p class="lede">Your artwork. Your lyrics. Your music.</p><p>Automatic animated album covers and optional glass navigation on iOS 26. No artwork uploads or extra account needed. Covers stay still when a matching animation isn’t available.</p><p>Choose lock-screen lyrics in the artist line, artwork, or both. Artwork lyrics require iOS 26.</p><p class="release-note">CarPlay brings your queue, downloads and favorites to the car with compatible CarPlay-enabled signing.</p></div>
-</section>
-<section class="product-section" aria-labelledby="views">
-<h2 id="views">Made to keep the music in view.</h2>
-<div class="musyn-screens">
-<figure>
-<img src="assets/img/musyn-screen-home.jpg" width="1206" height="2622" loading="lazy" alt="Recently played tracks, favorites, and the mini player">
-<figcaption>Home</figcaption>
-</figure>
-<figure>
-<img src="assets/img/musyn-screen-player.jpg" width="1206" height="2622" loading="lazy" alt="Album artwork and playback controls">
-<figcaption>Now Playing</figcaption>
-</figure>
-<figure>
-<img src="assets/img/musyn-screen-lyrics.jpg" width="1206" height="2622" loading="lazy" alt="Highlighted synced lyrics on a red background">
-<figcaption>Synced lyrics</figcaption>
-</figure>
-<figure>
-<img src="assets/img/musyn-screen-lyrics-alt.jpg" width="1206" height="2622" loading="lazy" alt="Synced lyrics and playback in the Dynamic Island">
-<figcaption>Lyrics and Dynamic Island</figcaption>
-</figure>
-<figure>
-<img src="assets/img/musyn-screen-lock-screen.jpg" width="1206" height="2622" loading="lazy" alt="Album artwork and iPhone Lock Screen playback controls">
-<figcaption>Lock Screen player</figcaption>
-</figure>
-<figure>
-<img src="assets/img/musyn-screen-lock-screen-lyrics.jpg" width="1206" height="2622" loading="lazy" alt="Live lyrics above the iPhone Lock Screen playback controls">
-<figcaption>Lock Screen lyrics</figcaption>
-</figure>
-</div>
-<p class="release-note">Screenshots captured on iPhone.</p>
-</section>
-<section class="product-section" id="install" aria-labelledby="install-title">
-<h2 id="install-title">Your iPhone. Your installer.</h2>
-<p class="lede">Musyn is distributed as an unsigned IPA. Use your own signing identity with a compatible installer, or import the IPA into a compatible LiveContainer version.</p>
-<p class="install-intro">One Voryn Labs source includes both Cloudified and Musyn. Add it once to browse both apps in your installer.</p>
-<nav class="installer-links" aria-label="Add Voryn Labs source">
-<a class="installer-link" href="feather://source/https://voryn-labs.github.io/source.json">
-<span class="installer-monogram" aria-hidden="true">F</span>
-<span>Feather</span>
-<span aria-hidden="true">↗</span>
-</a>
-<a class="installer-link" href="sidestore://source?url=https%3A%2F%2Fvoryn-labs.github.io%2Fsource.json">
-<span class="installer-monogram" aria-hidden="true">S</span>
-<span>SideStore</span>
-<span aria-hidden="true">↗</span>
-</a>
-<a class="installer-link" href="altstore://source?url=https%3A%2F%2Fvoryn-labs.github.io%2Fsource.json">
-<span class="installer-monogram" aria-hidden="true">A</span>
-<span>AltStore Classic</span>
-<span aria-hidden="true">↗</span>
-</a>
-</nav>
-<div class="install-utilities">
-<a id="release-checksum" href="https://github.com/Voryn-Labs/Musyn/releases">Release and checksum ↗</a>
-<button id="copy-source" type="button">Copy source URL</button>
-<span id="source-copy-status" role="status">
-</span>
-</div>
-<details class="install-details">
-<summary>Setup and release notes</summary>
-<ol class="installation">
-<li>
-<strong>Download and verify</strong>
-<p>Get Musyn.ipa and its SHA-256 file from the release. Sign with a compatible installer or import into LiveContainer. AltStore PAL cannot install this unsigned IPA.</p>
-</li>
-<li>
-<strong>Open Musyn</strong>
-<p>YouTube Music is ready without a key or account. Connect YouTube Music for your liked music and playlists. JioSaavn is optional: add your own authorized media URL key in Settings → JioSaavn. For setup, search “JioSaavn media URL key.” Musyn supplies no provider key.</p>
-</li>
-<li>
-<strong>Save a track</strong>
-<p>Tap Download on the player using your saved default. Use Download options when you want a different source or quality. Follow progress, retry failures and find saved music in Library.</p>
-</li>
-</ol>
-<p>Manual source URL:</p>
-<code class="source-address" id="source-url" tabindex="0">https://voryn-labs.github.io/source.json</code>
-<p class="release-note"><span id="release-identity">Musyn 1.0.0 · com.vorynlabs.musyn</span> · iOS 15+. CarPlay requires an approved audio entitlement in your signing profile.</p>
-</details>
-</section>
-<section class="product-section">
-<h2>Yours to explore. Open to grow.</h2>
-<p class="lede">Made by Voryn Labs. Open source under GPL-3.0, with credits to the Musify lineage and BitChord interface reference. YouTube Music and optional JioSaavn today, with room for more sources. Music and artwork remain their owners’ property.</p>
-<p>
-<a href="https://github.com/Voryn-Labs/Musyn">Explore the source ↗</a> · <a href="https://github.com/Voryn-Labs/Musyn/issues">Report an issue ↗</a> · <a href="musyn-privacy.html">Privacy</a> · <a href="musyn-terms.html">Terms of use</a>
-</p>
-</section>
-</main>
-<footer class="product-footer">
-<span>© 2026 Voryn Labs</span>
-<nav aria-label="Footer">
-<a href="index.html">Studio</a>
-<a href="musyn.html">Musyn</a>
-<a href="musyn-privacy.html">Privacy</a>
-<a href="https://github.com/Voryn-Labs/Musyn">GitHub</a>
-</nav>
-</footer>
-</div>
-<script src="assets/js/musyn.js?v=public-1">
-</script>
-<!-- Cloudflare Web Analytics -->
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"221b6d4d6a374533bbdf5fec04bee453"}'>
-</script>
-<!-- End Cloudflare Web Analytics -->
+<body class="product-detail-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Navigation Bar -->
+  <header class="site-nav">
+    <nav class="wrap" aria-label="Main Navigation">
+      <a class="brand-mark" href="index.html" aria-label="Voryn Labs Home">
+        <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="28" height="28">
+        <span class="brand-text">VORYN LABS</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#products">Ecosystem</a></li>
+        <li><a href="#screens">Screenshots</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#install">Installation</a></li>
+        <li><a href="musyn-privacy.html">Privacy</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a class="nav-github-btn" href="https://github.com/Voryn-Labs/Musyn" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>Repository</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="product-page-hero">
+      <div class="wrap product-hero-grid">
+        <div class="product-hero-copy">
+          <div class="badge-row">
+            <span class="platform-pill">iPhone · iOS 15+</span>
+            <span class="status-pill status-stable">Stable · v1.0.0</span>
+            <span class="license-pill">GPL-3.0 License</span>
+          </div>
+          <h1>Musyn</h1>
+          <p class="tagline-large">Music, in your rhythm.</p>
+          <p class="hero-desc">
+            A high-fidelity iPhone music player uniting YouTube Music and JioSaavn into one serene, ad-free listening experience. Featuring dynamic time-synced karaoke lyrics, Dynamic Island playback indicators, offline audio caching, and zero surveillance telemetry.
+          </p>
+
+          <div class="hero-actions">
+            <a class="action-btn action-btn-primary" id="download-ipa" href="https://github.com/Voryn-Labs/Musyn/releases/download/v1.0.0/Musyn.ipa">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download Musyn 1.0.0 IPA ↗</span>
+            </a>
+            <a class="action-btn" href="#install">
+              <span>Installation Guide ↓</span>
+            </a>
+            <a class="action-btn action-btn-ghost" href="https://github.com/Voryn-Labs/Musyn" target="_blank" rel="noopener">
+              <span>GitHub Repo ↗</span>
+            </a>
+          </div>
+
+          <div class="product-metadata-bar">
+            <span class="meta-tag" id="release-identity">Bundle: com.vorynlabs.musyn · v1.0.0 (23)</span>
+            <span class="meta-divider" aria-hidden="true">/</span>
+            <a class="meta-link" id="release-checksum" href="https://github.com/Voryn-Labs/Musyn/releases/tag/v1.0.0">Release Notes &amp; Checksum ↗</a>
+            <span class="meta-divider" aria-hidden="true">/</span>
+            <span class="meta-tag">iOS 15+</span>
+            <span class="meta-divider" aria-hidden="true">/</span>
+            <span class="meta-badge">Unsigned IPA</span>
+          </div>
+        </div>
+
+        <div class="product-hero-visual">
+          <div class="phone-app-window">
+            <div class="phone-viewport">
+              <img src="assets/img/musyn-screen-player.jpg" alt="Musyn Now Playing screen with album artwork and playback controls" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real Screenshots Showcase Grid -->
+    <section class="wrap product-detail-section" id="screens">
+      <div class="section-header">
+        <h2>Interface Gallery</h2>
+        <p class="section-lede">Captured directly from iPhone. High-contrast typography, live lyrics synchronization, and distraction-free audio controls.</p>
+      </div>
+
+      <div class="screenshots-showcase-grid">
+        <figure class="screenshot-figure">
+          <img src="assets/img/musyn-screen-home.jpg" alt="Musyn Home screen with recently played tracks and favorites" loading="lazy">
+          <figcaption>
+            <strong>Home &amp; Smart Library</strong>
+            <span>Quick access to recently played tracks, saved offline playlists, and the persistent mini player.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="screenshot-figure">
+          <img src="assets/img/musyn-screen-player.jpg" alt="Musyn Now Playing screen with album art and playback controls" loading="lazy">
+          <figcaption>
+            <strong>Now Playing Screen</strong>
+            <span>High-resolution album artwork, smooth scrub timeline, and quick queue management.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="screenshot-figure">
+          <img src="assets/img/musyn-screen-lyrics.jpg" alt="Musyn Synced Lyrics view" loading="lazy">
+          <figcaption>
+            <strong>Dynamic Synced Lyrics</strong>
+            <span>Time-coded karaoke lyrics that follow along with musical tempo. Tap any line to seek immediately.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="screenshot-figure">
+          <img src="assets/img/musyn-screen-lyrics-alt.jpg" alt="Musyn Dynamic Island integration" loading="lazy">
+          <figcaption>
+            <strong>Dynamic Island &amp; Full Screen</strong>
+            <span>Active track indicators on Dynamic Island and responsive landscape display.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="screenshot-figure">
+          <img src="assets/img/musyn-screen-lock-screen.jpg" alt="Musyn Lock Screen player" loading="lazy">
+          <figcaption>
+            <strong>iOS Lock Screen Controls</strong>
+            <span>Native iOS lock screen playback integration with fluid scrub controls and high-res art.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="screenshot-figure">
+          <img src="assets/img/musyn-screen-lock-screen-lyrics.jpg" alt="Musyn Live lyrics on iPhone Lock Screen" loading="lazy">
+          <figcaption>
+            <strong>Lock Screen Live Lyrics</strong>
+            <span>Live scrolling lyrics displayed directly above the lock screen playback controls on supported iOS versions.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Architecture & Features -->
+    <section class="wrap product-detail-section" id="architecture">
+      <div class="section-header">
+        <h2>Engineered for Listening Freedom</h2>
+        <p class="section-lede">Software designed to get out of the way and keep the music front and center.</p>
+      </div>
+
+      <div class="arch-points-grid">
+        <div class="arch-card">
+          <h4>Dual-Source Audio Streaming</h4>
+          <p>Search and stream seamlessly across YouTube Music and JioSaavn (up to 320 kbps AAC) from one unified search bar without requiring account credentials.</p>
+        </div>
+
+        <div class="arch-card">
+          <h4>Deterministic Offline Storage</h4>
+          <p>Download tracks and entire albums directly to your iPhone filesystem for uninterrupted playback when traveling or offline.</p>
+        </div>
+
+        <div class="arch-card">
+          <h4>Zero Telemetry &amp; Algorithm Hijacking</h4>
+          <p>No recommendation engines forcing promoted tracks into your queue. No behavioral profiling, no tracking pixels, and zero advertisements.</p>
+        </div>
+
+        <div class="arch-card">
+          <h4>CarPlay &amp; Home Screen Widgets</h4>
+          <p>Includes CarPlay support (when signed with compatible entitlements) and native iOS Home Screen widgets for immediate resume.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sideload Installation Guide -->
+    <section class="wrap product-detail-section" id="install">
+      <div class="section-header">
+        <h2>Installation &amp; Sideloading</h2>
+        <p class="section-lede">Distributed as an unsigned IPA. Install via your preferred iOS sideloading utility in seconds.</p>
+      </div>
+
+      <div class="source-container">
+        <!-- 4-Column Balanced Grid -->
+        <nav class="installer-grid" aria-label="1-Tap Add Source to iOS Installers">
+          <a class="installer-card-btn" href="feather://source/https://voryn-labs.github.io/source.json" title="Add source to Feather">
+            <div class="installer-badge-circle">F</div>
+            <div class="installer-text-col">
+              <strong class="installer-name">Feather</strong>
+              <span class="installer-note">Direct Protocol</span>
+            </div>
+            <svg class="installer-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+
+          <a class="installer-card-btn" href="sidestore://source?url=https%3A%2F%2Fvoryn-labs.github.io%2Fsource.json" title="Add source to SideStore">
+            <div class="installer-badge-circle">S</div>
+            <div class="installer-text-col">
+              <strong class="installer-name">SideStore</strong>
+              <span class="installer-note">Direct Protocol</span>
+            </div>
+            <svg class="installer-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+
+          <a class="installer-card-btn" href="altstore://source?url=https%3A%2F%2Fvoryn-labs.github.io%2Fsource.json" title="Add source to AltStore Classic">
+            <div class="installer-badge-circle">A</div>
+            <div class="installer-text-col">
+              <strong class="installer-name">AltStore</strong>
+              <span class="installer-note">Classic Edition</span>
+            </div>
+            <svg class="installer-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+
+          <a class="installer-card-btn" href="livecontainer://source?url=https%3A%2F%2Fvoryn-labs.github.io%2Fsource.json" title="Add source to LiveContainer">
+            <div class="installer-badge-circle">LC</div>
+            <div class="installer-text-col">
+              <strong class="installer-name">LiveContainer</strong>
+              <span class="installer-note">JIT Container</span>
+            </div>
+            <svg class="installer-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </nav>
+
+        <div class="source-copy-bar">
+          <code class="source-code-val">https://voryn-labs.github.io/source.json</code>
+          <button class="btn-copy" id="copy-source-btn" type="button">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy Source URL</span>
+          </button>
+        </div>
+        <p class="copy-status-msg" id="copy-status-msg" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="quickstart-steps-list">
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <div class="step-content">
+            <h4>Add Shared Source or Download IPA</h4>
+            <p>Tap your installer button above to add <code>source.json</code>, or download <code>Musyn.ipa</code> directly from the official releases repository.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <div class="step-content">
+            <h4>Sign with Your Apple Certificate</h4>
+            <p>Sign using your free 7-day Apple ID certificate, a personal developer certificate, or run without signing limits inside LiveContainer.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <div class="step-content">
+            <h4>Trust Certificate &amp; Listen</h4>
+            <p>Open <em>iOS Settings → General → VPN &amp; Device Management</em> to trust your developer certificate if prompted, then launch Musyn.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand-mark" href="index.html">
+          <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="24" height="24">
+          <span class="brand-text">VORYN LABS</span>
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="index.html#products">Ecosystem</a></li>
+          <li><a href="cloudified.html">Cloudified</a></li>
+          <li><a href="excly.html">Excly</a></li>
+          <li><a href="navigy.html">Navigy</a></li>
+          <li><a href="vividorbit.html">VividOrbit</a></li>
+          <li><a href="musyn-privacy.html">Privacy</a></li>
+          <li><a href="https://github.com/Voryn-Labs/Musyn" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Voryn Labs. Independent Multi-Platform Software Studio. Zero Telemetry.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/musyn.js"></script>
+  <script src="assets/js/site.js?v=10"></script>
 </body>
 </html>

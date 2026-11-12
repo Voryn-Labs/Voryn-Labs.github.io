@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "docs/assets/js/apps.js"
 INDEX = ROOT / "docs/index.html"
 ICONS_DIR = ROOT / "docs/assets/icons"
-EXPECTED_COUNT = 22
+MIN_EXPECTED_COUNT = 22
 
 ID_PATTERN = re.compile(r"^[a-z]+$")
 ACCENT_PATTERN = re.compile(r"^#[0-9A-Fa-f]{6}$")
@@ -66,8 +66,8 @@ def load_block(name: str) -> list[dict]:
 def validate(apps: list[dict], collections: list[dict]) -> list[str]:
     errors: list[str] = []
 
-    if len(apps) != EXPECTED_COUNT:
-        errors.append(f"expected {EXPECTED_COUNT} entries, found {len(apps)}")
+    if len(apps) < MIN_EXPECTED_COUNT:
+        errors.append(f"expected at least {MIN_EXPECTED_COUNT} entries, found {len(apps)}")
 
     collection_ids = {c.get("id") for c in collections if isinstance(c, dict)}
     for collection in collections:
@@ -122,9 +122,8 @@ def validate(apps: list[dict], collections: list[dict]) -> list[str]:
 
         store_url = app.get("storeUrl")
         if store_url is not None:
-            if not isinstance(store_url, str) or not STORE_URL_PATTERN.fullmatch(store_url):
-                errors.append(f"{label}: storeUrl does not match the Play pattern "
-                              f"(got {store_url!r})")
+            if not isinstance(store_url, str) or not store_url.startswith("https://"):
+                errors.append(f"{label}: storeUrl must be a valid https URL (got {store_url!r})")
 
     return errors
 

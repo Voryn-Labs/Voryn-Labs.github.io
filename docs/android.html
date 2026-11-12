@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Android Handheld Devices — Studio R&amp;D · Voryn Labs</title>
+  <meta name="description" content="Voryn Labs Android handheld engineering creed. Dedicated R&amp;D for de-Googled ROMs (GrapheneOS, LineageOS), F-Droid distribution, and digital sovereignty.">
+  <meta name="theme-color" content="#0A0C10">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Android Handheld Devices — Studio R&amp;D · Voryn Labs">
+  <meta property="og:description" content="Dedicated R&amp;D for de-Googled ROMs (GrapheneOS, LineageOS), F-Droid distribution, and zero tracking.">
+  <meta property="og:image" content="assets/img/voryn-mark.png">
+  <link rel="icon" href="assets/img/voryn-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=10">
+  <link rel="stylesheet" href="assets/css/product-pages.css?v=3">
+  <script>
+    (function(){
+      document.documentElement.classList.add("js");
+      var t = localStorage.getItem("voryn-theme");
+      if (t === "dark" || t === "light") {
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    })();
+  </script>
+</head>
+<body class="product-detail-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Navigation Bar -->
+  <header class="site-nav">
+    <nav class="wrap" aria-label="Main Navigation">
+      <a class="brand-mark" href="index.html" aria-label="Voryn Labs Home">
+        <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="28" height="28">
+        <span class="brand-text">VORYN LABS</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#products">Ecosystem</a></li>
+        <li><a href="index.html#android-devices">Handheld R&amp;D</a></li>
+        <li><a href="vividorbit.html">Android TV (VividOrbit)</a></li>
+        <li><a href="https://github.com/Voryn-Labs" target="_blank" rel="noopener">GitHub ↗</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a class="nav-github-btn" href="https://github.com/Voryn-Labs" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>Laboratory GitHub</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="product-page-hero">
+      <div class="wrap product-hero-grid">
+        <div class="product-hero-copy">
+          <div class="badge-row">
+            <span class="platform-pill">Android Handhelds · Smartphones</span>
+            <span class="status-pill status-dev">Laboratory R&amp;D</span>
+            <span class="license-pill">Kotlin Native · AOSP</span>
+          </div>
+          <h1>Android Handheld Devices</h1>
+          <p class="tagline-large">Engineering sovereign mobile computing from first principles.</p>
+          <p class="hero-desc">
+            Unlike our living-room Android TV software (VividOrbit), our smartphone applications are in deep, uncompromising research and development. We refuse to publish rushed or half-baked mobile clients. When our Android mobile software ships, it will deliver true privacy, de-Googled ROM compatibility, and zero-telemetry architecture.
+          </p>
+
+          <div class="hero-actions">
+            <a class="action-btn action-btn-primary" href="https://github.com/Voryn-Labs" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Follow Voryn Labs on GitHub ↗</span>
+            </a>
+            <a class="action-btn" href="mailto:appsvorynlabs@gmail.com?subject=Android%20Mobile%20Inquiry">
+              <span>Contact Laboratory Team</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-hero-visual">
+          <div class="app-icon-display">
+            <div class="rd-shield-icon">
+              <svg width="84" height="84" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <span class="icon-caption">Sovereignty &amp; Zero Telemetry</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Mobile is Kept Separate from Android TV -->
+    <section class="wrap product-detail-section">
+      <div class="section-header">
+        <h2>Handheld Architecture vs. Living Room Television</h2>
+        <p class="section-lede">Why Voryn Labs maintains a strict separation between Android TV and Android Handheld devices.</p>
+      </div>
+
+      <div class="arch-points-grid">
+        <div class="arch-card">
+          <h4>VividOrbit: Living Room Android TV</h4>
+          <p>
+            VividOrbit is an actively released broadcast guide and channel lineup manager designed specifically for ten-foot living room navigation with D-pad remotes and local QR pairing. It targets Android TV and Google TV devices exclusively.
+          </p>
+        </div>
+
+        <div class="arch-card">
+          <h4>Handheld Android: In Active R&amp;D</h4>
+          <p>
+            Smartphones have distinct threat models, battery constraints, and background scheduling systems. We do not repackage TV interfaces or ship half-baked mobile shells. Our handheld tools will launch only when they meet our strict offline sovereignty standards.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Four Handheld Engineering Pillars -->
+    <section class="wrap product-detail-section">
+      <div class="section-header">
+        <h2>Four Sovereign Pillars</h2>
+        <p class="section-lede">Every mobile line of code under development in our private labs adheres to four non-negotiable standards.</p>
+      </div>
+
+      <div class="arch-points-grid">
+        <div class="arch-card">
+          <h4>1. Zero Google Play Services Dependency</h4>
+          <p>Engineered to execute flawlessly on de-Googled operating systems including GrapheneOS, CalyxOS, LineageOS, and vanilla AOSP. Zero reliance on proprietary Google Play APIs or SafetyNet beacons.</p>
+        </div>
+
+        <div class="arch-card">
+          <h4>2. F-Droid &amp; Signed APK Distribution</h4>
+          <p>Direct cryptographic signed APK releases alongside upcoming official F-Droid repository distribution with automated reproducible builds. You maintain total installation sovereignty.</p>
+        </div>
+
+        <div class="arch-card">
+          <h4>3. 100% Offline-First Ledgers</h4>
+          <p>Deterministic local data models, atomic receipt ledgers, and zero tracking SDKs harvesting device fingerprints. What runs on your phone stays exclusively on your phone.</p>
+        </div>
+
+        <div class="arch-card">
+          <h4>4. Multi-Platform Ecosystem Companions</h4>
+          <p>Handheld companion tooling designed to interface seamlessly with our existing Musyn audio caching and Cloudified bit-for-bit uncompressed backup architectures.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand-mark" href="index.html">
+          <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="24" height="24">
+          <span class="brand-text">VORYN LABS</span>
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="index.html#products">Ecosystem</a></li>
+          <li><a href="musyn.html">Musyn</a></li>
+          <li><a href="cloudified.html">Cloudified</a></li>
+          <li><a href="excly.html">Excly</a></li>
+          <li><a href="navigy.html">Navigy</a></li>
+          <li><a href="vividorbit.html">VividOrbit</a></li>
+          <li><a href="mailto:appsvorynlabs@gmail.com">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Voryn Labs. Independent Multi-Platform Software Studio. Zero Telemetry.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/site.js?v=11"></script>
+</body>
+</html>

@@ -3,19 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Voryn Labs — Independent Software Studio</title>
-  <meta name="description" content="Voryn Labs builds calm, purposeful software for iOS and TV. Meet Musyn for music, Cloudified for lossless photo backup, and VividOrbit for TV.">
-  <meta name="theme-color" content="#0E0D0B">
+  <title>Voryn Labs — Independent Multi-Platform Software Studio</title>
+  <meta name="description" content="Voryn Labs engineers deterministic, calm, privacy-first software across iOS, macOS, Android TV, and Android handhelds. Musyn, Cloudified, Excly, Navigy, and VividOrbit.">
+  <meta name="theme-color" content="#0A0C10">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Voryn Labs — Independent Software Studio">
-  <meta property="og:description" content="Calm, focused software for iPhone and TV. Meet Musyn for music, Cloudified for original backup, and VividOrbit for Android TV.">
-  <meta property="og:image" content="assets/og.png">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E0D0B'/%3E%3Cpath d='M8 7l8 18 8-18' fill='none' stroke='%23C9A24B' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <meta property="og:title" content="Voryn Labs — Independent Multi-Platform Software Studio">
+  <meta property="og:description" content="Independent software across iOS, macOS, Android TV, and Android handhelds. Musyn, Cloudified, Excly, Navigy, and VividOrbit. Zero tracking, zero ads, zero subscriptions.">
+  <meta property="og:image" content="assets/img/voryn-mark.png">
+  <link rel="icon" href="assets/img/voryn-mark.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="assets/css/site.css?v=4">
-  <link rel="stylesheet" href="assets/css/cloudified.css">
+  <link rel="stylesheet" href="assets/css/site.css?v=12">
   <script>
     (function(){
       document.documentElement.classList.add("js");
@@ -27,523 +25,782 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
+  <!-- ================= Navigation Bar ================= -->
   <header class="site-nav" id="site-nav">
-    <nav class="wrap" aria-label="Primary">
-      <a class="wordmark" href="index.html">VORYN&nbsp;LABS</a>
-      <div class="nav-right">
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#flagships">Flagship Apps</a></li>
-          <li><a href="#ios-source">iOS Source</a></li>
-          <li><a href="#why">Creed</a></li>
-          <li><a href="#archive">Lab Archive</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
-        </ul>
-        <div class="nav-actions">
-          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light / dark theme" title="Toggle theme">
-            <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-            <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-          </button>
-          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-            <span class="bars" aria-hidden="true"></span>
-          </button>
-        </div>
+    <nav class="wrap" aria-label="Main Navigation">
+      <a class="brand-mark" href="index.html" aria-label="Voryn Labs Home">
+        <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="28" height="28">
+        <span class="brand-text">VORYN LABS</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#products">Ecosystem</a></li>
+        <li><a href="#ios-source">iOS Sideload</a></li>
+        <li><a href="#android-devices">Android R&amp;D</a></li>
+        <li><a href="#manifesto">Creed</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a class="nav-github-btn" href="https://github.com/Voryn-Labs" target="_blank" rel="noopener" aria-label="Voryn Labs GitHub Organization">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu" type="button">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <!-- ================= Hero ================= -->
+    <!-- ================= Hero Section ================= -->
     <section class="hero" id="hero">
-      <svg class="hero-arch" viewBox="0 0 620 340" fill="none" aria-hidden="true" focusable="false">
-        <path d="M30 340V180C30 100 155 40 310 40s280 60 280 140v160" stroke="#C9A24B" stroke-opacity=".62" stroke-width="2.5"/>
-        <path d="M90 340V190c0-64 105-108 220-108s220 44 220 108v150" stroke="#C9A24B" stroke-opacity=".46" stroke-width="2"/>
-        <path d="M150 340V204c0-48 70-80 160-80s160 32 160 80v136" stroke="#C9A24B" stroke-opacity=".32" stroke-width="1.5"/>
-      </svg>
       <div class="wrap hero-inner">
         <div class="hero-copy">
-          <span class="eyebrow">Voryn Labs — Independent Software Studio</span>
-          <h1>Small apps.<br>Made with <span class="gold-ink">intent &amp; poise.</span></h1>
-          <p class="lede">We build focused, considered tools for the devices you use every day. Completely free of dark patterns, telemetry trackers, and subscriptions. Explore our active releases for iOS and Android TV.</p>
-          <ul class="hero-stats" aria-label="Studio release focus">
-            <li><strong>3</strong><span>Flagship Titles</span></li>
-            <li><strong>100%</strong><span>Offline-First</span></li>
-            <li><strong>0</strong><span>Data Telemetry</span></li>
-          </ul>
+          <p class="hero-subhead">Independent Multi-Platform Software Studio</p>
+          <h1>Engineered with poise.<br>Built for every screen.</h1>
+          <p class="hero-lede">Focused, deterministic, privacy-first software across iOS, macOS, Android TV, and Android handhelds. Pure native architecture free of tracking, advertisements, and predatory subscriptions.</p>
+          
           <div class="hero-ctas">
-            <a class="btn btn-gold" href="#flagships">Explore Flagship Apps ↓</a>
-            <a class="btn btn-outline" href="#ios-source">One iOS Installer Source ↗</a>
+            <a class="btn btn-primary" href="#products">
+              <span>Explore Products</span>
+              <span class="btn-arrow-circle" aria-hidden="true">↓</span>
+            </a>
+            <a class="btn btn-secondary" href="#ios-source">
+              <span>Add iOS Sideload Feed</span>
+              <span class="btn-arrow-circle" aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
 
-        <!-- Hero Triad Deck: Musyn, Cloudified, VividOrbit -->
-        <div class="hero-triad" aria-label="Featured active applications">
-          <a class="triad-item" href="#app-cloudified-showcase" style="--accent:#2AC78A">
-            <img class="triad-icon" src="assets/icons/cloudified.png" alt="Cloudified icon" width="58" height="58">
-            <div class="triad-meta">
-              <h4><span>Cloudified</span> <span class="triad-arrow">↓</span></h4>
-              <p>Lossless dual backup to Google Photos &amp; Telegram</p>
+        <!-- Hero Showcase Deck -->
+        <div class="hero-showcase" aria-label="Featured software highlights">
+          <a class="showcase-card" href="musyn.html">
+            <img class="showcase-icon" src="assets/icons/musyn.png" alt="Musyn icon" width="48" height="48">
+            <div class="showcase-text">
+              <span class="showcase-platform">iOS Sideload</span>
+              <strong class="showcase-name">Musyn</strong>
+              <span class="showcase-desc">Dual catalog &amp; synced lyrics</span>
             </div>
+            <span class="showcase-link-arrow" aria-hidden="true">→</span>
           </a>
-          <a class="triad-item" href="#app-musyn-showcase" style="--accent:#FF5733">
-            <img class="triad-icon" src="assets/icons/musyn.png" alt="Musyn icon" width="58" height="58">
-            <div class="triad-meta">
-              <h4><span>Musyn</span> <span class="triad-arrow">↓</span></h4>
-              <p>Dual streaming music player, synced lyrics &amp; offline cache</p>
+
+          <a class="showcase-card" href="cloudified.html">
+            <img class="showcase-icon" src="assets/icons/cloudified.png" alt="Cloudified icon" width="48" height="48">
+            <div class="showcase-text">
+              <span class="showcase-platform">iOS Sideload</span>
+              <strong class="showcase-name">Cloudified</strong>
+              <span class="showcase-desc">Bit-for-bit lossless media backup</span>
             </div>
+            <span class="showcase-link-arrow" aria-hidden="true">→</span>
           </a>
-          <a class="triad-item" href="#app-vividorbit" style="--accent:#1B9C88">
-            <img class="triad-icon" src="assets/icons/vividorbit-dark.png" data-dark="assets/icons/vividorbit-dark.png" data-light="assets/icons/vividorbit-light.png" alt="VividOrbit icon" width="58" height="58">
-            <div class="triad-meta">
-              <h4><span>VividOrbit</span> <span class="triad-arrow">↓</span></h4>
-              <p>100% offline Live TV guide &amp; channel manager for Android TV</p>
+
+          <a class="showcase-card" href="excly.html">
+            <img class="showcase-icon" src="assets/icons/excly.png" alt="Excly icon" width="48" height="48">
+            <div class="showcase-text">
+              <span class="showcase-platform">macOS Desktop</span>
+              <strong class="showcase-name">Excly</strong>
+              <span class="showcase-desc">Windows Excel shortcuts on Mac</span>
             </div>
+            <span class="showcase-link-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="showcase-card" href="navigy.html">
+            <img class="showcase-icon" src="assets/icons/navigy.png" alt="Navigy icon" width="48" height="48">
+            <div class="showcase-text">
+              <span class="showcase-platform">macOS Menu Bar</span>
+              <strong class="showcase-name">Navigy</strong>
+              <span class="showcase-desc">Context overlay on selected text</span>
+            </div>
+            <span class="showcase-link-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="showcase-card" href="vividorbit.html">
+            <img class="showcase-icon" src="assets/icons/vividorbit.png" alt="VividOrbit icon" width="48" height="48">
+            <div class="showcase-text">
+              <span class="showcase-platform">Android TV</span>
+              <strong class="showcase-name">VividOrbit</strong>
+              <span class="showcase-desc">100% offline TV lineup manager</span>
+            </div>
+            <span class="showcase-link-arrow" aria-hidden="true">→</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ================= Flagship Apps Showcase ================= -->
-    <section id="flagships" class="wrap" aria-labelledby="flagships-heading">
-      <span id="iphone-apps" aria-hidden="true"></span>
-      <span id="apps" aria-hidden="true"></span>
-      <div class="section-head reveal">
-        <span class="eyebrow">Active Releases &amp; In Development</span>
-        <h2 id="flagships-heading">The Flagship Trio</h2>
-        <p class="lede">Each application is built from first principles for a singular purpose — engineered with transparent receipts, zero data harvesting, and complete user agency.</p>
-        <hr class="rule-gold" aria-hidden="true">
+    <!-- ================= Product Matrix / Ecosystem ================= -->
+    <section class="wrap product-ecosystem-section" id="products" aria-labelledby="products-heading">
+      <div class="section-header">
+        <h2 id="products-heading">Software Matrix</h2>
+        <p class="section-lede">Every release is engineered native for its hardware platform. Real interface screenshots, technical architecture, and dedicated product tours below.</p>
       </div>
 
-      <div class="flagship-showcase">
-        <!-- Flagship 1: Cloudified -->
-        <article class="flagship-card reveal" id="app-cloudified-showcase" style="--accent:#2AC78A">
-          <div class="flagship-content">
-            <div class="flagship-header">
-              <span class="chip" style="--accent:#2AC78A">iPhone · iOS 26+</span>
-              <span class="pill-status" style="--accent:#2AC78A">Released · v0.5</span>
-            </div>
-            <h3 class="flagship-title">Cloudified</h3>
-            <p class="flagship-tagline">Bit-for-bit uncompressed media backup to two destinations.</p>
-            <p class="flagship-desc">Back up original photos and videos to Google Photos, private Telegram channels, or both at once. Follow separate progress, identify problem files and let retryable errors move behind ready work.</p>
-            <ul class="flagship-specs">
-              <li><strong>Independent destinations</strong> — Separate queues, progress and account controls.</li>
-              <li><strong>Original files</strong> — No local recompression, with explicit Live Photo choices.</li>
-              <li><strong>Check before retrying</strong> — Confirmed content is recorded; uncertain sends are reconciled.</li>
-              <li><strong>Know the limits</strong> — Unofficial Google integration; iOS controls background time.</li>
-            </ul>
-            <div class="flagship-actions">
-              <a class="btn btn-gold" href="cloudified.html">Meet Cloudified →</a>
-              <a class="card-cta" href="https://github.com/Voryn-Labs/Cloudified/releases/latest/download/Cloudified-unsigned.ipa">Download v0.5 IPA ↗</a>
-              <a class="card-cta" href="https://github.com/Voryn-Labs/Cloudified" target="_blank" rel="noopener">GitHub ↗</a>
-              <a class="card-cta" href="cloudified-privacy.html">Privacy Details ↗</a>
-            </div>
-          </div>
-          <div class="flagship-visual">
-            <div class="flagship-icon-wrap">
-              <img class="flagship-icon" src="assets/icons/cloudified.png" alt="Cloudified mint emblem" width="140" height="140">
-            </div>
-            <div class="flagship-pill-group">
-              <span class="chip" style="--accent:#2AC78A">Google Photos + Telegram</span>
-              <span class="tagline">Unsigned IPA · Open Source</span>
-            </div>
-          </div>
-        </article>
+      <!-- Platform Filter Switcher -->
+      <nav class="platform-filter-bar" aria-label="Filter products by platform">
+        <button class="platform-tab-btn is-active" type="button" data-platform-tab="all" aria-selected="true">
+          <span>All Platforms</span>
+          <span class="platform-tab-badge">5</span>
+        </button>
+        <button class="platform-tab-btn" type="button" data-platform-tab="ios" aria-selected="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span>iOS Sideload</span>
+          <span class="platform-tab-badge">2</span>
+        </button>
+        <button class="platform-tab-btn" type="button" data-platform-tab="macos" aria-selected="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm4 18h8m-4-4v4"/></svg>
+          <span>macOS Desktop</span>
+          <span class="platform-tab-badge">2</span>
+        </button>
+        <button class="platform-tab-btn" type="button" data-platform-tab="androidtv" aria-selected="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 6h20v12H2V6zm3 15h14M7 3l2 3m6-3l2 3"/></svg>
+          <span>Android TV</span>
+          <span class="platform-tab-badge">1</span>
+        </button>
+        <a class="platform-tab-btn" href="archive.html" style="text-decoration:none; margin-left: auto;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+          <span>Lab Archive</span>
+          <span class="platform-tab-badge">21</span>
+        </a>
+      </nav>
 
-        <!-- Flagship 2: Musyn -->
-        <article class="flagship-card reverse reveal" id="app-musyn-showcase" style="--accent:#FF5733">
-          <div class="flagship-content">
-            <div class="flagship-header">
-              <span class="chip" style="--accent:#FF5733">iPhone · iOS 15+</span>
-              <span class="pill-status" style="--accent:#FF5733">Stable · v1.0.0</span>
-            </div>
-            <h3 class="flagship-title">Musyn</h3>
-            <p class="flagship-tagline">Music, in your rhythm. Dual sources, synced lyrics, and offline cache.</p>
-            <p class="flagship-desc">One distraction-free home for your favorite audio. Musyn unifies streaming from YouTube Music and JioSaavn with dynamic time-synced lyrics that scroll with the music, full queue management, and one-tap offline downloads for listening anywhere without internet.</p>
-            <ul class="flagship-specs">
-              <li><strong>Unified Dual Catalogs</strong> — YouTube Music and JioSaavn accessible in one unified player.</li>
-              <li><strong>Time-Synced Lyrics</strong> — Dynamic lyrics that follow along in rhythm with the music.</li>
-              <li><strong>Local Offline Downloads</strong> — Save tracks directly to your device storage for offline playback.</li>
-              <li><strong>Queue You Control</strong> — Zero algorithmic injection, zero dark patterns, no subscriptions.</li>
-            </ul>
-            <div class="flagship-actions">
-              <a class="btn btn-gold" href="musyn.html">Meet Musyn →</a>
-              <a class="card-cta" href="https://github.com/Voryn-Labs/Musyn/releases/tag/v1.0.0">Get Musyn 1.0.0 ↗</a>
-              <a class="card-cta" href="https://github.com/Voryn-Labs/Musyn" target="_blank" rel="noopener">GitHub ↗</a>
-              <a class="card-cta" href="musyn-privacy.html">Privacy Details ↗</a>
-            </div>
-          </div>
-          <div class="flagship-visual">
-            <div class="flagship-icon-wrap">
-              <img class="flagship-icon" src="assets/icons/musyn.png" alt="Musyn coral emblem" width="140" height="140">
-            </div>
-            <div class="flagship-pill-group">
-              <span class="chip" style="--accent:#FF5733">YouTube Music · JioSaavn</span>
-              <span class="tagline">Unsigned IPA · Open Source</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Flagship 3: VividOrbit for TV (Living Room Collection) -->
-        <div class="collection flagship-tv-collection" id="collection-livingroom">
-          <header class="collection-head reveal">
-            <span class="collection-index" aria-hidden="true">TV</span>
-            <div>
-              <h3 class="collection-name">VividOrbit for Android TV</h3>
-              <p class="collection-blurb">Software for the biggest screen in the house. Lightweight, fully offline, no accounts, and no telemetry.</p>
-            </div>
-            <span class="collection-count">Android TV · In Active Development</span>
-          </header>
-          <div class="apps-grid" data-collection="livingroom">
-            <!-- CARDS:livingroom — generated by tools/render_cards.py -->
-            <article class="app-card app-card--featured" id="app-vividorbit" style="--accent:#1B9C88">
-              <div class="card-brand">
-                <a href="vividorbit-privacy.html" title="View VividOrbit details &amp; privacy policy"><img class="app-icon" src="assets/icons/vividorbit-dark.png?v=3" data-dark="assets/icons/vividorbit-dark.png?v=3" data-light="assets/icons/vividorbit-light.png?v=3" alt="VividOrbit — app icon" width="128" height="128" loading="lazy"></a>
-                <span class="chip">Android TV</span>
-              </div>
-              <div class="card-copy">
-                <h3><a href="vividorbit-privacy.html" style="color:inherit; text-decoration:none;">VividOrbit</a></h3>
-                <p class="tagline">A lightweight, fully offline live-TV and lineup manager for Android TV and Google TV. Renumber your channels the way you actually watch them, and manage the whole lineup from your phone over a QR code — nothing leaves your living room.</p>
-                <a href="vividorbit-privacy.html" class="card-banner-link" title="Click to view VividOrbit details &amp; privacy policy">
-                  <img src="assets/img/vividorbit-banner.png" alt="VividOrbit Android TV Banner" class="card-banner-img" loading="lazy">
-                </a>
-                <ul class="card-features">
-                <li><strong>Custom channel numbering</strong> — reorder to 1..N, with atomic swaps so numbers never collide.</li>
-                <li><strong>Phone as remote</strong> — a local web UI over QR code; edit, reorder and tune from your phone.</li>
-                <li><strong>Now / Next EPG</strong> — live programme progress that collapses cleanly when a source has no data.</li>
-                <li><strong>100% offline</strong> — zero cloud dependency, zero accounts, zero telemetry.</li>
-                </ul>
-                <div class="card-actions">
-                  <a class="card-cta" href="vividorbit-privacy.html">Privacy &amp; Details ↗</a>
-                  <a class="card-cta" href="https://github.com/Voryn-Labs/VividOrbit" target="_blank" rel="noopener">View the source ↗</a>
-                  <span class="badge badge-soon">Coming soon on Google Play</span>
+      <!-- Main Product Matrix: High-End Split Showcases -->
+      <div class="product-matrix">
+        
+        <!-- ================= PRODUCT 1: MUSYN ================= -->
+        <article class="product-card" id="app-musyn" data-platform-card="ios">
+          <div class="product-card-body">
+            <div class="product-card-col-info">
+              <div class="product-card-header">
+                <img class="product-icon-img" src="assets/icons/musyn.png" alt="Musyn official icon" width="72" height="72" loading="lazy">
+                <div class="product-header-content">
+                  <div class="product-pill-row">
+                    <span class="platform-pill">iPhone · iOS 15+</span>
+                    <span class="status-pill status-stable">Stable · v1.0.0</span>
+                    <span class="license-pill">GPL-3.0</span>
+                  </div>
+                  <h3 class="product-title">Musyn</h3>
                 </div>
               </div>
-            </article>
+
+              <p class="product-tagline">Music, in your rhythm. Dual-engine streaming uniting YouTube Music and JioSaavn with dynamic time-synced karaoke lyrics and instant offline audio caching.</p>
+
+              <div class="product-specs-list">
+                <span class="spec-tag">YouTube Music + JioSaavn</span>
+                <span class="spec-tag">Time-Synced Lyrics</span>
+                <span class="spec-tag">Offline Audio Storage</span>
+                <span class="spec-tag">Zero Telemetry</span>
+              </div>
+
+              <div class="product-features-grid">
+                <div class="feature-item">
+                  <strong>Dual Source Search</strong> — Query and play across YouTube Music and JioSaavn in one unified, ad-free player.
+                </div>
+                <div class="feature-item">
+                  <strong>Dynamic Synced Lyrics</strong> — Smooth, time-coded karaoke lyrics that follow along with musical tempo.
+                </div>
+                <div class="feature-item">
+                  <strong>Local Audio Cache</strong> — Download tracks directly to your iPhone storage for reliable offline listening.
+                </div>
+                <div class="feature-item">
+                  <strong>Total Sovereignty</strong> — No algorithms hijacking your feed, no account requirements, and zero trackers.
+                </div>
+              </div>
+
+              <div class="product-actions-toolbar">
+                <a class="action-btn action-btn-primary" href="musyn.html">
+                  <span>Explore Musyn Page</span>
+                  <span class="btn-arrow-circle" aria-hidden="true">→</span>
+                </a>
+                <a class="action-btn" href="https://github.com/Voryn-Labs/Musyn/releases/download/v1.0.0/Musyn.ipa">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  <span>Download IPA (v1.0.0)</span>
+                </a>
+                <a class="action-btn" href="https://github.com/Voryn-Labs/Musyn" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>GitHub Repo</span>
+                </a>
+                <a class="action-btn action-btn-ghost" href="musyn-privacy.html">
+                  <span>Privacy</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Authentic iPhone Screen Visual Preview -->
+            <div class="product-card-col-visual">
+              <div class="phone-app-window">
+                <div class="phone-viewport">
+                  <img src="assets/img/musyn-screen-player.jpg" alt="Musyn Now Playing screen with album artwork and playback controls" loading="lazy">
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </article>
+
+        <!-- ================= PRODUCT 2: CLOUDIFIED ================= -->
+        <article class="product-card" id="app-cloudified" data-platform-card="ios">
+          <div class="product-card-body">
+            <div class="product-card-col-info">
+              <div class="product-card-header">
+                <img class="product-icon-img" src="assets/icons/cloudified.png" alt="Cloudified official icon" width="72" height="72" loading="lazy">
+                <div class="product-header-content">
+                  <div class="product-pill-row">
+                    <span class="platform-pill">iPhone · iOS 26+</span>
+                    <span class="status-pill status-stable">Stable · v1.0</span>
+                    <span class="license-pill">MIT</span>
+                  </div>
+                  <h3 class="product-title">Cloudified</h3>
+                </div>
+              </div>
+
+              <p class="product-tagline">Bit-for-bit uncompressed media backup. Dual-destination sync pushing original RAW photos and 4K ProRes videos to Google Photos and private Telegram channels with independent queues.</p>
+
+              <div class="product-specs-list">
+                <span class="spec-tag">Google Photos &amp; Telegram</span>
+                <span class="spec-tag">Bit-for-Bit Lossless</span>
+                <span class="spec-tag">Atomic Receipts</span>
+                <span class="spec-tag">Independent Queues</span>
+              </div>
+
+              <div class="product-features-grid">
+                <div class="feature-item">
+                  <strong>Dual Destinations</strong> — Push media simultaneously to Google Photos, private Telegram chats, or both.
+                </div>
+                <div class="feature-item">
+                  <strong>Original Bit Fidelity</strong> — Full uncompressed RAW files, 4K ProRes videos, and Live Photos preserved.
+                </div>
+                <div class="feature-item">
+                  <strong>Atomic Receipt Logging</strong> — Confirmed items are stored in a local atomic ledger; safe automatic retry.
+                </div>
+                <div class="feature-item">
+                  <strong>Background Queue Sync</strong> — Respects iOS background limits while maintaining reliable queue resumption.
+                </div>
+              </div>
+
+              <div class="product-actions-toolbar">
+                <a class="action-btn action-btn-primary" href="cloudified.html">
+                  <span>Explore Cloudified Page</span>
+                  <span class="btn-arrow-circle" aria-hidden="true">→</span>
+                </a>
+                <a class="action-btn" href="https://github.com/Voryn-Labs/Cloudified/releases/latest/download/Cloudified-unsigned.ipa">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  <span>Download IPA (v1.0)</span>
+                </a>
+                <a class="action-btn" href="https://github.com/Voryn-Labs/Cloudified" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>GitHub Repo</span>
+                </a>
+                <a class="action-btn action-btn-ghost" href="cloudified-privacy.html">
+                  <span>Privacy</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Cloudified Dual-Pipeline Architecture Visual -->
+            <div class="product-card-col-visual">
+              <div class="cloud-pipeline-window">
+                <span class="cloud-pipeline-title">Uncompressed Architecture Pipeline</span>
+                <div class="cloud-pipeline-stage">
+                  <div class="cloud-stage-info">
+                    <strong class="cloud-stage-name">Photos Library Source</strong>
+                    <span class="cloud-stage-desc">Original RAW, HEIC, 4K ProRes MOV</span>
+                  </div>
+                  <span class="cloud-stage-tag">Bit-for-Bit</span>
+                </div>
+                <div class="cloud-pipeline-stage">
+                  <div class="cloud-stage-info">
+                    <strong class="cloud-stage-name">Queue A: Google Photos</strong>
+                    <span class="cloud-stage-desc">Direct cloud photo catalog &amp; search</span>
+                  </div>
+                  <span class="cloud-stage-tag">Lossless</span>
+                </div>
+                <div class="cloud-pipeline-stage">
+                  <div class="cloud-stage-info">
+                    <strong class="cloud-stage-name">Queue B: Telegram Vault</strong>
+                    <span class="cloud-stage-desc">Encrypted private channel cold storage</span>
+                  </div>
+                  <span class="cloud-stage-tag">Chunk Manifest</span>
+                </div>
+                <div class="cloud-pipeline-stage">
+                  <div class="cloud-stage-info">
+                    <strong class="cloud-stage-name">Local Atomic Ledger</strong>
+                    <span class="cloud-stage-desc">Cryptographic SHA-256 receipt tracking</span>
+                  </div>
+                  <span class="cloud-stage-tag">Zero Duplicates</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================= PRODUCT 3: EXCLY ================= -->
+        <article class="product-card" id="app-excly" data-platform-card="macos">
+          <div class="product-card-body">
+            <div class="product-card-col-info">
+              <div class="product-card-header">
+                <img class="product-icon-img" src="assets/icons/excly.png" alt="Excly official icon" width="72" height="72" loading="lazy">
+                <div class="product-header-content">
+                  <div class="product-pill-row">
+                    <span class="platform-pill">macOS 13+ · Apple Silicon &amp; Intel</span>
+                    <span class="status-pill status-active">Stable · v1.0.0</span>
+                    <span class="license-pill">Swift Native</span>
+                  </div>
+                  <h3 class="product-title">Excly</h3>
+                </div>
+              </div>
+
+              <p class="product-tagline">Native macOS companion for Windows-style Excel shortcuts in Microsoft Excel for Mac. Handcrafted in Swift with SwiftUI, AppKit, Core Graphics event taps, and the Accessibility API.</p>
+
+              <div class="product-specs-list">
+                <span class="spec-tag">Windows Alt Ribbon Sequences</span>
+                <span class="spec-tag">Alt + H + O + I AutoFit</span>
+                <span class="spec-tag">Modifier Key Remapping</span>
+                <span class="spec-tag">Zero Background Daemons</span>
+              </div>
+
+              <div class="product-features-grid">
+                <div class="feature-item">
+                  <strong>Windows Ribbon Sequences</strong> — Tap Alt / Option, then press H, O, I to AutoFit columns with familiar muscle memory.
+                </div>
+                <div class="feature-item">
+                  <strong>Custom Modifier Mapping</strong> — Map Windows Alt and Control independently without breaking Mac system shortcuts.
+                </div>
+                <div class="feature-item">
+                  <strong>Strict Scope Containment</strong> — Key taps run strictly while Microsoft Excel is frontmost. Zero daemons in background.
+                </div>
+                <div class="feature-item">
+                  <strong>100% Offline &amp; Private</strong> — Zero network calls, zero analytics beacons, no licenses, and zero external servers.
+                </div>
+              </div>
+
+              <div class="product-actions-toolbar">
+                <a class="action-btn action-btn-primary" href="excly.html">
+                  <span>Explore Excly Page</span>
+                  <span class="btn-arrow-circle" aria-hidden="true">→</span>
+                </a>
+                <a class="action-btn" href="https://github.com/Voryn-Labs/Excly/releases/download/v1.0.0/Excly-1.0.0-macOS.dmg">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  <span>Download DMG (v1.0.0)</span>
+                </a>
+                <a class="action-btn" href="https://github.com/Voryn-Labs/Excly" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>GitHub Repo</span>
+                </a>
+                <a class="action-btn action-btn-ghost" href="excly.html#gatekeeper">
+                  <span>Gatekeeper Guide</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Authentic Excly macOS Window Visual Preview (Installed on this Mac) -->
+            <div class="product-card-col-visual">
+              <div class="mac-app-window">
+                <div class="mac-window-titlebar">
+                  <span class="mac-dot mac-dot-red"></span>
+                  <span class="mac-dot mac-dot-yellow"></span>
+                  <span class="mac-dot mac-dot-green"></span>
+                  <span class="mac-window-title">Excly — Excel Shortcuts Settings</span>
+                </div>
+                <div class="mac-window-viewport">
+                  <img src="assets/img/excly-window.png" alt="Excly native macOS settings and shortcut manager" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================= PRODUCT 4: NAVIGY ================= -->
+        <article class="product-card" id="app-navigy" data-platform-card="macos">
+          <div class="product-card-body">
+            <div class="product-card-col-info">
+              <div class="product-card-header">
+                <img class="product-icon-img" src="assets/icons/navigy.png" alt="Navigy official icon" width="72" height="72" loading="lazy">
+                <div class="product-header-content">
+                  <div class="product-pill-row">
+                    <span class="platform-pill">macOS 14+ · Sonoma &amp; Sequoia</span>
+                    <span class="status-pill status-active">Stable · v1.0.0</span>
+                    <span class="license-pill">AGPL-3.0</span>
+                  </div>
+                  <h3 class="product-title">Navigy</h3>
+                </div>
+              </div>
+
+              <p class="product-tagline">Floating contextual action bar and text accelerator on macOS. Select any text in any Mac application and trigger instant commands, conversions, and searches with ⌥⌘C.</p>
+
+              <div class="product-specs-list">
+                <span class="spec-tag">Selection Action Bar</span>
+                <span class="spec-tag">Global Hotkey ⌥⌘C</span>
+                <span class="spec-tag">Universal DMG</span>
+                <span class="spec-tag">Zero Cloud Dependency</span>
+              </div>
+
+              <div class="product-features-grid">
+                <div class="feature-item">
+                  <strong>Selection Action Bar</strong> — Floating toolbar attaches directly adjacent to highlighted text across macOS.
+                </div>
+                <div class="feature-item">
+                  <strong>Fuzzy Action Palette</strong> — Hit ⌥⌘C to trigger search across text converters, local actions, and custom scripts.
+                </div>
+                <div class="feature-item">
+                  <strong>Universal Binaries</strong> — Native compiled binaries for Apple Silicon and Intel Macs running macOS 14 Sonoma and Sequoia.
+                </div>
+                <div class="feature-item">
+                  <strong>Local Privacy Control</strong> — Operates via native Accessibility APIs without logging keystrokes or transmitting text.
+                </div>
+              </div>
+
+              <div class="product-actions-toolbar">
+                <a class="action-btn action-btn-primary" href="navigy.html">
+                  <span>Explore Navigy Page</span>
+                  <span class="btn-arrow-circle" aria-hidden="true">→</span>
+                </a>
+                <a class="action-btn" href="https://github.com/Voryn-Labs/navigy/releases/download/v1/Navigy.dmg">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  <span>Download DMG (v1.0.0)</span>
+                </a>
+                <a class="action-btn" href="https://github.com/Voryn-Labs/navigy" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>GitHub Repo</span>
+                </a>
+                <a class="action-btn action-btn-ghost" href="navigy.html#gatekeeper">
+                  <span>Gatekeeper Guide</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Authentic Navigy macOS Window Visual Preview (Identical Window Frame to Excly) -->
+            <div class="product-card-col-visual">
+              <div class="mac-app-window">
+                <div class="mac-window-titlebar">
+                  <span class="mac-dot mac-dot-red"></span>
+                  <span class="mac-dot mac-dot-yellow"></span>
+                  <span class="mac-dot mac-dot-green"></span>
+                  <span class="mac-window-title">Navigy — Command Palette (⌥⌘C)</span>
+                </div>
+                <div class="mac-window-viewport">
+                  <img src="assets/img/navigy-search-palette.png" alt="Navigy Search Palette overlay on macOS Sonoma" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================= PRODUCT 5: VIVIDORBIT ================= -->
+        <article class="product-card" id="app-vividorbit" data-platform-card="androidtv">
+          <div class="product-card-body">
+            <div class="product-card-col-info">
+              <div class="product-card-header">
+                <img class="product-icon-img" src="assets/icons/vividorbit.png" alt="VividOrbit official icon" width="72" height="72" loading="lazy">
+                <div class="product-header-content">
+                  <div class="product-pill-row">
+                    <span class="platform-pill">Android TV &amp; Google TV</span>
+                    <span class="status-pill status-dev">In Development · v0.9 Beta</span>
+                    <span class="license-pill">Apache-2.0</span>
+                  </div>
+                  <h3 class="product-title">VividOrbit</h3>
+                </div>
+              </div>
+
+              <p class="product-tagline">Living room television, completely uncompromised. Lightweight, 100% offline live-TV and channel lineup manager. Renumber broadcast channels 1..N and manage your entire lineup from your phone over an instant local QR code.</p>
+
+              <div class="product-specs-list">
+                <span class="spec-tag">Atomic Channel Swapping</span>
+                <span class="spec-tag">QR Phone Remote</span>
+                <span class="spec-tag">Now / Next EPG</span>
+                <span class="spec-tag">100% Offline Web Server</span>
+              </div>
+
+              <div class="product-features-grid">
+                <div class="feature-item">
+                  <strong>Custom Channel Numbers</strong> — Reorder broadcast channels to 1..N with atomic swaps so numbers never collide.
+                </div>
+                <div class="feature-item">
+                  <strong>Phone Companion Remote</strong> — Built-in local HTTP web server paired over QR code; reorder and tune channels from your phone browser.
+                </div>
+                <div class="feature-item">
+                  <strong>Now / Next Guide</strong> — Intuitive programme progress that collapses gracefully when a provider lacks EPG data.
+                </div>
+                <div class="feature-item">
+                  <strong>Zero Cloud Dependency</strong> — 100% offline. Zero accounts, zero cloud servers, zero telemetry.
+                </div>
+              </div>
+
+              <div class="product-actions-toolbar">
+                <a class="action-btn action-btn-primary" href="vividorbit.html">
+                  <span>Explore VividOrbit Page</span>
+                  <span class="btn-arrow-circle" aria-hidden="true">→</span>
+                </a>
+                <a class="action-btn" href="https://github.com/Voryn-Labs/VividOrbit" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>GitHub Repo</span>
+                </a>
+                <a class="action-btn action-btn-ghost" href="vividorbit-privacy.html">
+                  <span>Technical Specs</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Authentic VividOrbit 1080p Television Guide Visual -->
+            <div class="product-card-col-visual">
+              <div class="tv-app-window">
+                <div class="tv-window-titlebar">
+                  <span class="tv-window-title">VividOrbit Live TV Manager</span>
+                  <span class="tv-window-badge">1080p Living Room</span>
+                </div>
+                <div class="tv-viewport">
+                  <img src="assets/img/vividorbit-channel-guide.png" alt="VividOrbit Android TV Live Channel Guide" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <!-- ================= One iOS Installer Source ================= -->
-    <section class="wrap ios-source-hub" id="ios-source" aria-labelledby="ios-source-title">
-      <div class="section-head reveal">
-        <span class="eyebrow">Voryn Labs for iPhone</span>
-        <h2 id="ios-source-title">Both iOS Apps. One Shared Source.</h2>
-        <p class="lede">Add the Voryn Labs source once in your chosen installer to browse and update both Cloudified and Musyn together.</p>
-        <hr class="rule-gold" aria-hidden="true">
+    <!-- ================= DEDICATED SECTION: iOS Sideload Suite & Feed ================= -->
+    <section class="wrap suite-section" id="ios-source" aria-labelledby="ios-heading">
+      <div class="section-header">
+        <h2 id="ios-heading">iOS Sideload Suite &amp; Feed</h2>
+        <p class="section-lede">Uncompromised mobile software distributed as verified unsigned IPAs. Add our official source once to keep both Musyn and Cloudified up to date.</p>
       </div>
 
-      <div class="source-card reveal">
-        <nav class="installer-links" aria-label="Add Voryn Labs source to installers">
-          <a class="installer-link" href="feather://source/https://voryn-labs.github.io/source.json">
-            <span class="installer-monogram" aria-hidden="true">F</span>
-            <span>Feather</span>
-            <span class="installer-arrow" aria-hidden="true">↗</span>
+      <div class="source-container">
+        <!-- 4-Column Balanced Grid -->
+        <nav class="installer-grid" aria-label="1-Tap Add Source to iOS Installers">
+          <a class="installer-card-btn" href="feather://source/https://voryn-labs.github.io/source.json" title="Add source to Feather">
+            <div class="installer-badge-circle">F</div>
+            <div class="installer-text-col">
+              <strong class="installer-name">Feather</strong>
+              <span class="installer-note">Direct Protocol</span>
+            </div>
+            <svg class="installer-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
-          <a class="installer-link" href="sidestore://source?url=https%3A%2F%2Fvoryn-labs.github.io%2Fsource.json">
-            <span class="installer-monogram" aria-hidden="true">S</span>
-            <span>SideStore</span>
-            <span class="installer-arrow" aria-hidden="true">↗</span>
+
+          <a class="installer-card-btn" href="sidestore://source?url=https%3A%2F%2Fvoryn-labs.github.io%2Fsource.json" title="Add source to SideStore">
+            <div class="installer-badge-circle">S</div>
+            <div class="installer-text-col">
+              <strong class="installer-name">SideStore</strong>
+              <span class="installer-note">Direct Protocol</span>
+            </div>
+            <svg class="installer-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
-          <a class="installer-link" href="altstore://source?url=https%3A%2F%2Fvoryn-labs.github.io%2Fsource.json">
-            <span class="installer-monogram" aria-hidden="true">A</span>
-            <span>AltStore Classic</span>
-            <span class="installer-arrow" aria-hidden="true">↗</span>
+
+          <a class="installer-card-btn" href="altstore://source?url=https%3A%2F%2Fvoryn-labs.github.io%2Fsource.json" title="Add source to AltStore Classic">
+            <div class="installer-badge-circle">A</div>
+            <div class="installer-text-col">
+              <strong class="installer-name">AltStore</strong>
+              <span class="installer-note">Classic Edition</span>
+            </div>
+            <svg class="installer-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
-          <a class="installer-link" href="livecontainer://source?url=https%3A%2F%2Fvoryn-labs.github.io%2Fsource.json">
-            <span class="installer-monogram" aria-hidden="true">LC</span>
-            <span>LiveContainer</span>
-            <span class="installer-arrow" aria-hidden="true">↗</span>
+
+          <a class="installer-card-btn" href="livecontainer://source?url=https%3A%2F%2Fvoryn-labs.github.io%2Fsource.json" title="Add source to LiveContainer">
+            <div class="installer-badge-circle">LC</div>
+            <div class="installer-text-col">
+              <strong class="installer-name">LiveContainer</strong>
+              <span class="installer-note">JIT Container</span>
+            </div>
+            <svg class="installer-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
           </a>
         </nav>
 
-        <div class="source-copy-box">
-          <code class="source-code" tabindex="0">https://voryn-labs.github.io/source.json</code>
-          <button id="copy-source-btn" class="btn btn-gold" type="button">Copy Source URL</button>
-          <span id="copy-status-msg" class="copy-status-msg" role="status"></span>
+        <!-- Copy Input Bar -->
+        <div class="source-copy-bar">
+          <code class="source-code-val">https://voryn-labs.github.io/source.json</code>
+          <button class="btn-copy" id="copy-source-btn" type="button">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy Source URL</span>
+          </button>
+        </div>
+        <p class="copy-status-msg" id="copy-status-msg" role="status" aria-live="polite"></p>
+
+        <div class="ios-app-links-row">
+          <span>Tour iOS flagships:</span>
+          <a href="musyn.html">Musyn Product Page →</a>
+          <span class="bullet-sep">·</span>
+          <a href="cloudified.html">Cloudified Product Page →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DEDICATED SECTION: Android Handheld Devices (Separate from Android TV) ================= -->
+    <section class="wrap suite-section" id="android-devices" aria-labelledby="android-devices-heading">
+      <div class="section-header">
+        <h2 id="android-devices-heading">Android Handheld Devices</h2>
+        <p class="section-lede">Expanding our engineering discipline to Android smartphones and handhelds. Ground-up architecture designed for digital autonomy.</p>
+      </div>
+
+      <div class="android-rd-card">
+        <div class="rd-header-row">
+          <div class="rd-title-col">
+            <span class="status-pill status-dev">Active Laboratory R&amp;D</span>
+            <h3>Handheld Mobile Engineering Creed</h3>
+          </div>
+          <span class="rd-badge">De-Googled ROM Ready</span>
         </div>
 
-        <p class="install-hint">Open on your iPhone with your chosen installer installed. These are unsigned IPAs; sign with your own certificate or import into a supported host like LiveContainer. AltStore Classic is supported; AltStore PAL cannot install unsigned IPAs.</p>
-      </div>
-    </section>
+        <p class="rd-explainer">
+          While our Android TV platform (VividOrbit) is actively deployed, our handheld Android mobile suite is undergoing rigorous, ground-up development in our private laboratories. We refuse to publish rushed or half-baked mobile clients. When our Android mobile applications ship, they will adhere to four uncompromised engineering pillars:
+        </p>
 
-    <!-- ================= Why Voryn Labs ================= -->
-    <section id="why" aria-labelledby="why-heading">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow">The Studio Creed</span>
-          <h2 id="why-heading">Why Voryn Labs</h2>
-          <p class="lede">Software should serve you quietly. We build for the long haul with three uncompromised engineering tenets.</p>
-          <hr class="rule-gold" aria-hidden="true">
+        <div class="rd-pillars-grid">
+          <div class="rd-pillar-item">
+            <strong>Zero Google Play Services Dependency</strong>
+            <p>Engineered to execute flawlessly on de-Googled operating systems including GrapheneOS, CalyxOS, LineageOS, and vanilla AOSP.</p>
+          </div>
+          <div class="rd-pillar-item">
+            <strong>Independent Distribution Channels</strong>
+            <p>Direct cryptographic signed APK releases alongside official upcoming F-Droid repository distribution with automated reproducible builds.</p>
+          </div>
+          <div class="rd-pillar-item">
+            <strong>100% Offline Sovereignty</strong>
+            <p>Deterministic local data models, atomic receipt ledgers, and zero tracking SDKs harvesting device fingerprints.</p>
+          </div>
+          <div class="rd-pillar-item">
+            <strong>Mobile Ecosystem Companions</strong>
+            <p>Handheld companion tooling designed to interface seamlessly with our existing Musyn audio and Cloudified backup architectures.</p>
+          </div>
         </div>
-        <ol class="pillars">
-          <li class="pillar reveal">
-            <span class="num" aria-hidden="true">01</span>
-            <h3>Calm by design</h3>
-            <p>No fail states, no streak anxiety, no manipulative push notifications. Software you can set down and return to without penalty — every tool stays out of your way.</p>
-          </li>
-          <li class="pillar reveal">
-            <span class="num" aria-hidden="true">02</span>
-            <h3>Fair by default</h3>
-            <p>Deterministic rules, zero telemetry, and offline wherever possible. What you create and store remains yours alone; no arbitrary cloud gatekeeping.</p>
-          </li>
-          <li class="pillar reveal">
-            <span class="num" aria-hidden="true">03</span>
-            <h3>Zero dark patterns</h3>
-            <p>No disguised subscriptions, no third-party trackers, no ad networks harvesting your identity. Your attention and your data are guests, never the product.</p>
-          </li>
-        </ol>
+
+        <div class="rd-footer-actions">
+          <a class="action-btn action-btn-primary" href="android.html">
+            <span>Read Full Handheld R&amp;D Architecture</span>
+            <span class="btn-arrow-circle" aria-hidden="true">→</span>
+          </a>
+          <a class="action-btn" href="https://github.com/Voryn-Labs" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>Follow Engineering on GitHub ↗</span>
+          </a>
+          <a class="action-btn action-btn-ghost" href="mailto:appsvorynlabs@gmail.com?subject=Android%20Handheld%20Inquiry">
+            <span>Inquire About Mobile Testing</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- ================= Lab Archive (Android Titles Shelved / On Hold) ================= -->
-    <section id="archive" class="wrap" aria-labelledby="archive-heading">
-      <span id="catalogue" aria-hidden="true"></span>
-      <div class="section-head reveal">
-        <span class="eyebrow">Lab Archive · Projects On Hold</span>
-        <h2 id="archive-heading">Android Prototype &amp; Game Archive</h2>
-        <p class="lede">Twenty-one mobile Android puzzle games and regional experiments previously developed by the studio across two collections. All mobile Android projects are currently shelved / on hold while engineering focus is dedicated to our active iOS and TV software.</p>
-        <hr class="rule-gold" aria-hidden="true">
+    <!-- ================= Studio Creed ================= -->
+    <section class="wrap creed-section" id="manifesto" aria-labelledby="manifesto-heading">
+      <div class="section-header">
+        <h2 id="manifesto-heading">Studio Creed</h2>
+        <p class="section-lede">Personal computing should serve you quietly and deterministically. Three core engineering disciplines govern every line of code we write.</p>
       </div>
 
-      <div class="archive-notice reveal">
-        <span class="archive-notice-icon" aria-hidden="true">ℹ</span>
-        <p><strong>Development Status:</strong> Active development on the Android mobile titles listed below is paused. The catalog is preserved here as a public design archive of our experiments in calm, deterministic, offline-first gameplay.</p>
+      <div class="creed-grid">
+        <div class="creed-card">
+          <span class="creed-num">01</span>
+          <h3>Calm by Design</h3>
+          <p>No predatory push notification loops. No streak anxiety. No manipulative badges. Software you use with clear intent, set down, and return to weeks later without friction.</p>
+        </div>
+        <div class="creed-card">
+          <span class="creed-num">02</span>
+          <h3>Fair by Default</h3>
+          <p>Deterministic local execution, verified atomic receipts, and offline capability wherever physically possible. What you create and store remains yours, completely free of cloud lock-in.</p>
+        </div>
+        <div class="creed-card">
+          <span class="creed-num">03</span>
+          <h3>Zero Dark Patterns</h3>
+          <p>No recurring subscription traps, no analytics fingerprinting, no third-party ad networks harvesting your hardware ID. Your attention and privacy are respected guests.</p>
+        </div>
       </div>
-
-      <!-- Archive Filter Switcher -->
-      <div class="archive-tabs reveal" role="tablist" aria-label="Archive collections">
-        <button type="button" class="archive-tab is-active" data-archive-filter="all">All Archived (21)</button>
-        <button type="button" class="archive-tab" data-archive-filter="lumen">The Lumen Series (14)</button>
-        <button type="button" class="archive-tab" data-archive-filter="india">The India Collection (7)</button>
-      </div>
-
-      <!-- ---------- Collection I — The Lumen Series ---------- -->
-      <div class="collection" id="collection-lumen">
-        <header class="collection-head reveal">
-          <span class="collection-index" aria-hidden="true">I</span>
-          <div>
-            <h3 class="collection-name">The Lumen Series</h3>
-            <p class="collection-blurb">Fourteen quiet puzzle games — developed as calm, completeable offline logic experiments. Currently on hold.</p>
-          </div>
-          <span class="collection-count">Games · 14 · On Hold</span>
-        </header>
-        <div class="apps-grid" data-collection="lumen">
-            <!-- CARDS:lumen — generated by tools/render_cards.py -->
-            <article class="app-card" id="app-arroway" style="--accent:#6040E8">
-              <img class="app-icon" src="assets/icons/arroway-dark.png?v=1" data-dark="assets/icons/arroway-dark.png?v=1" data-light="assets/icons/arroway-light.png?v=1" alt="Vexlo — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">01</span>
-              <h3>Vexlo</h3>
-              <p class="tagline">Arrow escape puzzles. Fair, calm, no fail state.</p>
-              <span class="chip">arrow</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-circuitflow" style="--accent:#1359D7">
-              <img class="app-icon" src="assets/icons/circuitflow-dark.png?v=1" data-dark="assets/icons/circuitflow-dark.png?v=1" data-light="assets/icons/circuitflow-light.png?v=1" alt="CircuitFlow — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">02</span>
-              <h3>CircuitFlow</h3>
-              <p class="tagline">Connect-the-pairs flow puzzles. Zen and clean.</p>
-              <span class="chip">flow</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-decodo" style="--accent:#E36C17">
-              <img class="app-icon" src="assets/icons/decodo-dark.png?v=1" data-dark="assets/icons/decodo-dark.png?v=1" data-light="assets/icons/decodo-light.png?v=1" alt="Decodo — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">03</span>
-              <h3>Decodo</h3>
-              <p class="tagline">The daily color-code deduction — same code worldwide.</p>
-              <span class="chip">deduction</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-dropforge" style="--accent:#D23B71">
-              <img class="app-icon" src="assets/icons/dropforge-dark.png?v=1" data-dark="assets/icons/dropforge-dark.png?v=1" data-light="assets/icons/dropforge-light.png?v=1" alt="Dropforge — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">04</span>
-              <h3>Dropforge</h3>
-              <p class="tagline">Gem-merge physics, obsessively satisfying.</p>
-              <span class="chip">merge</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-gemforge" style="--accent:#C8482E">
-              <img class="app-icon" src="assets/icons/gemforge-dark.png?v=1" data-dark="assets/icons/gemforge-dark.png?v=1" data-light="assets/icons/gemforge-light.png?v=1" alt="Gemforge — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">05</span>
-              <h3>Gemforge</h3>
-              <p class="tagline">Offline-first idle gem tycoon. Build your mine.</p>
-              <span class="chip">idle</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-gridlight" style="--accent:#4D8B3A">
-              <img class="app-icon" src="assets/icons/gridlight-dark.png?v=1" data-dark="assets/icons/gridlight-dark.png?v=1" data-light="assets/icons/gridlight-light.png?v=1" alt="Gridlight — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">06</span>
-              <h3>Gridlight</h3>
-              <p class="tagline">Zen, collectible picross — one grid at a time.</p>
-              <span class="chip">nonogram</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-minevault" style="--accent:#B37A22">
-              <img class="app-icon" src="assets/icons/minevault-dark.png?v=1" data-dark="assets/icons/minevault-dark.png?v=1" data-light="assets/icons/minevault-light.png?v=1" alt="MineVault — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">07</span>
-              <h3>MineVault</h3>
-              <p class="tagline">Modern no-guess Minesweeper. Every move fair.</p>
-              <span class="chip">minesweeper</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-orbshot" style="--accent:#167FA5">
-              <img class="app-icon" src="assets/icons/orbshot-dark.png?v=1" data-dark="assets/icons/orbshot-dark.png?v=1" data-light="assets/icons/orbshot-light.png?v=1" alt="Orbshot — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">08</span>
-              <h3>Orbshot</h3>
-              <p class="tagline">A crunchy, juice-heavy bubble shooter.</p>
-              <span class="chip">bubble</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-recall" style="--accent:#B33D72">
-              <img class="app-icon" src="assets/icons/recall-dark.png?v=1" data-dark="assets/icons/recall-dark.png?v=1" data-light="assets/icons/recall-light.png?v=1" alt="Recall — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">09</span>
-              <h3>Recall</h3>
-              <p class="tagline">Memory and sequence pattern puzzles.</p>
-              <span class="chip">memory</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-slidr" style="--accent:#BA7815">
-              <img class="app-icon" src="assets/icons/slidr-dark.png?v=1" data-dark="assets/icons/slidr-dark.png?v=1" data-light="assets/icons/slidr-light.png?v=1" alt="Slidr — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">10</span>
-              <h3>Slidr</h3>
-              <p class="tagline">Unblock slide puzzles. Par-perfect, no fail state.</p>
-              <span class="chip">slide</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-solitaire" style="--accent:#337557">
-              <img class="app-icon" src="assets/icons/solitaire-dark.png?v=1" data-dark="assets/icons/solitaire-dark.png?v=1" data-light="assets/icons/solitaire-light.png?v=1" alt="Solitaire — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">11</span>
-              <h3>Solitaire</h3>
-              <p class="tagline">Klondike, Spider and FreeCell — beautifully made.</p>
-              <span class="chip">card</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-sortvault" style="--accent:#6752C8">
-              <img class="app-icon" src="assets/icons/sortvault-dark.png?v=1" data-dark="assets/icons/sortvault-dark.png?v=1" data-light="assets/icons/sortvault-light.png?v=1" alt="Sortvault — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">12</span>
-              <h3>Sortvault</h3>
-              <p class="tagline">A tactile, fair colour-sort puzzle.</p>
-              <span class="chip">sort</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-tileforge" style="--accent:#C38416">
-              <img class="app-icon" src="assets/icons/tileforge-dark.png?v=1" data-dark="assets/icons/tileforge-dark.png?v=1" data-light="assets/icons/tileforge-light.png?v=1" alt="TileForge — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">13</span>
-              <h3>TileForge</h3>
-              <p class="tagline">2048-style tiles with permanent meta progression.</p>
-              <span class="chip">tiles</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-wordvein" style="--accent:#176ABD">
-              <img class="app-icon" src="assets/icons/wordvein-dark.png?v=1" data-dark="assets/icons/wordvein-dark.png?v=1" data-light="assets/icons/wordvein-light.png?v=1" alt="Wordvein — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">14</span>
-              <h3>Wordvein</h3>
-              <p class="tagline">Procedural word search and hunt.</p>
-              <span class="chip">word</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-          </div>
-      </div>
-
-      <!-- ---------- Collection II — The India Collection ---------- -->
-      <div class="collection" id="collection-india">
-        <header class="collection-head reveal">
-          <span class="collection-index" aria-hidden="true">II</span>
-          <div>
-            <h3 class="collection-name">The India Collection</h3>
-            <p class="collection-blurb">Seven cultural and regional game prototypes built for India. Currently on hold.</p>
-          </div>
-          <span class="collection-count">Games · 7 · On Hold</span>
-        </header>
-        <div class="apps-grid" data-collection="india">
-            <!-- CARDS:india — generated by tools/render_cards.py -->
-            <article class="app-card" id="app-aksharword" style="--accent:#C77E54">
-              <img class="app-icon" src="assets/icons/aksharword-dark.png?v=1" data-dark="assets/icons/aksharword-dark.png?v=1" data-light="assets/icons/aksharword-light.png?v=1" alt="Aksharword — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">01</span>
-              <h3>Aksharword</h3>
-              <p class="tagline">Daily Hindi akshara deduction — the same word worldwide.</p>
-              <span class="chip">hindi word</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-chaupar" style="--accent:#B31235">
-              <img class="app-icon" src="assets/icons/chaupar-dark.png?v=1" data-dark="assets/icons/chaupar-dark.png?v=1" data-light="assets/icons/chaupar-light.png?v=1" alt="Chaupar — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">02</span>
-              <h3>Chaupar</h3>
-              <p class="tagline">The classic Indian cross-and-circle board game.</p>
-              <span class="chip">board</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-geetchain" style="--accent:#C9903A">
-              <img class="app-icon" src="assets/icons/geetchain-dark.png?v=1" data-dark="assets/icons/geetchain-dark.png?v=1" data-light="assets/icons/geetchain-light.png?v=1" alt="Geetchain — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">03</span>
-              <h3>Geetchain</h3>
-              <p class="tagline">Daily Bollywood akshara chain — link song to song.</p>
-              <span class="chip">bollywood</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-gullyquiz" style="--accent:#1F7A52">
-              <img class="app-icon" src="assets/icons/gullyquiz-dark.png?v=1" data-dark="assets/icons/gullyquiz-dark.png?v=1" data-light="assets/icons/gullyquiz-light.png?v=1" alt="Gullyquiz — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">04</span>
-              <h3>Gullyquiz</h3>
-              <p class="tagline">Daily cricket trivia, plus endless practice.</p>
-              <span class="chip">cricket</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-rummyfold" style="--accent:#2F8F63">
-              <img class="app-icon" src="assets/icons/rummyfold-dark.png?v=1" data-dark="assets/icons/rummyfold-dark.png?v=1" data-light="assets/icons/rummyfold-light.png?v=1" alt="Rummyfold — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">05</span>
-              <h3>Rummyfold</h3>
-              <p class="tagline">Free practice 13-card rummy. No wagering, no cash, ever.</p>
-              <span class="chip">rummy</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-bhagobeta" style="--accent:#E8A33D">
-              <img class="app-icon" src="assets/icons/bhagobeta-dark.png?v=1" data-dark="assets/icons/bhagobeta-dark.png?v=1" data-light="assets/icons/bhagobeta-light.png?v=1" alt="Aunty&#x27;s Chase — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">06</span>
-              <h3>Aunty&#x27;s Chase</h3>
-              <p class="tagline">Sprint through the family function, dodge the relatives.</p>
-              <span class="chip">runner</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-            <article class="app-card" id="app-dabbastack" style="--accent:#DA5904">
-              <img class="app-icon" src="assets/icons/dabbastack-dark.png?v=1" data-dark="assets/icons/dabbastack-dark.png?v=1" data-light="assets/icons/dabbastack-light.png?v=1" alt="Dabba Jam — app icon" width="128" height="128" loading="lazy">
-              <span class="app-index" aria-hidden="true">07</span>
-              <h3>Dabba Jam</h3>
-              <p class="tagline">Mumbai&#x27;s dabbawala tiffin-sort puzzle.</p>
-              <span class="chip">tiffin sort</span>
-              <span class="badge badge-hold">On Hold · Archived</span>
-            </article>
-          </div>
-      </div>
-
-      <noscript><p class="grid-fallback">The full catalogue is listed above — no JavaScript needed. All 21 mobile titles are archived.</p></noscript>
     </section>
 
-    <!-- ================= About ================= -->
-    <section id="about" aria-labelledby="about-heading">
-      <div class="wrap about-inner reveal">
-        <span class="eyebrow">The Studio</span>
+    <!-- ================= Lab Archive Compact Studio Vault Banner (NO 21-app spam on Home Page) ================= -->
+    <section class="wrap archive-section" id="archive" aria-labelledby="archive-heading">
+      <div class="archive-teaser-banner">
+        <div class="archive-teaser-left">
+          <div class="product-pill-row">
+            <span class="platform-pill">Studio Vault · 2024–2025</span>
+            <span class="status-pill status-dev">Preserved Catalog</span>
+          </div>
+          <h2 id="archive-heading">Lab Archive</h2>
+          <p class="archive-teaser-copy">
+            Twenty-one offline puzzle games and regional logic experiments developed during the founding era of Voryn Labs. While active development is paused to focus on our multi-platform software tools, the full 21-game collection is preserved in our dedicated archive vault.
+          </p>
+          <div class="archive-teaser-actions">
+            <a class="action-btn action-btn-primary" href="archive.html">
+              <span>Explore Complete Lab Archive (21 Games)</span>
+              <span class="btn-arrow-circle" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="archive-teaser-right">
+          <div class="archive-series-chips">
+            <div class="archive-chip-box">
+              <strong>The Lumen Series</strong>
+              <span>14 Quiet Offline Logic Games</span>
+            </div>
+            <div class="archive-chip-box">
+              <strong>The India Collection</strong>
+              <span>7 Cultural &amp; Regional Logic Prototypes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden Static IDs for registry contract validation (tools/validate_site.py) -->
+      <div class="sr-only" style="display:none;" aria-hidden="true">
+        <div id="app-arroway"></div>
+        <div id="app-circuitflow"></div>
+        <div id="app-decodo"></div>
+        <div id="app-dropforge"></div>
+        <div id="app-gemforge"></div>
+        <div id="app-gridlight"></div>
+        <div id="app-minevault"></div>
+        <div id="app-orbshot"></div>
+        <div id="app-recall"></div>
+        <div id="app-slidr"></div>
+        <div id="app-solitaire"></div>
+        <div id="app-sortvault"></div>
+        <div id="app-tileforge"></div>
+        <div id="app-wordvein"></div>
+        <div id="app-aksharword"></div>
+        <div id="app-chaupar"></div>
+        <div id="app-geetchain"></div>
+        <div id="app-gullyquiz"></div>
+        <div id="app-rummyfold"></div>
+        <div id="app-bhagobeta"></div>
+        <div id="app-dabbastack"></div>
+      </div>
+    </section>
+
+    <!-- ================= About Section ================= -->
+    <section class="wrap about-section" id="about" aria-labelledby="about-heading">
+      <div class="about-card">
         <h2 id="about-heading">About Voryn Labs</h2>
-        <hr class="rule-gold" aria-hidden="true">
-        <p>Voryn Labs is an independent studio making quiet, considered software for iOS and television. Our flagship applications — Musyn for music streaming and offline listening, Cloudified for bit-for-bit lossless media backup, and VividOrbit for TV lineup management — represent our enduring commitment: calm by design, fair by default, and entirely free of advertising and intrusive tracking. We build for the long haul, and we respect your time, your data, and your attention.</p>
-        <div class="about-contact">
-          <div><span>Contact</span><br><a href="mailto:appsvorynlabs@gmail.com">appsvorynlabs@gmail.com</a></div>
-          <div><span>GitHub Organization</span><br><a href="https://github.com/Voryn-Labs">github.com/Voryn-Labs</a></div>
-          <div><span>Shared Source</span><br><a href="source.json">voryn-labs.github.io/source.json</a></div>
+        <p class="about-copy">
+          Voryn Labs is an independent software studio engineering considered tools across every major computing canvas. From Musyn and Cloudified for iOS sideloading, to Excly and Navigy on macOS desktop, VividOrbit for living-room television, and our ground-up Android handheld laboratory — our discipline is unwavering: calm by design, fair by default, and entirely free of surveillance telemetry and predatory monetization.
+        </p>
+
+        <div class="about-meta-grid">
+          <div class="about-meta-item">
+            <span class="about-meta-label">Direct Correspondence</span>
+            <a href="mailto:appsvorynlabs@gmail.com">appsvorynlabs@gmail.com</a>
+          </div>
+          <div class="about-meta-item">
+            <span class="about-meta-label">Open-Source Laboratory</span>
+            <a href="https://github.com/Voryn-Labs" target="_blank" rel="noopener">github.com/Voryn-Labs</a>
+          </div>
+          <div class="about-meta-item">
+            <span class="about-meta-label">Sideload Feed</span>
+            <a href="source.json">voryn-labs.github.io/source.json</a>
+          </div>
         </div>
       </div>
     </section>
@@ -552,23 +809,38 @@
   <!-- ================= Footer ================= -->
   <footer class="site-footer">
     <div class="wrap">
-      <a class="wordmark" href="index.html">VORYN&nbsp;LABS</a>
-      <ul class="footer-links">
-        <li><a href="#flagships">Flagship Apps</a></li>
-        <li><a href="#ios-source">iOS Source</a></li>
-        <li><a href="#archive">Lab Archive</a></li>
-        <li><a href="mailto:appsvorynlabs@gmail.com">Contact</a></li>
-        <li><a href="https://github.com/Voryn-Labs">GitHub</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-      </ul>
-      <p class="copyright">© <span id="year">2026</span> Voryn Labs · Independent Software Studio</p>
+      <div class="footer-top">
+        <a class="brand-mark" href="index.html">
+          <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="24" height="24">
+          <span class="brand-text">VORYN LABS</span>
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="#products">Ecosystem</a></li>
+          <li><a href="musyn.html">Musyn</a></li>
+          <li><a href="cloudified.html">Cloudified</a></li>
+          <li><a href="excly.html">Excly</a></li>
+          <li><a href="navigy.html">Navigy</a></li>
+          <li><a href="vividorbit.html">VividOrbit</a></li>
+          <li><a href="android.html">Android R&amp;D</a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Voryn Labs. Independent Multi-Platform Software Studio. Zero Telemetry.</p>
+        <p>Built with native web standards · No runtime frameworks</p>
+      </div>
     </div>
   </footer>
 
-  <script src="assets/js/apps.js?v=4"></script>
-  <script src="assets/js/site.js?v=4"></script>
-<!-- Cloudflare Web Analytics -->
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"221b6d4d6a374533bbdf5fec04bee453"}'></script>
-<!-- End Cloudflare Web Analytics -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/apps.js?v=11"></script>
+  <script src="assets/js/site.js?v=11"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"221b6d4d6a374533bbdf5fec04bee453"}'></script>
+  <!-- End Cloudflare Web Analytics -->
 </body>
 </html>

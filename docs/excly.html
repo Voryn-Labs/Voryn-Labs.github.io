@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Excly — Native Windows Excel Shortcuts for Mac · Voryn Labs</title>
+  <meta name="description" content="Use familiar Windows Excel ribbon shortcuts in Microsoft Excel for Mac. Handcrafted in Swift with zero background servers, zero daemons, and complete offline privacy.">
+  <meta name="theme-color" content="#0A0C10">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Excly — Native Windows Excel Shortcuts for Mac">
+  <meta property="og:description" content="Use familiar Windows Excel ribbon shortcuts in Microsoft Excel for Mac. Handcrafted in Swift with zero background servers.">
+  <meta property="og:image" content="assets/icons/excly.png">
+  <link rel="icon" href="assets/icons/excly.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=12">
+  <link rel="stylesheet" href="assets/css/product-pages.css?v=5">
+  <script>
+    (function(){
+      document.documentElement.classList.add("js");
+      var t = localStorage.getItem("voryn-theme");
+      if (t === "dark" || t === "light") {
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    })();
+  </script>
+</head>
+<body class="product-detail-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Navigation Bar -->
+  <header class="site-nav">
+    <nav class="wrap" aria-label="Main Navigation">
+      <a class="brand-mark" href="index.html" aria-label="Voryn Labs Home">
+        <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="28" height="28">
+        <span class="brand-text">VORYN LABS</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#products">Ecosystem</a></li>
+        <li><a href="index.html#macos">macOS Apps</a></li>
+        <li><a href="https://github.com/Voryn-Labs/Excly" target="_blank" rel="noopener">GitHub Repo ↗</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a class="nav-github-btn" href="https://github.com/Voryn-Labs/Excly" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>Source Code</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="product-page-hero">
+      <div class="wrap product-hero-grid">
+        <div class="product-hero-copy">
+          <div class="badge-row">
+            <span class="platform-pill">macOS 13+ · Apple Silicon &amp; Intel</span>
+            <span class="status-pill status-active">Stable · v1.0.0</span>
+            <span class="license-pill">Swift Native</span>
+          </div>
+          <h1>Excly</h1>
+          <p class="tagline-large">Windows Excel shortcuts, natively restored in Excel for Mac.</p>
+          <p class="hero-desc">
+            Excly is a native macOS companion engineered to bring familiar Windows ribbon shortcuts (like <kbd>Alt</kbd> <kbd>H</kbd> <kbd>O</kbd> <kbd>I</kbd> to AutoFit columns) to Microsoft Excel for Mac. Handcrafted in pure Swift with AppKit, SwiftUI, Core Graphics event taps, and macOS Accessibility APIs.
+          </p>
+
+          <div class="hero-actions">
+            <a class="action-btn action-btn-primary" href="https://github.com/Voryn-Labs/Excly/releases/download/v1.0.0/Excly-1.0.0-macOS.dmg">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Download Excly DMG (v1.0.0)</span>
+            </a>
+            <a class="action-btn" href="https://github.com/Voryn-Labs/Excly/releases/tag/v1.0.0" target="_blank" rel="noopener">
+              <span>Release Notes ↗</span>
+            </a>
+            <a class="action-btn" href="#gatekeeper">
+              <span>Gatekeeper Guide ↓</span>
+            </a>
+            <a class="action-btn action-btn-ghost" href="#build-from-source">
+              <span>Build from Source ↓</span>
+            </a>
+          </div>
+
+          <div class="product-metadata-bar">
+            <span class="meta-tag"><code>com.vorynlabs.excly</code></span>
+            <span class="meta-divider">·</span>
+            <span>v1.0.0 Universal</span>
+            <span class="meta-divider">·</span>
+            <a class="meta-link" href="https://github.com/Voryn-Labs/Excly/releases/tag/v1.0.0" target="_blank" rel="noopener">v1.0.0 Release Notes &amp; SHA256 ↗</a>
+            <span class="meta-divider">·</span>
+            <span class="meta-badge">Gatekeeper Safe</span>
+          </div>
+        </div>
+
+        <div class="product-hero-visual">
+          <div class="mac-app-window">
+            <div class="mac-window-titlebar">
+              <span class="mac-dot mac-dot-red"></span>
+              <span class="mac-dot mac-dot-yellow"></span>
+              <span class="mac-dot mac-dot-green"></span>
+              <span class="mac-window-title">Excly — Excel Shortcuts Settings</span>
+            </div>
+            <div class="mac-window-viewport">
+              <img src="assets/img/excly-window.png" alt="Excly native macOS application window" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Workflows & Sequences -->
+    <section class="wrap product-detail-section">
+      <div class="section-header">
+        <h2>Uncompromised Muscle Memory</h2>
+        <p class="section-lede">Never lose seconds reaching for a mouse or relearning spreadsheet shortcuts. Excly restores Windows Excel sequences with sub-millisecond execution.</p>
+      </div>
+
+      <div class="key-workflows-grid">
+        <div class="workflow-card">
+          <div class="workflow-keys">
+            <kbd>Alt</kbd> <span>+</span> <kbd>H</kbd> <span>+</span> <kbd>O</kbd> <span>+</span> <kbd>I</kbd>
+          </div>
+          <h4>AutoFit Column Width</h4>
+          <p>Instantly AutoFits selected columns in the active worksheet without touching the trackpad.</p>
+        </div>
+
+        <div class="workflow-card">
+          <div class="workflow-keys">
+            <kbd>Ctrl</kbd> <span>+</span> <kbd>PgDn</kbd> / <kbd>PgUp</kbd>
+          </div>
+          <h4>Switch Worksheets</h4>
+          <p>Cycles forward and backward between workbook sheets, keeping native priority intact.</p>
+        </div>
+
+        <div class="workflow-card">
+          <div class="workflow-keys">
+            <kbd>Alt</kbd> <span>+</span> <kbd>H</kbd> <span>+</span> <kbd>V</kbd> <span>+</span> <kbd>V</kbd>
+          </div>
+          <h4>Paste Values Only</h4>
+          <p>Executes instantaneous formula stripping and value pasting directly into cells.</p>
+        </div>
+
+        <div class="workflow-card">
+          <div class="workflow-keys">
+            <kbd>Alt</kbd> <span>+</span> <kbd>A</kbd> <span>+</span> <kbd>C</kbd>
+          </div>
+          <h4>Clear Data Filter</h4>
+          <p>Clears active auto-filters across columns in one rapid four-stroke physical motion.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interface Showcase -->
+    <section class="wrap product-detail-section">
+      <div class="section-header">
+        <h2>Interface &amp; Control Center</h2>
+        <p class="section-lede">Real-time status HUD and configuration dashboard. Hand-tuned for dark mode with native macOS vibrancy and zero latency.</p>
+      </div>
+
+      <div class="screenshots-showcase-grid">
+        <figure class="screenshot-figure">
+          <img src="assets/img/excly-window.png" alt="Excly Settings and Shortcuts Manager running on macOS" loading="lazy">
+          <figcaption>
+            <strong>Shortcut Layer &amp; Modifier Configuration</strong>
+            <span>Active event tap indicators, custom Alt/Control remapping, and sub-millisecond execution feedback.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Technical Architecture -->
+    <section class="wrap product-detail-section">
+      <div class="section-header">
+        <h2>Architectural Integrity</h2>
+        <p class="section-lede">Engineered strictly to respect macOS system performance and privacy standards.</p>
+      </div>
+
+      <div class="arch-points-grid">
+        <div class="arch-card">
+          <h4>Strict Scope Guard</h4>
+          <p>The keyboard event tap exists exclusively while <code>com.microsoft.Excel</code> is the frontmost application. When Excel is backgrounded, the tap disconnects instantly.</p>
+        </div>
+        <div class="arch-card">
+          <h4>Zero Daemons or Servers</h4>
+          <p>No lingering background daemons, launch agents, or local HTTP servers. When you quit Excly, absolutely nothing remains running in the background.</p>
+        </div>
+        <div class="arch-card">
+          <h4>Independent Modifier Mapping</h4>
+          <p>Assign Windows Alt and Control independently to Option, Control, or Command without hijacking native macOS <kbd>⌘</kbd> <kbd>Tab</kbd> app switching.</p>
+        </div>
+        <div class="arch-card">
+          <h4>Verified Continuous Signing</h4>
+          <p>Built with certificate-pinned designated requirements. Verifiable reproducible builds that retain Accessibility trust without security warnings.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= macOS Gatekeeper & Authorization Guide ================= -->
+    <section class="wrap product-detail-section" id="gatekeeper">
+      <div class="section-header">
+        <h2>macOS Gatekeeper &amp; Authorization Guide</h2>
+        <p class="section-lede">Independent open-source binary without an Apple Developer subscription ($99/yr). Safe, verifiable, and running in under 30 seconds.</p>
+      </div>
+
+      <div class="gatekeeper-notice-box">
+        <div class="notice-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <div class="notice-text">
+          <h4>Why macOS Shows a Security Prompt</h4>
+          <p>
+            Because Voryn Labs software is 100% free and open-source, we do not pay an annual Apple Developer certificate tax. When launching downloaded apps for the first time, macOS Gatekeeper may show: <em>"Excly cannot be opened because Apple cannot check it for malicious software"</em>. Excly is completely open source with public source code, zero background servers, and zero telemetry. Follow either method below to authorize launch.
+          </p>
+        </div>
+      </div>
+
+      <div class="gatekeeper-methods-grid">
+        <!-- Method 1: GUI / Finder -->
+        <div class="method-card">
+          <div class="method-card-header">
+            <h3>Method 1: Control-Click (GUI)</h3>
+            <span class="method-tag method-tag-gui">Recommended</span>
+          </div>
+          <p class="method-desc">Authorize Excly directly through Finder without touching the command line.</p>
+          <ol class="method-steps">
+            <li>
+              <span class="step-bullet">1</span>
+              <span>Open the downloaded <code>Excly-1.0.0-macOS.dmg</code> and drag <strong>Excly.app</strong> into your <strong>/Applications</strong> folder.</span>
+            </li>
+            <li>
+              <span class="step-bullet">2</span>
+              <span>In Finder, open <strong>/Applications</strong>, hold <kbd>Control</kbd> (or right-click) on <strong>Excly.app</strong>, and choose <strong>Open</strong> from the menu.</span>
+            </li>
+            <li>
+              <span class="step-bullet">3</span>
+              <span>In the security dialog asking <em>"Are you sure you want to open it?"</em>, click <strong>Open</strong>. This permanently saves an exception for Excly.</span>
+            </li>
+          </ol>
+          <p class="method-desc" style="margin-top:auto; font-size:0.84rem; opacity:0.8;">
+            <em>Tip:</em> You can also go to <strong>System Settings → Privacy &amp; Security</strong>, scroll down to <strong>Security</strong>, and click <strong>"Open Anyway"</strong>.
+          </p>
+        </div>
+
+        <!-- Method 2: Terminal Quarantine Strip -->
+        <div class="method-card">
+          <div class="method-card-header">
+            <h3>Method 2: Strip Quarantine Flag</h3>
+            <span class="method-tag method-tag-cli">Instant CLI</span>
+          </div>
+          <p class="method-desc">For power users: strip macOS download quarantine flag in one terminal command.</p>
+          <ol class="method-steps">
+            <li>
+              <span class="step-bullet">1</span>
+              <span>Move <strong>Excly.app</strong> to your <strong>/Applications</strong> folder.</span>
+            </li>
+            <li>
+              <span class="step-bullet">2</span>
+              <span>Open <strong>Terminal.app</strong> (hit <kbd>⌘</kbd> <kbd>Space</kbd> and type Terminal).</span>
+            </li>
+            <li>
+              <span class="step-bullet">3</span>
+              <span>Run the following command to remove the quarantine attribute:</span>
+            </li>
+          </ol>
+          <div class="cli-command-box">
+            <code>xattr -cr /Applications/Excly.app</code>
+            <button class="copy-cmd-btn" type="button" data-copy-text="xattr -cr /Applications/Excly.app" aria-label="Copy terminal command">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Required Accessibility Banner -->
+      <div class="permission-banner-card">
+        <div class="perm-icon-wrap" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="10" r="3"></circle>
+            <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"></path>
+          </svg>
+        </div>
+        <div class="perm-text">
+          <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.25rem;">
+            <h4>Required Step: Grant Accessibility Permission</h4>
+            <span class="method-tag method-tag-required">Required</span>
+          </div>
+          <p>
+            Because Excly listens for Alt/Option ribbon sequences while Microsoft Excel is the active application, macOS requires explicit Accessibility authorization. When prompted, or at any time in system preferences:
+          </p>
+          <div class="perm-path">
+            <span>System Settings</span> <span>→</span> <span>Privacy &amp; Security</span> <span>→</span> <span>Accessibility</span> <span>→</span> <strong>Toggle Excly ON</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Build from Source Section ================= -->
+    <section class="wrap product-detail-section" id="build-from-source">
+      <div class="section-header">
+        <h2>Build from Source</h2>
+        <p class="section-lede">Prefer to inspect and compile the code yourself? Excly is 100% open source under Voryn Labs. Compile universal binaries in seconds with Swift Command Line Tools.</p>
+      </div>
+
+      <div class="build-source-grid">
+        <div>
+          <div class="code-terminal-block">
+            <div class="code-terminal-header">
+              <span class="code-terminal-dot"></span>
+              <span class="code-terminal-dot"></span>
+              <span class="code-terminal-dot"></span>
+              <span class="code-terminal-title">Terminal — Build Excly from Source</span>
+              <button class="copy-cmd-btn" type="button" data-copy-target="excly-build-code" style="margin-left:auto;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>Copy All</span>
+              </button>
+            </div>
+            <pre class="code-terminal-body"><code id="excly-build-code"># 1. Clone the official repository
+git clone https://github.com/Voryn-Labs/Excly.git
+cd Excly
+
+# 2. Compile standalone universal binary (Apple Silicon + Intel)
+./scripts/build-app.sh
+
+# 3. Launch the compiled application
+open dist/Excly.app</code></pre>
+          </div>
+        </div>
+
+        <div class="build-requirements-card">
+          <h4>Build Environment &amp; Requirements</h4>
+          <ul class="req-list">
+            <li><span class="req-check">✓</span> <span>macOS 13.0 Ventura, 14 Sonoma, or 15 Sequoia</span></li>
+            <li><span class="req-check">✓</span> <span>Xcode Command Line Tools (<code>xcode-select --install</code>)</span></li>
+            <li><span class="req-check">✓</span> <span>Swift 5.9+ compiler toolchain</span></li>
+            <li><span class="req-check">✓</span> <span>Zero npm, CocoaPods, or Carthage bloat</span></li>
+            <li><span class="req-check">✓</span> <span>Produces a clean universal binary (x86_64 + arm64)</span></li>
+          </ul>
+
+          <div style="margin-top:1.5rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <a class="action-btn action-btn-primary" href="https://github.com/Voryn-Labs/Excly" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub Repository ↗</span>
+            </a>
+            <a class="action-btn" href="https://github.com/Voryn-Labs/Excly/issues" target="_blank" rel="noopener">
+              <span>Report Issue ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand-mark" href="index.html">
+          <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="24" height="24">
+          <span class="brand-text">VORYN LABS</span>
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#products">Ecosystem</a></li>
+          <li><a href="https://github.com/Voryn-Labs/Excly" target="_blank" rel="noopener">Excly on GitHub</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Voryn Labs. Independent Multi-Platform Software Studio. Zero Telemetry.</p>
+        <p>Built with native web standards · No runtime frameworks</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/site.js?v=9"></script>
+</body>
+</html>

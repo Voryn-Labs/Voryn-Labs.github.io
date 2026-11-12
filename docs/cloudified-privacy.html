@@ -1,7 +1,154 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cloudified privacy · Voryn Labs</title><meta name="description" content="Where Cloudified sends your media, how it stores credentials and what happens when you share diagnostics."><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600;700&display=swap"><link rel="stylesheet" href="assets/css/site.css?v=3"><link rel="stylesheet" href="assets/css/cloudified.css"><link rel="icon" href="assets/icons/cloudified.png"><script>try { var theme = localStorage.getItem("voryn-theme"); if (theme === "light" || theme === "dark") document.documentElement.setAttribute("data-theme", theme); } catch (_) {}</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Cloudified · Voryn Labs</title>
+  <meta name="description" content="Where Cloudified sends your media, how it stores credentials, and our cryptographic local receipt architecture.">
+  <meta name="theme-color" content="#0A0C10">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privacy Policy — Cloudified · Voryn Labs">
+  <meta property="og:description" content="Where Cloudified sends your media, how it stores credentials, and our cryptographic local receipt architecture.">
+  <meta property="og:image" content="assets/icons/cloudified.png">
+  <link rel="icon" href="assets/icons/cloudified.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=12">
+  <script>
+    (function(){
+      document.documentElement.classList.add("js");
+      var t = localStorage.getItem("voryn-theme");
+      if (t === "dark" || t === "light") {
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    })();
+  </script>
 </head>
-<body class="cloudified-page"><a class="skip-link" href="#main">Skip to content</a><div class="wrap"><header class="product-nav"><a class="studio-lockup" href="index.html"><img src="assets/voryn-mark.png" width="32" height="32" alt="">Voryn Labs</a><a href="cloudified.html">Cloudified</a></header><main id="main" class="privacy-copy"><span class="eyebrow">Cloudified · public preview 0.1</span><h1>Your files and accounts</h1><p>Updated 16 October 2026. This page describes Cloudified; the studio’s Android games and VividOrbit have separate policies.</p><h2>Where media goes</h2><p>Original media uploads directly to the Google account or Telegram channel you link. The app stages files and keeps receipts, checksums and recovery records locally. Telegram channel archives are cloud documents, not end-to-end encrypted Secret Chats. People with access to that destination may access the media and metadata.</p><h2>Credentials stay with your installation</h2><p>The unofficial Google sign-in flow stores an Android master credential and authentication data in the iOS Keychain. That credential has broader scope than a Photos-only token. Cloudified cannot guarantee unlimited quota, continued service availability or isolation from Google’s account and device security systems. Telegram credentials and the local database encryption key use Keychain/native storage. No developer credential server or bundled signing certificate is provided.</p><h2>Installation and LiveContainer</h2><p>Changing signing team or bundle ID can affect access to local data and credentials. The public 0.1 identity does not inherit earlier testing data. In LiveContainer, the host controls the guest environment and credential isolation. Use a host you trust; Cloudified cannot provide a separate iOS security boundary inside it.</p><h2>Optional public diagnostics</h2><p>When you choose report upload, a redacted diagnostic report goes to dpaste.com and returns a public link. Reports are requested to expire after seven days. They exclude credentials, media, account names and private paths by design, but include timestamps, version/build, counts, device conditions and pseudonymous correlation identifiers. Anyone with the link can read it; copies in issues may last longer. Review before sharing. GitHub opens a draft; uploading logs does not submit an issue automatically.</p><h2>No advertising or analytics SDK</h2><p>Cloudified does not include an advertising or third-party analytics SDK. Linked cloud services, GitHub Pages, GitHub, Google Fonts on this site, and diagnostic hosting have their own policies and may receive network requests when used.</p><h2>Website analytics</h2><p>The Voryn Labs website uses Cloudflare Web Analytics for aggregate page views, visits, referral and page-performance statistics. The website beacon sends traffic and timing information to Cloudflare; network requests are processed under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare’s privacy policy</a>. It does not add an analytics SDK to Cloudified, receive your photo library or cloud credentials, or measure successful app installs. See the <a href="privacy.html#website-analytics">studio website analytics disclosure</a>.</p><h2>Control and contact</h2><p>You can disable either destination or delink it in Settings. Removing the app removes its local container; Keychain behavior depends on iOS and the signing/host environment. Cloudified does not delete your remote archive when you delink. Questions: <a href="mailto:appsvorynlabs@gmail.com">appsvorynlabs@gmail.com</a>.</p></main><footer class="product-footer"><span>© 2026 Voryn Labs</span><nav aria-label="Footer"><a href="cloudified.html">Cloudified</a><a href="privacy.html">Studio privacy</a></nav></footer></div><!-- Cloudflare Web Analytics -->
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"221b6d4d6a374533bbdf5fec04bee453"}'></script>
-<!-- End Cloudflare Web Analytics -->
-</body></html>
+<body class="legal-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-nav">
+    <nav class="wrap" aria-label="Main Navigation">
+      <a class="brand-mark" href="index.html" aria-label="Voryn Labs Home">
+        <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="28" height="28">
+        <span class="brand-text">VORYN LABS</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#products">Ecosystem</a></li>
+        <li><a href="cloudified.html">Cloudified App</a></li>
+        <li><a href="index.html#ios-source">iOS Sideload</a></li>
+        <li><a href="privacy.html" class="is-active">Studio Privacy</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a class="nav-github-btn" href="https://github.com/Voryn-Labs/Cloudified" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>Repository</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="wrap legal-layout">
+      <div class="legal-header">
+        <a class="back-link-pill" href="cloudified.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Back to Cloudified</span>
+        </a>
+
+        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap;">
+          <span class="platform-pill">iOS 16+ · iPhone</span>
+          <span class="status-pill status-active">Direct API Pipelines</span>
+          <span class="license-pill">MIT License</span>
+        </div>
+
+        <h1 class="legal-title">Privacy Policy — Cloudified</h1>
+        <p class="legal-lede">Cloudified is an uncompressed photo backup accelerator for iOS. It connects your native iOS Photos library directly to your personal Google Photos and Telegram destinations with cryptographic local ledgers.</p>
+
+        <div class="legal-effective-badge">
+          <span>Effective: October 16, 2026 · Bundle: <code>com.vorynlabs.cloudified</code></span>
+        </div>
+      </div>
+
+      <!-- 3-Pillar Summary Cards -->
+      <div class="legal-summary-grid">
+        <div class="legal-summary-card">
+          <strong>Direct Destination Routing</strong>
+          <p>Media streams directly to your personal Google account or Telegram storage channel. Zero intermediary Voryn servers.</p>
+        </div>
+        <div class="legal-summary-card">
+          <strong>Keychain Stored Credentials</strong>
+          <p>Tokens and master credentials stay strictly inside hardware-backed iOS Keychain. Never uploaded to diagnostics.</p>
+        </div>
+        <div class="legal-summary-card">
+          <strong>Local Cryptographic Receipts</strong>
+          <p>Every photo backup is indexed locally with SHA-256 hashes to prevent duplicates without remote telemetry indexing.</p>
+        </div>
+      </div>
+
+      <div class="legal-content">
+        <section class="legal-chapter">
+          <h2>1. Destination Routing &amp; Direct Data Streams</h2>
+          <p>Your media uploads directly to the personal Google account or Telegram channel you authenticate. Cloudified stages files locally, computes bit-exact SHA-256 checksums, and records local receipts in an encrypted SQLite database on your iPhone.</p>
+          <p>At no point does your photo media pass through any Voryn Labs cloud server or proxy. All network transfers occur over encrypted TLS directly between your iOS device and Google or Telegram APIs.</p>
+        </section>
+
+        <section class="legal-chapter">
+          <h2>2. Credentials &amp; Keychain Security</h2>
+          <p>Credentials, auth tokens, and local database keys are stored strictly in the hardware-backed iOS Keychain on your physical device. We provide no remote authentication proxy; you interact with the third-party provider directly.</p>
+        </section>
+
+        <section class="legal-chapter">
+          <h2>3. Ephemeral Redacted Diagnostics</h2>
+          <p>If you choose to submit a debug report, the app generates a sanitized JSON preview stripping authentication tokens, personal names, account emails, and image filenames. Reports expire after seven days and must be explicitly reviewed by you prior to submission.</p>
+        </section>
+
+        <section class="legal-chapter">
+          <h2>4. Zero Third-Party Advertising SDKs</h2>
+          <p>Cloudified contains zero commercial advertising networks, zero tracking cookies, and zero behavioral analytics libraries.</p>
+        </section>
+
+        <section class="legal-chapter">
+          <h2>5. Direct Studio Correspondence</h2>
+          <p>Inquiries regarding Cloudified’s security architecture or cryptographic integrity: <strong><a href="mailto:appsvorynlabs@gmail.com">appsvorynlabs@gmail.com</a></strong>.</p>
+          <p>Public open-source repository: <a href="https://github.com/Voryn-Labs/Cloudified" target="_blank" rel="noopener">GitHub (Voryn-Labs/Cloudified)</a>.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand-mark" href="index.html">
+          <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="24" height="24">
+          <span class="brand-text">VORYN LABS</span>
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cloudified.html">Cloudified Page</a></li>
+          <li><a href="https://github.com/Voryn-Labs/Cloudified" target="_blank" rel="noopener">GitHub Repo</a></li>
+          <li><a href="privacy.html">Studio Privacy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Voryn Labs. Independent Multi-Platform Software Studio. Zero Telemetry.</p>
+        <p>Built with native web standards · No runtime frameworks</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js?v=12"></script>
+</body>
+</html>

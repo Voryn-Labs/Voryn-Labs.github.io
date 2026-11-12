@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VividOrbit — Offline Channel Lineup &amp; Guide for Android TV · Voryn Labs</title>
+  <meta name="description" content="100% offline live-TV and lineup manager for Android TV and Google TV. Renumber channels 1..N and control lineups from your phone over a local QR code.">
+  <meta name="theme-color" content="#0A0C10">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VividOrbit — Offline Channel Lineup &amp; Guide for Android TV">
+  <meta property="og:description" content="100% offline live-TV and lineup manager for Android TV and Google TV. Zero accounts, zero cloud servers.">
+  <meta property="og:image" content="assets/icons/vividorbit.png">
+  <link rel="icon" href="assets/icons/vividorbit.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=10">
+  <link rel="stylesheet" href="assets/css/product-pages.css?v=3">
+  <script>
+    (function(){
+      document.documentElement.classList.add("js");
+      var t = localStorage.getItem("voryn-theme");
+      if (t === "dark" || t === "light") {
+        document.documentElement.setAttribute("data-theme", t);
+      }
+    })();
+  </script>
+</head>
+<body class="product-detail-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Navigation Bar -->
+  <header class="site-nav">
+    <nav class="wrap" aria-label="Main Navigation">
+      <a class="brand-mark" href="index.html" aria-label="Voryn Labs Home">
+        <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="28" height="28">
+        <span class="brand-text">VORYN LABS</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#products">Ecosystem</a></li>
+        <li><a href="index.html#androidtv">Android TV</a></li>
+        <li><a href="https://github.com/Voryn-Labs/VividOrbit" target="_blank" rel="noopener">GitHub Repo ↗</a></li>
+        <li><a href="vividorbit-privacy.html">Privacy</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a class="nav-github-btn" href="https://github.com/Voryn-Labs/VividOrbit" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>Source Code</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="product-page-hero">
+      <div class="wrap product-hero-grid">
+        <div class="product-hero-copy">
+          <div class="badge-row">
+            <span class="platform-pill">Android TV &amp; Google TV</span>
+            <span class="status-pill status-dev">In Development · v0.9 Beta</span>
+            <span class="license-pill">Apache-2.0</span>
+          </div>
+          <h1>VividOrbit</h1>
+          <p class="tagline-large">Living room television, completely uncompromised.</p>
+          <p class="hero-desc">
+            VividOrbit is a lightweight, 100% offline live-TV and channel lineup manager engineered for Android TV and Google TV. Renumber your physical channels 1..N with atomic swaps and control your guide seamlessly from your smartphone browser via a local QR code.
+          </p>
+
+          <div class="hero-actions">
+            <a class="action-btn action-btn-primary" href="https://github.com/Voryn-Labs/VividOrbit" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>View Source on GitHub ↗</span>
+            </a>
+            <a class="action-btn" href="https://github.com/Voryn-Labs/VividOrbit/releases" target="_blank" rel="noopener">
+              <span>Releases</span>
+            </a>
+            <a class="action-btn action-btn-ghost" href="vividorbit-privacy.html">
+              <span>Technical Specs &amp; Privacy →</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-hero-visual">
+          <div class="app-icon-display">
+            <img src="assets/icons/vividorbit.png" alt="Official VividOrbit application icon" width="160" height="160">
+            <span class="icon-caption">Official Android TV Icon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TV Screenshots Showcase -->
+    <section class="wrap product-detail-section">
+      <div class="section-header">
+        <h2>Television Interface Showcase</h2>
+        <p class="section-lede">Captured directly from Android TV running in full 1080p. Sized comfortably for ten-foot living room navigation.</p>
+      </div>
+
+      <div class="screenshots-showcase-grid">
+        <figure class="screenshot-figure">
+          <img src="assets/img/vividorbit-channel-guide.png" alt="VividOrbit Channel Guide" loading="lazy">
+          <figcaption>
+            <strong>Now / Next Electronic Programme Guide</strong>
+            <span>Progress bar displays active show progress; gracefully collapses when broadcast channels lack guide data.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="screenshot-figure">
+          <img src="assets/img/vividorbit-phone-setup.png" alt="VividOrbit Phone Companion Pairing QR Code" loading="lazy">
+          <figcaption>
+            <strong>Local Phone Companion Pairing</strong>
+            <span>Scan the TV screen QR code from any smartphone on your local Wi-Fi to manage lineups without installing an app.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="screenshot-figure">
+          <img src="assets/img/vividorbit-settings-lineup.png" alt="VividOrbit Channel Lineup Manager" loading="lazy">
+          <figcaption>
+            <strong>Atomic Channel Numbering</strong>
+            <span>Reorder and swap channel numbers without conflicts or collisions. Number channels logically from 1..N.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="screenshot-figure">
+          <img src="assets/img/vividorbit-categories.png" alt="VividOrbit Category Browser" loading="lazy">
+          <figcaption>
+            <strong>Live Category Groupings</strong>
+            <span>Filter news, sports, entertainment, and regional broadcasts with one D-pad click on your TV remote.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Architecture & Living Room Privacy -->
+    <section class="wrap product-detail-section">
+      <div class="section-header">
+        <h2>Living Room Privacy Sovereignty</h2>
+        <p class="section-lede">Your TV viewing habits belong to you alone. VividOrbit operates with zero cloud reliance.</p>
+      </div>
+
+      <div class="arch-points-grid">
+        <div class="arch-card">
+          <h4>100% Offline Local Web Server</h4>
+          <p>The companion remote server runs entirely on your local television hardware. Nothing ever crosses the internet or leaves your home network.</p>
+        </div>
+        <div class="arch-card">
+          <h4>Zero Accounts or Sign-Ins</h4>
+          <p>Turn on your TV and start watching immediately. No email registration, no phone verification, and no cloud logins.</p>
+        </div>
+        <div class="arch-card">
+          <h4>No Telemetry or Viewing Beacons</h4>
+          <p>Traditional smart TVs track every channel tune and pause event. VividOrbit has zero analytics beacons and zero ad trackers.</p>
+        </div>
+        <div class="arch-card">
+          <h4>Low-Memory Android TV Engine</h4>
+          <p>Hand-tuned for Android TV 11+ and Google TV boxes with modest CPU and RAM constraints for lag-free D-pad navigation.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand-mark" href="index.html">
+          <img class="brand-logo-img" src="assets/img/voryn-mark.png" alt="Voryn Labs logo" width="24" height="24">
+          <span class="brand-text">VORYN LABS</span>
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#products">Ecosystem</a></li>
+          <li><a href="https://github.com/Voryn-Labs/VividOrbit" target="_blank" rel="noopener">VividOrbit on GitHub</a></li>
+          <li><a href="vividorbit-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Voryn Labs. Independent Multi-Platform Software Studio. Zero Telemetry.</p>
+        <p>Built with native web standards · No runtime frameworks</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js?v=8"></script>
+</body>
+</html>
