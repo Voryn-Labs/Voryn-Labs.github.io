@@ -117,7 +117,7 @@ def build_catalog(registry, feeds, release_lookup):
         # retaining the same bundle identifier for in-place installation.
         if False in selected:
             apps.append(app_for_channel(app, selected[False]))
-        if True in selected:
+        if True in selected and spec.get('includePreview', True):
             apps.append(app_for_channel(app, selected[True], preview=True))
     require(bool(apps), 'The shared source cannot be empty')
     return {

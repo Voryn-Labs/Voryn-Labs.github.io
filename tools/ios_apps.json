@@ -2,7 +2,8 @@
   {
     "name": "Cloudified",
     "repository": "Voryn-Labs/Cloudified",
-    "bundleIdentifier": "com.vorynlabs.cloudified"
+    "bundleIdentifier": "com.vorynlabs.cloudified",
+    "includePreview": false
   },
   {
     "name": "Musyn",
