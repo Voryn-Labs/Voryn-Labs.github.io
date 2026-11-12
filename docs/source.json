@@ -19,14 +19,14 @@
       "category": "photo-video",
       "versions": [
         {
-          "version": "0.5",
-          "buildVersion": "32",
-          "marketingVersion": "0.5 (32)",
-          "date": "2026-10-22T06:09:27Z",
-          "localizedDescription": "Upload recovery and retries\n\n- Keep checking other Telegram recovery sources when an individual lookup is\n  missing, times out or returns an unusable history page. Uncertain sends remain\n  protected and are verified before another upload.\n- Isolate Google transfer-journal errors so one damaged result does not block\n  unrelated files. Reconcile system tasks that have ended and release stranded\n  upload waiters without treating an unknown Google commit as absent.\n- Move retryable file failures behind other ready items. Each item and destination\n  has at most three automatic send attempts; exhausted failures remain in\n  Activity → Needs attention, with identifying details and manual Retry.\n- Show destination-specific guidance for expired sign-ins, access problems,\n  storage limits and Telegram rate limits, including a retry time when available.\n  Account-wide problems pause the affected destination while the other can continue.\n- Wait for upload-completion callbacks before ending a backup run or settling a\n  destination, preventing premature teardown during recovery.\n\nResource handling and diagnostics\n\n- Drain temporary framework objects during photo scanning and streamed file writes.\n- Preserve signed capture timestamps and real fractional seconds in Google upload\n  metadata, including dates before 1970.\n- Retain diagnostic-export cleanup ownership after a failed deletion so cleanup\n  can be retried, and record preparation errors before attempting cleanup.\n- Clarify Older/Newest navigation in bounded activity history and explain retry\n  behavior in the failure list and FAQ.\n\nOriginal media bytes, pinned dependencies and bounded native-reader protection\nare retained. Recovery can still wait when the remote outcome cannot be verified;\nCloudified does not blindly resend such items. Background time remains controlled\nby iOS.",
-          "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-39731681087/Cloudified-unsigned.ipa",
-          "size": 17932543,
-          "sha256": "6ec74685da1213a5a6779fb0957d569916aeafe37c5f9288ef7c7c720c46fce9",
+          "version": "1.0",
+          "buildVersion": "40",
+          "marketingVersion": "1.0 (40)",
+          "date": "2026-11-12T04:06:05Z",
+          "localizedDescription": "Latest stable release. This stable release carries forward the Telegram\nreliability correction from preview0.81 and the album exclusions and Keep Awake\nredesign from0.8.\n\n- Filter unrelated Telegram chat/file updates before the bounded native queue,\n  preserving owned completion/failure events and preventing irrelevant bursts from\n  filling the queue.\n- Gate a broken Telegram input stream once and request recovery; keep Google uploads\n  independent. Distinguish local connection capacity from Telegram server rejection.\n- Preserve original media, upload profile, retries, receipts and protected native\n  files. Unknown outcomes still require verification before another send.\n- Retain separate provider album exclusions and the redesigned Keep Awake screen.\n\nUpdate in place with the same signing identity/container. This release advances the\ndatabase to schema7; do not downgrade its container to0.8 or earlier.",
+          "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-43150178566/Cloudified-unsigned.ipa",
+          "size": 17986115,
+          "sha256": "6525396e7a630a31b4053cd4b10d14e5b60bd32ea0501705bfed0eacd2371c2a",
           "minOSVersion": "26.0"
         }
       ],
@@ -36,13 +36,13 @@
           "NSPhotoLibraryUsageDescription": "Cloudified requires photo library access to back up original quality photos and videos to Google Photos and Telegram."
         }
       },
-      "version": "0.5",
-      "versionDate": "2026-10-22T06:09:27Z",
-      "versionDescription": "Upload recovery and retries\n\n- Keep checking other Telegram recovery sources when an individual lookup is\n  missing, times out or returns an unusable history page. Uncertain sends remain\n  protected and are verified before another upload.\n- Isolate Google transfer-journal errors so one damaged result does not block\n  unrelated files. Reconcile system tasks that have ended and release stranded\n  upload waiters without treating an unknown Google commit as absent.\n- Move retryable file failures behind other ready items. Each item and destination\n  has at most three automatic send attempts; exhausted failures remain in\n  Activity → Needs attention, with identifying details and manual Retry.\n- Show destination-specific guidance for expired sign-ins, access problems,\n  storage limits and Telegram rate limits, including a retry time when available.\n  Account-wide problems pause the affected destination while the other can continue.\n- Wait for upload-completion callbacks before ending a backup run or settling a\n  destination, preventing premature teardown during recovery.\n\nResource handling and diagnostics\n\n- Drain temporary framework objects during photo scanning and streamed file writes.\n- Preserve signed capture timestamps and real fractional seconds in Google upload\n  metadata, including dates before 1970.\n- Retain diagnostic-export cleanup ownership after a failed deletion so cleanup\n  can be retried, and record preparation errors before attempting cleanup.\n- Clarify Older/Newest navigation in bounded activity history and explain retry\n  behavior in the failure list and FAQ.\n\nOriginal media bytes, pinned dependencies and bounded native-reader protection\nare retained. Recovery can still wait when the remote outcome cannot be verified;\nCloudified does not blindly resend such items. Background time remains controlled\nby iOS.",
-      "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-39731681087/Cloudified-unsigned.ipa",
-      "size": 17932543,
+      "version": "1.0",
+      "versionDate": "2026-11-12T04:06:05Z",
+      "versionDescription": "Latest stable release. This stable release carries forward the Telegram\nreliability correction from preview0.81 and the album exclusions and Keep Awake\nredesign from0.8.\n\n- Filter unrelated Telegram chat/file updates before the bounded native queue,\n  preserving owned completion/failure events and preventing irrelevant bursts from\n  filling the queue.\n- Gate a broken Telegram input stream once and request recovery; keep Google uploads\n  independent. Distinguish local connection capacity from Telegram server rejection.\n- Preserve original media, upload profile, retries, receipts and protected native\n  files. Unknown outcomes still require verification before another send.\n- Retain separate provider album exclusions and the redesigned Keep Awake screen.\n\nUpdate in place with the same signing identity/container. This release advances the\ndatabase to schema7; do not downgrade its container to0.8 or earlier.",
+      "downloadURL": "https://github.com/Voryn-Labs/Cloudified/releases/download/build-43150178566/Cloudified-unsigned.ipa",
+      "size": 17986115,
       "minOSVersion": "26.0",
-      "buildVersion": "32"
+      "buildVersion": "40"
     },
     {
       "name": "Musyn",
@@ -56,7 +56,7 @@
         {
           "version": "1.0.0",
           "buildVersion": "22",
-          "date": "2026-11-12T03:50:33.143352+00:00",
+          "date": "2026-11-12T04:14:30.396870+00:00",
           "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v1.0.0/Musyn.ipa",
           "size": 12489818,
           "minOSVersion": "15.0",
@@ -72,7 +72,7 @@
         "privacy": {}
       },
       "version": "1.0.0",
-      "versionDate": "2026-11-12T03:50:33.143352+00:00",
+      "versionDate": "2026-11-12T04:14:30.396870+00:00",
       "versionDescription": "Stable — multi-source playback, offline downloads, synced lyrics and a focused player.",
       "downloadURL": "https://github.com/Voryn-Labs/Musyn/releases/download/v1.0.0/Musyn.ipa",
       "size": 12489818,
